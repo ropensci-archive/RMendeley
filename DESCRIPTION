@@ -1,0 +1,11 @@
+Package: RMendeley
+Description: A programmatic interface to the
+ Web Service methods provided by the Mendeley open science
+ project.
+Title: Interface to Mendeley API methods
+Version: 0.1-0
+License: BSD
+Author: Carl Boettiger, Duncan Temple Lang
+Maintainer: Duncan Temple Lang <duncan@r-project.org>
+Imports: RJSONIO, RCurl
+Packaged: 2011-05-06 02:07:13 UTC; duncan

@@ -1,0 +1,6 @@
+import(RJSONIO)
+import(RCurl)
+# searches
+export(msearch, authored, details, related, search_tagged)
+# statistics
+export(authors, papers, tags, publications)
