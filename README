@@ -7,5 +7,5 @@ Version: 0.1-1
 License: BSD
 Author: Carl Boettiger, Duncan Temple Lang
 Maintainer: Duncan Temple Lang <duncan@r-project.org>
-Imports: RJSONIO, RCurl
+Imports: RJSONIO, RCurl (>= 1.6)
 Packaged: 2011-05-06 02:07:13 UTC; duncan
