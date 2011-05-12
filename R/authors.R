@@ -1,6 +1,10 @@
 # authors.R Stats Method (Public Method)
 
 authors =
+# Returns list of all-time top authors across all disciplines, unless optional params used.
+# Examples: 
+#   authors()
+#   authors(6) # Discipline "6", Computer Science
 function(discipline = NULL, upandcoming = FALSE, url = "http://api.mendeley.com/oapi/stats/authors/",
           key = getOption("MendeleyKey", stop("need an API key for Mendeley")))
 {
