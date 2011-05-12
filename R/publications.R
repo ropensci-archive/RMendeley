@@ -1,3 +1,4 @@
+# publications.R: A Stats Method (Public Methods)
 publications =
 function(discipline = NULL, upandcoming = FALSE, url = "http://api.mendeley.com/oapi/stats/publications/",
           key = getOption("MendeleyKey", stop("need an API key for Mendeley")))
@@ -6,7 +7,7 @@ function(discipline = NULL, upandcoming = FALSE, url = "http://api.mendeley.com/
   if(!is.null(discipline))
      args$discipline_id = as.character(discipline)
   if(as.logical(upandcoming))
-     args$upandcoming = 1L
+     args$upandcoming = 1
   
   tt = getForm(url, .params = args)
   ans = fromJSON(tt)

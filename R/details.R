@@ -1,3 +1,5 @@
+# detail.R Search Method (Public Method)
+
 details =
  # b <- details("10.1073/pnas.0810311106", type="doi") ## Returns the wrong paper!  others don't return any papers
  # a <- details("cabcbae0-839b-11df-aedb-0024e8453de8") # uuid

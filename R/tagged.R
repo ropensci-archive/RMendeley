@@ -1,7 +1,7 @@
-search_tagged =
+tagged =
   # Examples: 
-  # a <- search_tagged("phylogenetics") 
-  # b <- search_tagged("phylogenetics", cat="Phylogenetic Methods") 
+  # a <- tagged("phylogenetics") 
+  # b <- tagged("phylogenetics", cat="Phylogenetic Methods") 
   # 
 function(query, page = NA, numItems = 1000L, cat=NA, subcat=NA, key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
           url = sprintf("%s/%s", "http://api.mendeley.com/oapi/documents/tagged", query))
@@ -12,9 +12,9 @@ function(query, page = NA, numItems = 1000L, cat=NA, subcat=NA, key = getOption(
    if(!is.na(numItems))
       args$items = as.integer(numItems)
    if(!is.na(cat))
-      args$year = as.character(cat)
+      args$cat = as.character(cat)
    if(!is.na(subcat))
-      args$year = as.character(subcat)
+      args$subcat = as.character(subcat)
    tt = getForm(url, .params = args)
    fromJSON(I(tt))
 }

@@ -1,3 +1,4 @@
+# authored.R   Search Method (Public Method)
 authored =
   # Examples: 
   # a <- authored("Boettiger")
