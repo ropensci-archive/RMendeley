@@ -1,6 +1,8 @@
 import(RJSONIO)
 import(RCurl)
 # searches
-export(msearch, details, related, authored, tagged)
+export(msearch, details, related, authored, tagged, categories, subcategories)
 # statistics
 export(authors, papers, tags, publications)
+# public groups
+export(public_groups_overview, public_groups_details, public_groups_documents, public_groups_people)
