@@ -7,7 +7,7 @@ function(discipline = NULL, upandcoming = FALSE, url = "http://api.mendeley.com/
   if(!is.null(discipline))
      args$discipline_id = as.character(discipline)
   if(as.logical(upandcoming))
-     args$upandcoming = 1
+     args$upandcoming = 1L
   
   tt = getForm(url, .params = args)
   ans = fromJSON(tt)
