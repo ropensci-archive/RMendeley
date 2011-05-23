@@ -11,7 +11,7 @@ function(discipline = NULL, upandcoming = FALSE, url = "http://api.mendeley.com/
 {
   args = list(consumer_key = key)
   if(!is.null(discipline))
-     args$discipline_id = as.character(discipline)
+     args$discipline = as.character(discipline)
   if(as.logical(upandcoming))
      args$upandcoming = 1L # L means as integer, not numeric (double)
   
