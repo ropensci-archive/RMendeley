@@ -6,6 +6,5 @@ Title: Interface to Mendeley API methods
 Version: 0.1-1
 License: BSD
 Author: Carl Boettiger, Duncan Temple Lang
-Maintainer: Duncan Temple Lang <duncan@r-project.org>
+Maintainer: Carl Boettiger <cboettig@gmail.com>
 Imports: RJSONIO, RCurl (>= 1.6)
-Packaged: 2011-05-06 02:07:13 UTC; duncan

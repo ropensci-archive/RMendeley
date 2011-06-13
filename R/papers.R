@@ -1,8 +1,10 @@
 # papers.R Stats Method (Public Method)
 
 papers =
-function(discipline = NULL, upandcoming = FALSE, url = "http://api.mendeley.com/oapi/stats/papers/",
-          key = getOption("MendeleyKey", stop("need an API key for Mendeley")), ..., curl=getCurlHandle())
+function(discipline = NULL, upandcoming = FALSE, 
+  url = "http://api.mendeley.com/oapi/stats/papers/", 
+  key = getOption("MendeleyKey", 
+  stop("need an API key for Mendeley")), ..., curl=getCurlHandle())
 {
   args = list(consumer_key = key)
   if(!is.null(discipline))
