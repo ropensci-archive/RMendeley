@@ -1,4 +1,4 @@
-# query for documents in a given group
+#' query for documents in a given group
 #' @param query a group name to query
 #' @param page number of pages to return (optional)
 #' @param numItems number of hits to return (optional)

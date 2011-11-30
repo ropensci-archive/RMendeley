@@ -1,4 +1,4 @@
-# detail.R Search Method (Public Method)
+#' details Search Method (Public Method)
 #' @param query an object identifer of type identified by type
 #' @param type the type of object identifier to use
 #' @param url Mendeley API URL (don't change this)
