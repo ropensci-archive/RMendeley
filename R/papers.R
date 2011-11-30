@@ -1,5 +1,14 @@
-# papers.R Stats Method (Public Method)
-
+#' papers.R Stats Method (Public Method)
+#' @param discipline a numeric code indicating the discipline
+#' @param upandcoming logical: give recent/trending top authors only?
+#' @param url Mendeley API URL (don't change this)
+#' @param key Mendeley API key (otherwise will try and load from package)
+#' @param curl If using in a loop, call getCurlHandle() first and pass 
+#'  the returned value in here (avoids unnecessary footprint)
+#' @param ... optional additional curl options (debugging tools mostly)
+#' @examples \dontrun{
+#' }
+#' @export
 papers =
 function(discipline = NULL, upandcoming = FALSE, 
   url = "http://api.mendeley.com/oapi/stats/papers/", 
