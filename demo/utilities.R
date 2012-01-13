@@ -6,8 +6,8 @@
 #' get the ids of all the entries where the author's surname and forename match the given regular expressions
 #'
 #' dakos <- authored("Dakos")
-#' subset_by_author(dakos, "V", "Dakos")
-#' 
+#' m <- subset_by_author(dakos, "V", "Dakos")
+#' unique(show_titles(dakos[m])) 
 subset_by_author <- function(x, surname, forename){
   sapply(x[[1]], function(y){
     matches <- sapply(y$authors, function(z)
@@ -26,14 +26,18 @@ extract_authors <- function(x)
 #' @returns a vector of the number of authors in each of the publications included in the returned list
 #' @export
 count_authors <- function(x) 
-  sapply(x[[1]], function(y) length(y$authors))
+  sapply(x, function(y) length(y$authors))
 
 
-titles <- function(x)
-  sapply(x[[1]], function(y) y$title)
+show_titles <- function(x)
+  sapply(x, function(y) y$title)
 
-years <- function(x)
-  sapply(x[[1]], function(y) y$year)
+show_years <- function(x)
+  sapply(x, function(y) y$year)
 
 
+show_authors <- function(x)
+  sapply(x, function(y) y$authors)
 
+
+unique(show_titles(dakos[[1]][m]))

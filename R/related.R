@@ -4,10 +4,6 @@
 #' Return a list of papers related to a given Mendeley uuid
 #' @param query any Mendeley uuid (see details() function) 
 #' @param page number pages to return (optional)
-#' @param cat Only tags appearing in this subject category
-#' See the search-categories function to obtain a list of the numeric
-#' codes corresponding to each of the main subject categories.  
-#' @param subcategory a subcategory to restrict searching to
 #' @param numItems number of hits to return (optional)
 #' @param key Mendeley API key (otherwise will try and load from package)
 #' @param url the Mendeley API url for the function (should be left to default)
@@ -22,13 +18,13 @@
 #' @export
 related <- 
 function(query, page = NA, numItems = 1000L, key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-          url = sprintf("%s/%s", "http://api.mendeley.com/oapi/documents/related", query))
+          url = sprintf("%s/%s", "http://api.mendeley.com/oapi/documents/related", query), curl=getCurlHandle(), ...)
 {
    args = list(consumer_key = key)
    if(!is.na(page))
       args$page = as.integer(page)
    if(!is.na(numItems))
       args$items = as.integer(numItems)
-   tt = getForm(url, .params = args)
+   tt = getForm(url, .params = args, .opts=list(...), curl=curl)
    fromJSON(I(tt))
 }

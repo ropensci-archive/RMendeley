@@ -1,7 +1,6 @@
 \name{authors}
 \alias{authors}
-\title{authors Stats Method (Public Method)
-Returns list of top authors of given disipline or overall}
+\title{authors Stats Method (Public Method)}
 \usage{
   authors(discipline = NULL, upandcoming = FALSE,
     url = "http://api.mendeley.com/oapi/stats/authors/",
@@ -28,8 +27,7 @@ Returns list of top authors of given disipline or overall}
   tools mostly)}
 }
 \description{
-  authors Stats Method (Public Method) Returns list of top
-  authors of given disipline or overall
+  Returns list of top authors of given disipline or overall
 }
 \examples{
 \dontrun{

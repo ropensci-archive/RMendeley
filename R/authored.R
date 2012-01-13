@@ -31,5 +31,6 @@ function(query, page = NA, numItems = 1000L, year=NA,
    if(!is.na(year))
       args$year = as.character(year)
    tt = getForm(url, .params = args, .opts=list(...), curl=curl)
-   fromJSON(I(tt))
+   out <- fromJSON(I(tt))
+   out[[1]] 
 }

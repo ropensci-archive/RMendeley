@@ -1,4 +1,6 @@
 #' public_groups.details.R   Public Group Methods (Public Methods)
+#' 
+#' This method will return further details about a group. 
 #' @param query a public group ID number
 #' @param key Mendeley API key (otherwise will try and load from package)
 #' @param url the Mendeley API url for the function (should be left to default)
@@ -11,9 +13,6 @@
 #' }
 #' @export
 public_groups_details =
-  # This method will return further details about a group. 
-  # Examples: 
-  # 
 function(query, key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
           url = sprintf("%s/%s", "http://api.mendeley.com/oapi/documents/groups", query), curl=getCurlHandle(), ...)
 {

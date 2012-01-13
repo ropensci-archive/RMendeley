@@ -7,6 +7,8 @@
 #'  the returned value in here (avoids unnecessary footprint)
 #' @param ... optional additional curl options (debugging tools mostly)
 #' @examples \dontrun{
+#' papers()
+#' papers(6) # top papers in a discipline (id 6 = Computer Science)
 #' }
 #' @export
 papers =

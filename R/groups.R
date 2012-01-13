@@ -9,8 +9,6 @@
 #' @param curl If using in a loop, call getCurlHandle() first and pass 
 #'  the returned value in here (avoids unnecessary footprint)
 #' @return all results matching the query for the author
-#' @examples \dontrun{
-#' }
 #' @export
 groups =
 function(query, page=NA,numItems=10,cat=NA, 
@@ -28,5 +26,6 @@ function(query, page=NA,numItems=10,cat=NA,
       
   tt = getForm(url, .params = args, .opts=list(...), curl=curl)
   ans = fromJSON(tt)
+  ans[[1]]
 }
 

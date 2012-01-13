@@ -1,4 +1,5 @@
 #' authors Stats Method (Public Method)
+#' 
 #' Returns list of top authors of given disipline or overall 
 #' @param discipline a numeric code indicating the discipline
 #' @param upandcoming logical: give recent/trending top authors only?

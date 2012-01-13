@@ -1,7 +1,18 @@
-# publications.R: A Stats Method (Public Methods)
+#' publications.R: A Stats Method (Public Methods)
+#' 
+#' @param discipline a numeric code indicating the discipline
+#' @param upandcoming logical: give recent/trending top authors only?
+#' @param url Mendeley API URL (don't change this)
+#' @param key Mendeley API key (otherwise will try and load from package)
+#' @param curl If using in a loop, call getCurlHandle() first and pass 
+#'  the returned value in here (avoids unnecessary footprint)
+#' @param ... optional additional curl options (debugging tools mostly)
+#' @examples \dontrun{
+#' publications()
+#' publications("6", up=T, verbose=T)
+#' }
+#' @export
 publications =
-# discipline is the numerical id, see categories() for a list
-# Example: plublications("6", up=T, verbose=T)
 function(discipline = NULL, upandcoming = FALSE, url = "http://api.mendeley.com/oapi/stats/publications/",
           key = getOption("MendeleyKey", stop("need an API key for Mendeley")), ..., curl=getCurlHandle())
 {

@@ -27,8 +27,7 @@
   detailed metadata for all articles in the public group
 }
 \description{
-  public_groups.details.R Public Group Methods (Public
-  Methods)
+  This method will return further details about a group.
 }
 \examples{
 \dontrun{
