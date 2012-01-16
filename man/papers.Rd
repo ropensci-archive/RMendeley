@@ -31,6 +31,8 @@
 }
 \examples{
 \dontrun{
+papers()
+papers(6) # top papers in a discipline (id 6 = Computer Science)
 }
 }
 

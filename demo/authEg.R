@@ -1,9 +1,15 @@
+## Manipulation of private libraries through the Mendeley API is also 
+## possible but requires OAuth authentication.  This demonstration shows
+## how private information can be accessed from R.  
+##
+## This is work in progress, and will eventually be supported directly by the package functions
+
 library(ROAuth)
 library(RJSONIO)
 
-cred <- OAuthFactory$new(consumerKey= '66ec852fe739466f779c529b515b3d2204dc349c0',
-                         consumerSecret = getOption('RMendeleySecret'),
-                         requestURL= 'http://api.mendeley.com/oauth/request_token/',
+cred <- OAuthFactory$new(consumerKey = getOption(MendeleyKey),
+                         consumerSecret = getOption(RMendeleySecret),
+                         requestURL = 'http://api.mendeley.com/oauth/request_token/',
                          accessURL = 'http://api.mendeley.com/oauth/access_token/',
                          authURL = 'http://api.mendeley.com/oauth/authorize/')
 #if using my OAuthInR

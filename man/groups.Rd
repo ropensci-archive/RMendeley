@@ -35,8 +35,4 @@
 \description{
   query for documents in a given group
 }
-\examples{
-\dontrun{
-}
-}
 
