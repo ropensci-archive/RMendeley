@@ -5,7 +5,6 @@
 #' @param page number pages to return (optional)
 #' @param numItems number of hits to return (optional)
 #' @param key Mendeley API key (otherwise will try and load from package)
-#' @param url the Mendeley API url for the function (should be left to default)
 #' @param ... optional additional curl options (debugging tools mostly)
 #' @param curl If using in a loop, call getCurlHandle() first and pass 
 #'  the returned value in here (avoids unnecessary footprint)

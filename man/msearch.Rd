@@ -18,9 +18,6 @@
   \item{key}{Mendeley API key (otherwise will try and load
   from package)}
 
-  \item{url}{the Mendeley API url for the function (should
-  be left to default)}
-
   \item{...}{optional additional curl options (debugging
   tools mostly)}
 
