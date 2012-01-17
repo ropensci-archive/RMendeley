@@ -17,9 +17,12 @@
 #' @export
 subset_by_author <- function(x, surname, forename){
   sapply(x, function(y){
-    matches <- sapply(y$authors, function(z)
-      pmatch(forename, z["forename"], nomatch=0) & pmatch(surname, z["surname"])
-    )
+    if(!is.null(y$authors))
+      matches <- sapply(y$authors, function(z)
+        pmatch(forename, z["forename"], nomatch=0) & pmatch(surname, z["surname"])
+      )
+    else
+      matches <- NA
     any(matches, na.rm=TRUE)
   })
 }
@@ -133,7 +136,11 @@ coauth <- function(myname){
 #' the RMendeley functions can leverage the power of scripted
 #' codes and the R language to perform arbitrary & complicated
 #' data manipulation. 
-# a <- erdos_number(myname=c(forename="Carl", surname="Boettiger"), target=c(forename="Simon", surname="Levin"), cutoff=3)
+#' @examples \dontrun{
+#' a <- erdos_number(myname=c(forename="Carl", surname="Boettiger"), 
+#'  target=c(forename="Simon", surname="Levin"), cutoff=3)
+#'}
+#' @export
 erdos_number <- function(myname, target="Erdos", cutoff=2){
   ## do careful matching on the target
   erdos_num <- 0
@@ -147,11 +154,11 @@ erdos_number <- function(myname, target="Erdos", cutoff=2){
     network[[erdos_num+1]] <- coauthors # Should restructure to show actual network
     stop <- any(name_match(coauthors, target), na.rm=TRUE) 
   }   
-  if(erdos_number==cutoff)
+  if(erdos_num==cutoff)
     message(paste("Your Erdos number with", target, "is greater than", cutoff))
   else 
-    message(paste("Your Erdos number with", target, "is", erdos_number))
-  list(erdos=erdos_number, network=network)
+    message(paste("Your Erdos number with", target, "is", erdos_num))
+  list(erdos=erdos_num, network=network)
 }
 
 
