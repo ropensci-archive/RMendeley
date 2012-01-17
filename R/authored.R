@@ -21,7 +21,7 @@ function(query, page = NA, numItems = 1000L, year=NA,
          key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
          url = 
          sprintf("%s/%s","http://api.mendeley.com/oapi/documents/authored",
-         query), curl=getCurlHandle(), ...)
+         gsub(" ", "%20", query)), curl=getCurlHandle(), ...)
 {
    args = list(consumer_key = key)
    if(!is.na(page))

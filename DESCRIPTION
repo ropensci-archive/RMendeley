@@ -27,3 +27,4 @@ Collate:
     'subcategories.R'
     'tagged.R'
     'tags.R'
+    'utilities.R'

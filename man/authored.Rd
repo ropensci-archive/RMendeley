@@ -4,7 +4,7 @@
 \usage{
   authored(query, page = NA, numItems = 1000L, year = NA,
     key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-    url = sprintf("\%s/\%s", "http://api.mendeley.com/oapi/documents/authored", query),
+    url = sprintf("\%s/\%s", "http://api.mendeley.com/oapi/documents/authored", gsub(" ", "\%20", query)),
     curl = getCurlHandle(), ...)
 }
 \arguments{
