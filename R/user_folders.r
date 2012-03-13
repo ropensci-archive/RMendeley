@@ -11,7 +11,7 @@
 user_folders <- function(mendeley_cred)
 {
 	if(!is.mendeley.cred(mendeley_cred)) {
-		stop("Your Mendeley credentials are incorrect. Please run mendeley_auth() again")
+		stop("Your Mendeley credentials are missing or incorrect. Please run mendeley_auth() again")
 	}
 	mendeley_folders <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/folders/", , "GET")
 	mendeley_folders <- fromJSON(mendeley_folders)
@@ -19,7 +19,7 @@ user_folders <- function(mendeley_cred)
 		d <- t(data.frame(df))
 		d <- as.data.frame(d)
 		if(dim(d)[2]==3) {
-			d$parent <- NA
+			d$parent <- "none"
 		}
 		return(d)
 	}
