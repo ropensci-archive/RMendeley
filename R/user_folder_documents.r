@@ -13,7 +13,7 @@
 #'}
 user_folder_documents <- function(mendeley_cred, folder_id = NULL, page = NULL, items = NULL) {
 	if(!is.mendeley.cred(mendeley_cred)) {
-		stop("Your Mendeley credentials are incorrect. Please run mendeley_auth() again")
+		stop("Your Mendeley credentials are missing or incorrect. Please run mendeley_auth() again")
 	}
 
 if(is.null(folder_id)) {

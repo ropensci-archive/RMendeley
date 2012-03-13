@@ -12,7 +12,7 @@
 user_doc_details  <- function(mendeley_cred, id = NULL)
 {
 	if(!is.mendeley.cred(mendeley_cred)) {
-		stop("Your Mendeley credentials are incorrect. Please run mendeley_auth() again")
+		stop("Your Mendeley credentials are missing or incorrect. Please run mendeley_auth() again")
 	}
 	if(is.null(id)) {
 		stop("Missing document id number", call.= FALSE)

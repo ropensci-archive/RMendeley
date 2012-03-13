@@ -11,7 +11,7 @@
 user_pub_stats <- function(mendeley_cred)
 {
 	if(!is.mendeley.cred(mendeley_cred)) {
-		stop("Your Mendeley credentials are incorrect. Please run mendeley_auth() again")
+		stop("Your Mendeley credentials are missing or incorrect. Please run mendeley_auth() again")
 	}
 	pub_stats <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/publications/", , "GET")
 	pub_stats <- fromJSON(pub_stats)

@@ -25,7 +25,7 @@ authURL <- "http://www.mendeley.com/oauth/authorize/"
  mendeley_cred <- OAuthFactory$new(consumerKey = cKey, consumerSecret = cSecret,
 requestURL = reqURL,accessURL = accessURL,
 authURL = authURL)
-mendeley_cred$handshake(post = FALSE, verbose = FALSE)   
+mendeley_cred$handshake(post = FALSE, verbose = TRUE)   
 return (mendeley_cred)
 cat("We recommend that you save mendeley_cred to disk using the save command. Doing so will allow you to reload your credentials from disk and skip the auth step every time")
 }

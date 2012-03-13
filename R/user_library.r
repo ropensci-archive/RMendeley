@@ -16,7 +16,7 @@ user_library <- function(mendeley_cred, page = NULL, items = NULL)
 {
 	lib_url <- ""
 	if(!is.mendeley.cred(mendeley_cred)) {
-		stop("Your Mendeley credentials are incorrect. Please run mendeley_auth() again")
+		stop("Your Mendeley credentials are missing or incorrect. Please run mendeley_auth() again")
 	}
 	lib_opts <- list()
 	if(!is.null(page)) {

@@ -14,6 +14,7 @@ user_contacts <- function(mendeley_cred)
 		stop("Your Mendeley credentials are incorrect. Please run mendeley_auth() again")
 	}
 	mendeley_contacts <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/profiles/contacts/", , "GET")
-	mendeley_contacts <- fromJSON(mendeley_contacts)
+	mendeley_contacts <- ldply(fromJSON(mendeley_contacts))
+	mendeley_contacts <- arrange(mendeley_contacts, name)
    return(mendeley_contacts)
 }

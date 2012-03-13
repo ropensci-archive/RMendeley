@@ -13,7 +13,7 @@
 user_group_doc_details <- function(mendeley_cred, group_id = NULL, document_id = NULL)
 {
 	if(!is.mendeley.cred(mendeley_cred)) {
-		stop("Your Mendeley credentials are incorrect. Please run mendeley_auth() again")
+		stop("Your Mendeley credentials are missing or incorrect. Please run mendeley_auth() again")
 	}
 
 if(is.null(group_id)) {
