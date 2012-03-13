@@ -15,5 +15,14 @@ user_folders <- function(mendeley_cred)
 	}
 	mendeley_folders <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/folders/", , "GET")
 	mendeley_folders <- fromJSON(mendeley_folders)
-	return(mendeley_folders)
+	add_parent <- function(df) {
+		d <- t(data.frame(df))
+		d <- as.data.frame(d)
+		if(dim(d)[2]==3) {
+			d$parent <- NA
+		}
+		return(d)
+	}
+
+	return(ldply(mendeley_folders, add_parent))
 }
