@@ -18,5 +18,5 @@ user_create_group <- function(mendeley_cred, group = NULL, type = NULL) {
 if(is.null(group)) {
 	stop("You did not specify a group name", call.= FALSE)
 }
-# http://api.mendeley.com/oapi/library/groups/
 }
+# API:  http://api.mendeley.com/oapi/library/groups/

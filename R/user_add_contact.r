@@ -19,12 +19,13 @@ user_add_contacts <- function(mendeley_cred, mendeley_user_id = NULL)
 		stop ("You did not specifiy the ID for your contact", call.= FALSE)
 	}	
 add_url <- paste("http://api.mendeley.com/oapi/profiles/contacts/",mendeley_user_id,"/",sep="")
-	add <- mendeley_cred$OAuthRequest(add_url, , "POST")
+	add <- mendeley_cred$OAuthRequest(add_url, ,"POST")
 return (add)
 }
+# API DOC: http://apidocs.mendeley.com/home/user-specific-methods/user-profile-add-contact
+
 # Has verification errors like like user_create_folder()
 
 # testing
-
 # add_url <- "http://api.mendeley.com/oapi/profiles/contacts/5089461/"
 # mendeley_cred$OAuthRequest(add_url, , "POST")

@@ -15,3 +15,4 @@ user_upload_file  <- function(mendeley_cred, id = NULL) {
 	}
 	# function stuff here.
 }	
+# API: http://apidocs.mendeley.com/home/user-specific-methods/file-upload

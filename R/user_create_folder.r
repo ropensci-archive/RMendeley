@@ -24,4 +24,5 @@ add_folder <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/f
 ", folder_name , "POST")
 return (add_folder)
 }
+# API: http://apidocs.mendeley.com/user-library-create-folder
 # Verification of signature errors. 

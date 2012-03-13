@@ -15,5 +15,5 @@ user_delete_folder <- function(mendeley_cred, id = NULL) {
 	if(!is.mendeley.cred(mendeley_cred)) {
 		stop("Your Mendeley credentials are missing or incorrect. Please run mendeley_auth() again")
 	}
-# http://api.mendeley.com/oapi/library/folders/<id>/
 }
+# API: http://apidocs.mendeley.com/user-library-delete-folder

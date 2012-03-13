@@ -17,3 +17,4 @@ user_delete_group <- function(mendeley_cred, group_id = NULL) {
 	}
 # function specific stuff
 }
+# API: http://apidocs.mendeley.com/home/user-specific-methods/user-library-delete-group
