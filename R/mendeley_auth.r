@@ -11,10 +11,10 @@
 #' mendeley_auth() # If your keys are stored in options using
 #' as MendeleyKey and MendeleyPrivateKey.
 #'}
-mendeley_auth <- function(cKey = NULL, cSecret=NULL) {
+mendeley_auth <- function(cKey = NULL, cSecret = NULL) {
     if (is.null(cKey) && is.null(cSecret)) {
-        cKey = getOption("MendeleyKey")
-        cSecret = getOption("MendeleyPrivateKey")
+        cKey <- getOption("MendeleyKey")
+        cSecret <- getOption("MendeleyPrivateKey")
         if (length(cKey) == 0 | length(cSecret) == 0) {
             stop("Could not find your Mendeley keys in the function arguments or in your options. ?rMendeley for more help")
         }
