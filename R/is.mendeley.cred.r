@@ -10,7 +10,7 @@ is.dropbox.cred <- function(mendeley_cred, response = TRUE) {
         response <- ifelse(class(mendeley_cred) != "OAuth", FALSE, TRUE)
     }
     if (response) {
-        response <- ifelse(grep("dropbox", mendeley_cred$requestURL) != 1, FALSE,
+        response <- ifelse(grep("mendeley", mendeley_cred$requestURL) != 1, FALSE,
             TRUE)
     }
     return(response)
