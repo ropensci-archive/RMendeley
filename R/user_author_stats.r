@@ -1,4 +1,3 @@
-
 #'Returns list of top 5 authors in user library.
 #'
 #'@param mendeley_cred Your Mendeley OAuth Keys
