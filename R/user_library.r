@@ -1,7 +1,4 @@
-
-#'http://api.mendeley.com/oapi/library/
-#'
-#'<longer description>
+#'Allows authenticated users to retrieve all the documents in their library.
 #'@param mendeley_cred Your Mendeley ROauth credentials.
 #'@param  page  Page number of search results
 #'@param  items  Number of items per page
