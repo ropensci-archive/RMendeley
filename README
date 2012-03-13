@@ -32,18 +32,18 @@ Public Group methods
 User specific methods (03/12/12)
 ----------------------------------
 [ Some functions below are working. Others will be available shortly.]
-[12 functions remaining]
+[10 functions remaining]
 * Authors stats (completed)	
 * Tags stats 	
 * Publications stats
 * Groups (completed)
 * Group people (completed)
-* Group documents
+* Group documents (completed)
 * Group document details
 * Create group
 * Delete group
-* Folders (completed)
-* Folder documents
+* Folders (completed) 
+* Folder documents (completed)
 * Add document to folder
 * Create folder
 * Delete folder
