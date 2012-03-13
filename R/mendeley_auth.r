@@ -7,11 +7,14 @@
 #'@alias
 #'@export
 #'@examples \dontrun{
-#' mendeley_auth('YOUR_CONSUMER_KEY', 'YOUR_CONSUMER_SECRET')
-#' mendeley_auth() # If your keys are stored in options using
+#' mendeley_cred <- mendeley_auth('YOUR_CONSUMER_KEY', 'YOUR_CONSUMER_SECRET')
+#' mendeley_cred <- mendeley_auth() # If your keys are stored in options using
 #' as MendeleyKey and MendeleyPrivateKey.
 #'}
 mendeley_auth <- function(cKey = NULL, cSecret = NULL) {
+reqURL <- "http://www.mendeley.com/oauth/request_token/"
+accessURL <- "http://www.mendeley.com/oauth/access_token/"
+authURL <- "http://www.mendeley.com/oauth/authorize/"	
     if (is.null(cKey) && is.null(cSecret)) {
         cKey <- getOption("MendeleyKey")
         cSecret <- getOption("MendeleyPrivateKey")
@@ -23,7 +26,7 @@ mendeley_auth <- function(cKey = NULL, cSecret = NULL) {
 requestURL = reqURL,accessURL = accessURL,
 authURL = authURL)
 mendeley_cred$handshake(post = FALSE, verbose = FALSE)   
-
+return (mendeley_cred)
 cat("We recommend that you save mendeley_cred to disk using the save command. Doing so will allow you to reload your credentials from disk and skip the auth step every time")
 }
 # Notes: requires new ROAuth (ROAuth_0.91.0) which is not yet on CRAN. 
