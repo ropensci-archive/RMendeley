@@ -15,6 +15,4 @@ mendeley_cred$handshake(post = FALSE, verbose = FALSE)
 
 cat("We recommend that you save mendeley_cred to disk using the save command. Doing so will and reloading your credentials from disk will allow you to skip the auth step every time")
 }
-
-
 # Notes: requires new ROAuth which is not yet on CRAN.
