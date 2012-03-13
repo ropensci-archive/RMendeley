@@ -1,6 +1,4 @@
 #'Function to obtain OAuth tokens from Mendeley to faciliate user specific methods.
-#'
-#'<longer description>
 #'@param cKey Consumer key. can be supplied here or read from Options()
 #'@param  cSecret Consumer secret. can be supplied here or read from Options()
 #'@keywords
