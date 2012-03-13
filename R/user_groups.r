@@ -15,5 +15,6 @@ user_groups <- function(mendeley_cred)
 	}
 	mendeley_groups <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/groups/", , "GET")
 	mendeley_groups <- fromJSON(mendeley_groups)
-   return(mendeley_groups)
+	mendeley_groups <- ldply(mendeley_groups, function(x) as.data.frame(x))
+    return(mendeley_groups)
 }
