@@ -17,8 +17,10 @@ user_create_folder <- function(mendeley_cred, folder = NULL)
 	if(is.null(folder)) {
 		stop("You did not specify a name for your new folder", call.= FALSE)
 	}
-folder_name <- toJSON(folder)	
-add_folder <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/folders/folder=
+folder_name <- list()
+folder_name$name <- folder	
+folder_name <- toJSON(folder_name)	
+add_folder <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/folders/folder
 ", folder_name , "POST")
 return (add_folder)
 }
