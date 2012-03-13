@@ -19,7 +19,7 @@
  * `Details` -- more details such as authors, publication outlet, year, abstract, PubMed ID if available, etc. Also returns # readers, top 3 discipline stats, top 3 country stats, and top 3 education status stats.
 
 
-** Public Group methods **
+**Public Group methods**
 
  * `Public groups overview` 
  * `Public groups details`
