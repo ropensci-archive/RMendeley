@@ -26,6 +26,6 @@ requestURL = reqURL,accessURL = accessURL,
 authURL = authURL)
 mendeley_cred$handshake(post = FALSE, verbose = FALSE)   
 
-cat("We recommend that you save mendeley_cred to disk using the save command. Doing so will and reloading your credentials from disk will allow you to skip the auth step every time")
+cat("We recommend that you save mendeley_cred to disk using the save command. Doing so will allow you to reload your credentials from disk and skip the auth step every time")
 }
 # Notes: requires new ROAuth (ROAuth_0.91.0) which is not yet on CRAN. 
