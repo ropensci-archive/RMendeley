@@ -23,6 +23,5 @@ user_folders <- function(mendeley_cred)
 		}
 		return(d)
 	}
-
 	return(ldply(mendeley_folders, add_parent))
 }
