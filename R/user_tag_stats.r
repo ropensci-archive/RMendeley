@@ -15,5 +15,5 @@ user_tag_stats <- function(mendeley_cred)
 	}
 	tag_stats <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/tags/", , "GET")
 	tag_stats <- fromJSON(tag_stats)
-	return(tag_stats)
+	return(ldply(tag_stats))
 }
