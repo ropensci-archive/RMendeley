@@ -28,3 +28,26 @@ Public Group methods
  * Public groups details
  * Public groups documents
  * Public groups people
+
+User specific methods (03/12/12)
+----------------------------------
+Following functions will become available shortly.
+
+* Authors stats (completed)	
+* Tags stats 	
+* Publications stats
+* Groups
+* Group people
+* Group documents
+* Group document details
+* Create group
+* Delete group
+* Folders
+* Folder documents
+* Add document to folder
+* Create folder
+* Delete folder
+* Delete document from folder
+* Contacts
+* Add contact
+* Profile info
