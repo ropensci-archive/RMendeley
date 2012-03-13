@@ -1,4 +1,4 @@
-is.dropbox.cred <- function(mendeley_cred, response = TRUE) {
+is.mendeley.cred <- function(mendeley_cred, response = TRUE) {
     if (missing(mendeley_cred)) {
         response <- FALSE
     }
