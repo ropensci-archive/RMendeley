@@ -1,5 +1,4 @@
 # Having issues with POST in the new OAUTh
-
 #' Add another Mendeley user as a contact with their Mendeley ID.
 #'@param mendeley_cred Your Mendeley OAuth credentials.
 #'@param  mendeley_user_id Mendeley user id of your contact.
