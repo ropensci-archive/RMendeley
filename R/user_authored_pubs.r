@@ -1,4 +1,3 @@
-
 #'Allows authenticated users to retrieve their own publications.
 #'
 #'<longer description>
