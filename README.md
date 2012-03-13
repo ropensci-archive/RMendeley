@@ -72,7 +72,7 @@
 * `Profile info`(completed)	
 
 
-### Pending functions (10 functions)
+### Pending functions (11 functions)
 * `Create new document`
 * `Upload file`
 * `Download file`
