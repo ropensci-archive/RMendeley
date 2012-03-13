@@ -2,7 +2,7 @@
 #'@param mendeley_cred Your Mendeley OAUth credentials.
 #'@keywords
 #'@seealso
-#'@return
+#'@return data.frame
 #'@alias
 #'@export
 #'@examples \dontrun{
