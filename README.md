@@ -38,8 +38,8 @@
 
 **Documents Methods**
 
-* `Library`
-* `Authored publications`
+* `Library` (completed)
+* `Authored publications` (compelted)
 * `Documents details`
 * `Create new document`
 * `Upload file`
