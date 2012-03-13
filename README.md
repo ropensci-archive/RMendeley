@@ -40,7 +40,7 @@
 
 * `Library` (completed)
 * `Authored publications` (compelted)
-* `Documents details`
+* `Documents details` (completed)
 * `Create new document`
 * `Upload file`
 * `Download file`
@@ -72,10 +72,8 @@
 * `Profile info`(completed)	
 
 
-### Pending functions
-
-* `Authored Publications`
-* `Document details`
+### Pending functions (10 functions)
+* `Create new document`
 * `Upload file`
 * `Download file`
 * `Delete document`
