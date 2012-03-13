@@ -1,5 +1,16 @@
 # Having issues with POST in the new OAUTh
 
+#' Add another Mendeley user as a contact with their Mendeley ID.
+#'@param mendeley_cred Your Mendeley OAuth credentials.
+#'@param  mendeley_user_id Mendeley user id of your contact.
+#'@keywords
+#'@seealso user_contacts
+#'@return
+#'@alias
+#'@export
+#'@examples \dontrun{
+#'
+#'}
 user_add_contacts <- function(mendeley_cred, mendeley_user_id = NULL)
 {
 	if(!is.mendeley.cred(mendeley_cred)) {
@@ -11,8 +22,8 @@ user_add_contacts <- function(mendeley_cred, mendeley_user_id = NULL)
 add_url <- paste("http://api.mendeley.com/oapi/profiles/contacts/",mendeley_user_id,"/",sep="")
 	add <- mendeley_cred$OAuthRequest(add_url, , "POST")
 return (add)
-# function specific stuff
 }
+# Has verification errors like like user_create_folder()
 
 # testing
 
