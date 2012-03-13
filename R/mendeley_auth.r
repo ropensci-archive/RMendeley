@@ -30,3 +30,4 @@ return (mendeley_cred)
 cat("We recommend that you save mendeley_cred to disk using the save command. Doing so will allow you to reload your credentials from disk and skip the auth step every time")
 }
 # Notes: requires new ROAuth (ROAuth_0.91.0) which is not yet on CRAN. 
+# Note for Duncan: Verbose = FALSE is not recognized in ROAuth.
