@@ -7,17 +7,22 @@
 #'@seealso
 #'@return
 #'@alias
+#'@import RJSONIO
 #'@export
 #'@examples \dontrun{
 #'
 #'}
-user_create_group <- function(mendeley_cred, group = NULL, type = NULL) {
+user_create_group <- function(mendeley_cred, group_name = NULL, type = NULL) {
 	if(!is.mendeley.cred(mendeley_cred)) {
 		stop("Your Mendeley credentials are incorrect. Please run mendeley_auth() again")
 	}
-if(is.null(group)) {
+if(is.null(group_name)) {
 	stop("You did not specify a group name", call.= FALSE)
 }
+group <- list()
+group$name <- group_name
+group$type <- "invite" # private or open are other options
+group <- toJSON(group)
 
 }
 # API:  http://api.mendeley.com/oapi/library/groups/
