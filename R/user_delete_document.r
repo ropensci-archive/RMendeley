@@ -21,8 +21,7 @@ if(is.null(folder_id) | is.null(doc_id)) {
 	stop("Missing folder and/or document id", call. = FALSE)
 	}	
 del_url <- paste("", folder_id, "/", doc_id, "/", sep="")
-delete_folder <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/folders/
-",  , "DELETE")
+delete_folder <- mendeley_cred$OAuthRequest(del_url,  , "DELETE")
 return (delete_folder)
 }	
 # API: http://apidocs.mendeley.com/user-library-delete-document-from-folder
