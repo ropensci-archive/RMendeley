@@ -9,19 +9,19 @@
 #'@examples \dontrun{
 #'
 #'}
-user_create_folder <- function(mendeley_cred, folder = NULL)
+user_create_folder <- function(mendeley_cred, folder_name = NULL)
 {
 	if(!is.mendeley.cred(mendeley_cred)) {
 		stop("Your Mendeley credentials are incorrect. Please run mendeley_auth() again")
 	}
-	if(is.null(folder)) {
+	if(is.null(folder_name)) {
 		stop("You did not specify a name for your new folder", call.= FALSE)
 	}
-folder_name <- list()
-folder_name$name <- folder	
-folder_name <- toJSON(folder_name)	
+folder <- list()
+folder$name <- folder_name	
+folder <- toJSON(folder)	
 add_folder <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/folders/folder
-", folder_name , "POST")
+", list(folder = folder) , "POST")
 return (add_folder)
 }
 # API: http://apidocs.mendeley.com/user-library-create-folder
