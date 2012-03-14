@@ -14,7 +14,10 @@ user_delete_folder_doc <- function(mendeley_cred, folder_id = NULL, doc_id = NUL
 	if(!is.mendeley.cred(mendeley_cred)) {
 		stop("Your Mendeley credentials are missing or incorrect. Please run mendeley_auth() again")
 	}
-# function specific stuff
+if(is.null(folder_id)) {
+	stop("Group id is missing", call. = FALSE)
+ }
+del_folder_doc <- paste("http://api.mendeley.com/oapi/library/folders/", folder_id, "/", doc_id, "/", sep="")
+delete_folder_doc <- mendeley_cred$OAuthRequest(del_folder_doc,  , "DELETE")
+return (delete_folder_doc)
 }
-# Testing
-# user_group_documents(mendeley_cred, group_id='1377483')
