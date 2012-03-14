@@ -23,10 +23,10 @@ user_create_documents  <- function(mendeley_cred, group_id = NULL, type = NULL, 
 
 document <- list()
 document$type <- "Book"
-document$title <- "My book"
+document$title <- "My%20book"
 document <- toJSON(document)
-	doc_created <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/documents/", list(document = document), "POST")
-	doc_created <- fromJSON(doc_created)
-	return(doc_created)
+doc_created <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/documents/", list(document = document), "POST")
+doc_created <- fromJSON(doc_created)
+return(doc_created)
 }	
 # API: http://apidocs.mendeley.com/home/user-specific-methods/user-library-create-document
