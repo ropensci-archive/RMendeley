@@ -13,6 +13,9 @@ user_upload_file  <- function(mendeley_cred, id = NULL) {
 	if(!is.mendeley.cred(mendeley_cred)) {
 		stop("Your Mendeley credentials are missing or incorrect. Please run mendeley_auth() again")
 	}
-	# function stuff here.
+if(is.null(id)) {
+	stop("File ID is missing", call. = TRUE)
+}
+
 }	
 # API: http://apidocs.mendeley.com/home/user-specific-methods/file-upload
