@@ -25,7 +25,7 @@ document <- list()
 document$type <- "Book"
 document$title <- "My book"
 document <- toJSON(document)
-	doc_created <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/documents/", list(document = document))
+	doc_created <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/documents/", list(document = document), "POST")
 	doc_created <- fromJSON(doc_created)
 	return(doc_created)
 }	
