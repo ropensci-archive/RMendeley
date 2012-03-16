@@ -21,8 +21,9 @@ folder <- list()
 folder$name <- folder_name	
 folder <- toJSON(folder)	
 add_folder <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/folders/folder
-", list(folder = folder) , "POST")
+", list(folder_name = folder) , "POST")
 return (add_folder)
 }
 # API: http://apidocs.mendeley.com/user-library-create-folder
 # Verification of signature errors. 
+# A link to discussion on the verificatione errors
