@@ -26,4 +26,5 @@ return (add_folder)
 }
 # API: http://apidocs.mendeley.com/user-library-create-folder
 # Verification of signature errors. 
-# A link to discussion on the verificatione errors
+# A link to discussion on the verificatione errors:
+# https://groups.google.com/forum/?fromgroups#!topic/mendeley-open-api-developers/ncau3VlOrYw
