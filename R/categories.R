@@ -18,3 +18,18 @@ categories = function(key = getOption("MendeleyKey",
    tt = getForm(url, .params = args, .opts = list(...), curl = curl)
    fromJSON(I(tt))
 }
+
+# Trying to rewrite an old working fuction using the new auth. Fails with the same verification errors as the other non-working functions. Clearly this has something to do with malformed args?
+
+# Below DOES NOT WORK.
+
+categories <- function(mendeley_cred)
+{
+	if(!is.mendeley.cred(mendeley_cred)) {
+		stop("Your Mendeley credentials are missing or incorrect. Please run mendeley_auth() again")
+	}
+	categories <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/documents/categories/", , "GET")
+	categories <- fromJSON(categories)
+	categories <- ldply(categories, function(x) as.data.frame(x))
+    return(categories)
+}
