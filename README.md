@@ -28,59 +28,6 @@
 
 
 # User Specific Methods
- >  New functions coming to the next version of Mendeley. (see [user specific methods for more information](http://apidocs.mendeley.com/home/user-specific-methods))
 
- **Stats Methods**
+All user specific methods are currently under development and located in the [dev branch](https://github.com/ropensci/RMendeley/tree/dev).
 
-* `Authors stats` (completed)	
-* `Tags stats` (completed)	
-* `Publications stats` (completed)	
-
-**Documents Methods**
-
-* `Library` (completed)
-* `Authored publications` (compelted)
-* `Documents details` (completed)
-* `Create new document`
-* `Upload file`
-* `Download file`
-* `Delete document`
-
-**Groups Methods**
-
-* `Groups` (completed)	
-* `Group people` (completed)	
-* `Group documents` (completed)	
-* `Group document details` (completed)	
-* `Create group`
-* `Delete group`
-
-**Folders Methods**
-
-* `Folders`(completed)	
-* `Folder documents` (completed)	
-* `Add document to folder`
-* `Create folder`
-* `Delete folder`
-* `Delete document from folder`
-
-
-**Profiles Methods**
-
-* `Contacts` (completed)	
-* `Add contact`
-* `Profile info`(completed)	
-
-
-### Pending functions (11 functions)
-* `Create new document`
-* `Upload file`
-* `Download file`
-* `Delete document`
-* `Create group`
-* `Delete group`
-* `Add document to folder`
-* `Create folder`
-* `Delete folder`
-* `Delete document from folder`
-* `Add Contacts`
