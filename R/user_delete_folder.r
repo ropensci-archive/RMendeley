@@ -11,6 +11,10 @@
 #'@examples \dontrun{
 #'
 #'}
+
+#DTL  This should take an id that is the human-readable name of the folder and then
+ #  call the folders() method to get the actual ID.
+ # Allow the caller to use I("id") to specify that it is the actual id.
 user_delete_folder <- function(mendeley_cred, id = NULL) {
 	if(!is.mendeley.cred(mendeley_cred)) {
 		stop("Your Mendeley credentials are missing or incorrect. Please run mendeley_auth() again")

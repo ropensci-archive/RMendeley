@@ -7,15 +7,15 @@
 library(ROAuth)
 library(RJSONIO)
 
-cred <- OAuthFactory$new(consumerKey = getOption(MendeleyKey),
-                         consumerSecret = getOption(RMendeleySecret),
+cred <- OAuthFactory$new(consumerKey = getOption("MendeleyKey"),
+                         consumerSecret = getOption("RMendeleySecret"),
                          requestURL = 'http://api.mendeley.com/oauth/request_token/',
                          accessURL = 'http://api.mendeley.com/oauth/access_token/',
                          authURL = 'http://api.mendeley.com/oauth/authorize/')
 #if using my OAuthInR
 #                         curlHandle = getCurlHandle(verbose = TRUE))
 
-cred$handshake( fun = "get")
+cred = cred$handshake( post = FALSE) # Not fun = "get"
 
 lib = cred$OAuthRequest('http://api.mendeley.com/oapi/library/')
 docs = fromJSON(I(lib))
@@ -44,14 +44,20 @@ newDoc = cred$OAuthRequest('http://api.mendeley.com/oapi/library/documents/', c(
 
 
 f = toJSON(list(name = "Test folder"), collapse = "")
-cred$OAuthRequest('http://api.mendeley.com/oapi/library/folders/', c(folder = f), "POST")
-
+ans = cred$OAuthRequest('http://api.mendeley.com/oapi/library/folders/', c(folder = f), "POST")
+f = fromJSON(ans)
 
 ################################
 
-# Delete a folder
 
-u = sprintf('http://api.mendeley.com/oapi/library/folders/%s/', folders[[1]]$id)
+# create a folder
+j = toJSON(list(name = "Test folder"))
+ans = cred$OAuthRequest("http://api.mendeley.com/oapi/library/folders/myFolder",
+                     list(folder = j) , "POST")
+f = fromJSON(ans)
+
+# Delete a folder
+u = sprintf('http://api.mendeley.com/oapi/library/folders/%s/', f)
 cred$OAuthRequest(u, method = "DELETE", verbose = TRUE)
 
 
