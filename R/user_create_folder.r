@@ -9,22 +9,21 @@
 #'@examples \dontrun{
 #'
 #'}
-user_create_folder <- function(mendeley_cred, folder_name = NULL)
+user_create_folder <- function(mendeley_cred, name = NULL)
 {
-	if(!is.mendeley.cred(mendeley_cred)) {
-		stop("Your Mendeley credentials are incorrect. Please run mendeley_auth() again")
-	}
-	if(is.null(folder_name)) {
-		stop("You did not specify a name for your new folder", call.= FALSE)
-	}
-folder <- list()
-folder$name <- folder_name	
-folder <- toJSON(folder)	
-add_folder <- mendeley_cred$OAuthRequest("http://api.mendeley.com/oapi/library/folders/folder",
-                                         list(folder_name = folder) , "POST")
-return (add_folder)
+    if (!is(mendeley_cred, "MendeleyCredentials") ||  missing(mendeley_cred))
+        stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.", call.= FALSE)
+
+  if(length(name) > 1)
+     return(lapply(name, function(x) createFolder(cred, x, curl = curl)))
+
+ folder_obj <- toJSON(list(name = name), collapse = "")  #!!! Note the collapse. Mendeley doesn't like the newlines.
+  ans <- OAuthRequest(mendeley_cred, "http://api.mendeley.com/oapi/library/folders/", list(folder = folder_obj) , "POST")  # c(folder = folder_obj) also works.
+  cat ("New folder successfully created \n")
+  new("MendeleyFolderID", fromJSON(ans))
+
 }
 # API: http://apidocs.mendeley.com/user-library-create-folder
-# Verification of signature errors. 
+# Verification of signature errors.
 # A link to discussion on the verificatione errors:
 # https://groups.google.com/forum/?fromgroups#!topic/mendeley-open-api-developers/ncau3VlOrYw
