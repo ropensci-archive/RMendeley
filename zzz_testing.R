@@ -5,7 +5,7 @@ load('~/Desktop/Coding/mendeley_cred.rdata')
 
 # AUTHENTICATION
 source('user_mendeley_auth.r')
-
+mc <- mendeley_cred
 # PERSONAL
 source('user_profile.r') # yes_example
 source('user_library.r') #yes_example
@@ -36,3 +36,4 @@ source('user_group_people.r') # needs a limit # yes_example
 source('user_group_doc_details.r') #yes_example
 source('user_group_documents.r') #yes_example
 source('user_delete_group.r')
+source('utilities.r')
