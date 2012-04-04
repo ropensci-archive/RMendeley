@@ -76,7 +76,6 @@
 * `Create new document`
 * `Upload file`
 * `Download file`
-* `Delete document`
 * `Delete group`
 * `Add document to folder`
-* `Delete document from folder`
+
