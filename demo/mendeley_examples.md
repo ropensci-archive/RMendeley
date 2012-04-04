@@ -129,7 +129,7 @@ $document_ids
 
 
 
-> user_contacts(mendeley_cred)
+> contacts(mendeley_cred)
    profile_id               name
 1     2202631      Andrew Bennie
 …
