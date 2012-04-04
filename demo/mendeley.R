@@ -42,7 +42,7 @@ if(FALSE) {
   # These functions should be merged into the R/ directory
   #
   #
-  
+
 cred <- OAuthFactory$new(consumerKey = getOption("MendeleyKey"),
                          consumerSecret = getOption("RMendeleySecret"),
                          requestURL = 'http://api.mendeley.com/oauth/request_token/',
@@ -109,31 +109,31 @@ setAs("MendeleyGroupID", "URL",
 
 
 folders =
-function(cred, ..., curl = getCurlHandle()) {
-  val = cred$OAuthRequest('http://api.mendeley.com/oapi/library/folders/', ..., curl = curl)
+function(mendeley_cred = NULL, ..., curl = getCurlHandle()) {
+  val = OAuthRequest(mendeley_cred, 'http://api.mendeley.com/oapi/library/folders/', ..., curl = curl)
   ans = fromJSON(val)
   names(ans) = sapply(ans, `[[`, "name")
   ans
 }
 
 deleteFolder =
-function(cred, name, ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, name, ..., curl = getCurlHandle())
 {
   if(length(name) > 1)
      return(lapply(name, function(x) deleteFolder(cred, x, curl = curl)))
-  
-  if(!is(name, "AsIs") && !is(name, "MendeleyFolderID")) 
+
+  if(!is(name, "AsIs") && !is(name, "MendeleyFolderID"))
      name = getFolderID(cred, name, curl = curl)
 
   u = sprintf('http://api.mendeley.com/oapi/library/folders/%s/', name)
-  cred$OAuthRequest(u, method = "DELETE", ..., curl = curl) == ""
+  OAuthRequest(mendeley_cred, u, method = "DELETE", ..., curl = curl) == ""
 }
 
 
 
 getFolderID =
   # helper function for mapping the folder name to an id.
-function(cred, name, ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, name, ..., curl = getCurlHandle())
 {
   fl = folders(cred, curl = curl)
   i = match(name, names(fl))
@@ -143,38 +143,38 @@ function(cred, name, ..., curl = getCurlHandle())
 }
 
 documentIds =
-function(cred, page = NA, items = NA, ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, page = NA, items = NA, ..., curl = getCurlHandle())
 {
    params = character()
    if(!is.na(page))
       params["page"] = page
    if(!is.na(items))
       params["items"] = items
-   
-   val = cred$OAuthRequest('http://api.mendeley.com/oapi/library/')
+
+   val = OAuthRequest(mendeley_cred, 'http://api.mendeley.com/oapi/library/')
    lapply(fromJSON(val)$document_ids,
             function(i)
                new("MendeleySimpleDocumentID", i))
  }
 
 documents =
-function(cred, folder = NULL, page = NA, items = NA, ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, folder = NULL, page = NA, items = NA, ..., curl = getCurlHandle())
 {
   if(is.null(folder)) {
        return(documentIds(cred, ..., curl = curl))
     }
-  
-  if(!is(folder, "AsIs") && !is(folder, "MendeleyFolderID")) 
+
+  if(!is(folder, "AsIs") && !is(folder, "MendeleyFolderID"))
      folder = getFolderID(cred, folder, curl = curl)
-  
+
   u = sprintf("http://api.mendeley.com/oapi/library/folders/%s", as(folder, "character"))
   params = character()
   if(!is.na(page))
     params["page"] = page
   if(!is.na(items))
     params["items"] = as.character(as.integer(items))
-  
-  val = cred$OAuthRequest(u)
+
+  val = OAuthRequest(mendeley_cred, u)
   ans = fromJSON(val)
   lapply(ans$document_ids,
            function(x)
@@ -184,39 +184,39 @@ function(cred, folder = NULL, page = NA, items = NA, ..., curl = getCurlHandle()
 
 
 deleteDocument =
-function(cred, name, ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, name, ..., curl = getCurlHandle())
 {
   if(length(name) > 1)
      return(lapply(name, function(x) deleteDocument(cred, x, curl = curl)))
-  
-   if(!is(name, "AsIs") && !is(name, "MendeleyFolderID")) 
+
+   if(!is(name, "AsIs") && !is(name, "MendeleyFolderID"))
        name = getFolderID(cred, name, curl = curl)
 
    u = sprintf("http://api.mendeley.com/oapi/library/documents/%s/", name)
-   cred$OAuthRequest(u, method = "DELETE", ..., curl = curl) == ""   
+   OAuthRequest(mendeley_cred, u, method = "DELETE", ..., curl = curl) == ""
 }
 
 deleteDocument =
   #
   #  This version works for a document or  a document within a folder .
   #
-function(cred, doc, folder = NULL, ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, doc, folder = NULL, ..., curl = getCurlHandle())
 {
   if(!is.null(folder)) {
      u = sprintf("%s%s/", as(folder, "URL"), as(doc, "character"))
   } else
      u =  as(doc, "URL")
-  cred$OAuthRequest(u, method = "DELETE", ..., curl = curl, followlocation = TRUE)
+  OAuthRequest(mendeley_cred, u, method = "DELETE", ..., curl = curl, followlocation = TRUE)
 }
 
 createFolder =
-function(cred, name, ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, name, ..., curl = getCurlHandle())
 {
   if(length(name) > 1)
      return(lapply(name, function(x) createFolder(cred, x, curl = curl)))
-  
+
   j = toJSON(list(name = name), collapse = "")  #!!! Note the collapse. Mendeley doesn't like the newlines.
-  ans = cred$OAuthRequest("http://api.mendeley.com/oapi/library/folders/",
+  ans = OAuthRequest(mendeley_cred, "http://api.mendeley.com/oapi/library/folders/",
                              list(folder = j) , "POST", ..., curl = curl)  # c(folder = j) also works.
 
   new("MendeleyFolderID", fromJSON(ans))
@@ -224,19 +224,19 @@ function(cred, name, ..., curl = getCurlHandle())
 
 
 addDocToFolder =
-function(cred, folder, doc, ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, folder, doc, ..., curl = getCurlHandle())
 {
   u = sprintf("%s%s/", as(folder, "URL"), as(doc, "character"))
-  ans = cred$OAuthRequest(u, method = 'POST', ..., curl = curl)
+  ans = OAuthRequest(mendeley_cred, u, method = 'POST', ..., curl = curl)
   ans == ""
 }
 
 
 createGroup =
-function(cred, name, type = "invite", ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, name, type = "invite", ..., curl = getCurlHandle())
 {
   content = toJSON(list(name = name, type = type), collapse = "")
-  val = cred$OAuthRequest("http://www.mendeley.com/oapi/library/groups/",
+  val = OAuthRequest(mendeley_cred, "http://www.mendeley.com/oapi/library/groups/",
                            list(group = content), "POST")
 
   ans = fromJSON(val)
@@ -244,9 +244,9 @@ function(cred, name, type = "invite", ..., curl = getCurlHandle())
 }
 
 groups =
-function(cred, ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, ..., curl = getCurlHandle())
 {
-  val = cred$OAuthRequest("http://api.mendeley.com/oapi/library/groups/")
+  val = OAuthRequest(mendeley_cred, "http://api.mendeley.com/oapi/library/groups/")
   ans = fromJSON(val)
   structure(lapply(ans, function(x) new("MendeleyGroupID", x$id)),
              names = sapply(ans, `[[`, "name"))
@@ -256,36 +256,36 @@ deleteGroup =
       #
       #  Want to allow for leave and unfollow
       #
-function(cred, group, ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, group, ..., curl = getCurlHandle())
 {
   u =  as(group, "URL")
 
     # may want to get the header of the HTTP response and check the status is 204.
-  cred$OAuthRequest(u, method = "DELETE", ..., curl = curl, followlocation = TRUE) == ""
+  OAuthRequest(mendeley_cred, u, method = "DELETE", ..., curl = curl, followlocation = TRUE) == ""
 }
 
 createDoc =
-function(cred, doc, ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, doc, ..., curl = getCurlHandle())
 {
   jdoc = toJSON(doc, collapse = "")
-  val = cred$OAuthRequest('http://api.mendeley.com/oapi/library/documents/',
+  val = OAuthRequest(mendeley_cred, 'http://api.mendeley.com/oapi/library/documents/',
                             list(document = jdoc), "POST", curl = curl)
 
   new("MendeleySimpleDocumentID", as.character(fromJSON(val)))
 }
 
 uploadFile =
-function(cred, doc, content, ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, doc, content, ..., curl = getCurlHandle())
 {
   u = as(doc, "URL")
   if(!is(content, "AsIs")) {
      # read the content
-    
+
   }
   sha = digest(content, "sha1", serialize = FALSE)
-  
+
   input = RCurl:::uploadFunctionHandler(content, TRUE)
-  ans = cred$OAuthRequest(u, method = "PUT",
+  ans = OAuthRequest(mendeley_cred, u, method = "PUT",
                            readfunction = input, infilesize = nchar(content),
                            customHeader = c(oauth_body_hash = sha), ...
                           )
@@ -294,18 +294,18 @@ function(cred, doc, content, ..., curl = getCurlHandle())
 }
 
 getDocInfo =
-function(cred, doc, ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, doc, ..., curl = getCurlHandle())
 {
-   if(length(doc) > 1) 
+   if(length(doc) > 1)
      return(lapply(doc, function(d) getDocInfo(cred, doc, ..., curl = curl)))
 
    u = as(doc, "URL")
-   ans = cred$OAuthRequest(u, ..., curl = curl)
+   ans = OAuthRequest(mendeley_cred, u, ..., curl = curl)
    fromJSON(ans)
 }
 
 downloadFile =
-function(cred, doc, file = NA, binary = NA, ..., curl = getCurlHandle())
+function(mendeley_cred = NULL, doc, file = NA, binary = NA, ..., curl = getCurlHandle())
 {
 
   if(is.na(file)) {
@@ -317,10 +317,10 @@ function(cred, doc, file = NA, binary = NA, ..., curl = getCurlHandle())
       return(lapply(id, function(i) downloadFile(cred, doc, i, binary, ..., curl = curl)))
   }
 
-  if(length(file) > 1) 
+  if(length(file) > 1)
       return(lapply(file, function(i) downloadFile(cred, doc, i, binary, ..., curl = curl)))
 
-      
+
   if(nchar(file) != 40 || grepl("[^a-f0-9]", file)) {
       info = getDocInfo(cred, doc, ..., curl = curl)
       ext = sapply(info$files, `[[`, "file_extension")
@@ -329,14 +329,14 @@ function(cred, doc, file = NA, binary = NA, ..., curl = getCurlHandle())
          stop("Cannot make sense of ", file, " as a file identifier for the document")
       file = info$files[[i]][["file_hash"]]
   }
-      
+
   u = sprintf("%s/file/%s/", as(doc, "URL"), file)
-  val = cred$OAuthRequest(u, ..., curl = curl)
+  val = OAuthRequest(mendeley_cred, u, ..., curl = curl)
   if(is.raw(val) && !is.na(binary) && !binary)
       rawToChar(val)
   else
       val
-     
+
 }
 
 
@@ -351,5 +351,5 @@ if(FALSE) {
 
  doc = new("MendeleySimpleDocumentID", "4613380643")
  content = sprintf("This is simple content\n%s\n", Sys.time())
- uploadFile(cred, doc, content) 
+ uploadFile(cred, doc, content)
 }

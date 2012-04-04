@@ -16,18 +16,16 @@
 #'  public_groups_overview() 
 #' }
 #' @export
-public_groups_overview =
-function(page = NA, numItems = 1000L, cat=NA, 
-         key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-         url = "http://api.mendeley.com/oapi/documents/groups", curl=getCurlHandle(), ...)
-{
-   args = list(consumer_key = key)
-   if(!is.na(page))
-      args$page = as.integer(page)
-   if(!is.na(numItems))
-      args$items = as.integer(numItems)
-   if(!is.na(cat))
-      args$cat = as.character(cat)
-   tt = getForm(url, .params = args, .opts=list(...), curl=curl)
-   fromJSON(I(tt))
-}
+public_groups_overview <- function(page = NA, numItems = 1000L, cat = NA, 
+    key = getOption("MendeleyKey", stop("need an API key for Mendeley")), url = "http://api.mendeley.com/oapi/documents/groups", 
+    curl = getCurlHandle(), ...) {
+    args <- list(consumer_key = key)
+    if (!is.na(page)) 
+        args$page <- as.integer(page)
+    if (!is.na(numItems)) 
+        args$items <- as.integer(numItems)
+    if (!is.na(cat)) 
+        args$cat <- as.character(cat)
+    tt <- getForm(url, .params = args, .opts = list(...), curl = curl)
+    fromJSON(I(tt))
+} 

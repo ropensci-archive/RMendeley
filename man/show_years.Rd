@@ -17,8 +17,8 @@
 }
 \examples{
 \dontrun{
-dakos <- authored("Dakos")
-m <- subset_by_author(dakos, "V", "Dakos")
+dakos <- authored('Dakos')
+m <- subset_by_author(dakos, 'V', 'Dakos')
 histogram(show_years(dakos[m]))
 }
 }

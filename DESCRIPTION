@@ -3,12 +3,13 @@ Description: A programmatic interface to the
     Web Service methods provided by the Mendeley open science
     project.
 Title: Interface to Mendeley API methods
-Version: 0.1-1
+Version: 0.1-2
 License: BSD
 Author: Carl Boettiger, Duncan Temple Lang
 Maintainer: Carl Boettiger <cboettig@gmail.com>
 Imports:
     RJSONIO,
+    ROAuth (>= 0.92.0),
     RCurl (>= 1.6)
 Collate:
     'authored.R'
@@ -28,3 +29,28 @@ Collate:
     'tagged.R'
     'tags.R'
     'utilities.R'
+    'user_add_doc_folder.r'
+    'user_addContact.r'
+    'user_author_stats.r'
+    'user_authored_pubs.r'
+    'user_contacts.r'
+    'user_create_document.r'
+    'user_create_folder.r'
+    'user_create_group.r'
+    'user_delete_document.r'
+    'user_delete_folder.r'
+    'user_delete_group.r'
+    'user_docInfo.r'
+    'user_download_file.r'
+    'user_folder_documents.r'
+    'user_folders.r'
+    'user_group_doc_details.r'
+    'user_group_documents.r'
+    'user_group_people.r'
+    'user_groups.r'
+    'user_library.r'
+    'user_mendeley_auth.r'
+    'user_profile.r'
+    'user_pub_stats.r'
+    'user_tag_stats.r'
+    'user_upload_file.r'

@@ -10,12 +10,10 @@
 #' }
 #' @keywords public method stats
 #' @export
-subcategories =
-function(cat, key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-          url = sprintf("%s/%s", "http://api.mendeley.com/oapi/documents/subcategories/", cat),
-          curl=getCurlHandle(), ...)
-{
-   args = list(consumer_key = key)
-   tt = getForm(url, .params = args, .opts=list(...), curl=curl)
-   fromJSON(I(tt))
-}
+subcategories <- function(cat, key = getOption("MendeleyKey", stop("need an API key for Mendeley")), 
+    url = sprintf("%s/%s", "http://api.mendeley.com/oapi/documents/subcategories/", 
+        cat), curl = getCurlHandle(), ...) {
+    args <- list(consumer_key = key)
+    tt <- getForm(url, .params = args, .opts = list(...), curl = curl)
+    fromJSON(I(tt))
+} 

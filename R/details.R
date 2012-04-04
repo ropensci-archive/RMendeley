@@ -8,20 +8,18 @@
 #' @param ... optional additional curl options (debugging tools mostly)
 #' @return the details of the paper being queried
 #' @examples \dontrun{
-#' ali <- details("10.1073/pnas.0810311106", type="doi") 
-#'  a <- details("cabcbae0-839b-11df-aedb-0024e8453de8") # uuid
+#' ali <- details('10.1073/pnas.0810311106', type='doi') 
+#'  a <- details('cabcbae0-839b-11df-aedb-0024e8453de8') # uuid
 #' }
 #' @export
-details = function(query, type=c("mendeley", "arxiv", "doi", "isbn", "pmid", "scopus", "ssm"), 
-         key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-         url = sprintf("%s/%s", "http://api.mendeley.com/oapi/documents/details", query),
-         curl=getCurlHandle(), ...)
-{
-   type = match.arg(type)
-   args = list(consumer_key = key)
-   if(type != "mendeley")
-     args$type = as.character(type)
-
-   tt = getForm(url, .params = args, .opts = list(...), curl = curl)
-   fromJSON(I(tt))
-}
+details <- function(query, type = c("mendeley", "arxiv", "doi", "isbn", 
+    "pmid", "scopus", "ssm"), key = getOption("MendeleyKey", stop("need an API key for Mendeley")), 
+    url = sprintf("%s/%s", "http://api.mendeley.com/oapi/documents/details", query), 
+    curl = getCurlHandle(), ...) {
+    type <- match.arg(type)
+    args <- list(consumer_key = key)
+    if (type != "mendeley") 
+        args$type <- as.character(type)
+    tt <- getForm(url, .params = args, .opts = list(...), curl = curl)
+    fromJSON(I(tt))
+} 

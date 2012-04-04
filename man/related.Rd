@@ -39,7 +39,7 @@
 }
 \examples{
 \dontrun{
-b <- related("cabcbae0-839b-11df-aedb-0024e8453de8") # uuid
+b <- related('cabcbae0-839b-11df-aedb-0024e8453de8') # uuid
 }
 }
 

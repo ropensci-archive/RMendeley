@@ -12,12 +12,10 @@
 #' public_groups_people(492511) 
 #' }
 #' @export
-public_groups_people =
-function(query, key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-          url = sprintf("%s/%s/%s", "http://api.mendeley.com/oapi/documents/groups", query, "people"),
-          curl=getCurlHandle(), ...)
-{
-   args = list(consumer_key = key)
-   tt = getForm(url, .params = args, .opts=list(...), curl=curl)
-   fromJSON(I(tt))
-}
+public_groups_people <- function(query, key = getOption("MendeleyKey", 
+    stop("need an API key for Mendeley")), url = sprintf("%s/%s/%s", "http://api.mendeley.com/oapi/documents/groups", 
+    query, "people"), curl = getCurlHandle(), ...) {
+    args <- list(consumer_key = key)
+    tt <- getForm(url, .params = args, .opts = list(...), curl = curl)
+    fromJSON(I(tt))
+} 

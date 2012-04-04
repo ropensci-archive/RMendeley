@@ -37,11 +37,11 @@
 }
 \examples{
 \dontrun{
- a = msearch("bob", , 20)
- b = msearch("bob", 4, 20)
- d = msearch("authors:Alistair Boettiger published_in:Science")
+ a = msearch('bob', , 20)
+ b = msearch('bob', 4, 20)
+ d = msearch('authors:Alistair Boettiger published_in:Science')
  # Get the DOIs of Journal of Ecology hits (returns first 999 exact matches)
-  all <- msearch("published_in:\\"Journal of Ecology\\"")
+  all <- msearch('published_in:\\'Journal of Ecology\\'')
   dois <- sapply(all, function(x) x$doi)
 }
 }

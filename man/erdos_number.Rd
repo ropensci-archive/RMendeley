@@ -30,8 +30,8 @@
 }
 \examples{
 \dontrun{
-a <- erdos_number(myname=c(forename="Carl", surname="Boettiger"),
- target=c(forename="Simon", surname="Levin"), cutoff=3)
+a <- erdos_number(myname=c(forename='Carl', surname='Boettiger'),
+ target=c(forename='Simon', surname='Levin'), cutoff=3)
 }
 }
 

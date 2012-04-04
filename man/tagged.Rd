@@ -43,8 +43,8 @@
 }
 \examples{
 \dontrun{
-a <- tagged("phylogenetics")
-b <- tagged("phylogenetics", cat=3)  # biological sciences
+a <- tagged('phylogenetics')
+b <- tagged('phylogenetics', cat=3)  # biological sciences
 }
 }
 

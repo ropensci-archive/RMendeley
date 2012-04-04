@@ -6,7 +6,7 @@
 }
 \arguments{
   \item{x}{the return of any search function, such as
-  "authored" or "tagged"}
+  'authored' or 'tagged'}
 
   \item{surname}{the surname, will attempt partial
   matching}
@@ -24,8 +24,8 @@
 }
 \examples{
 \dontrun{
-dakos <- authored("V Dakos")
-m <- subset_by_author(dakos, "V", "Dakos")
+dakos <- authored('V Dakos')
+m <- subset_by_author(dakos, 'V', 'Dakos')
 unique(show_titles(dakos[m]))
 }
 }

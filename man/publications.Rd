@@ -32,7 +32,7 @@
 \examples{
 \dontrun{
 publications()
-publications("6", up=T, verbose=T)
+publications('6', up=T, verbose=T)
 }
 }
 

@@ -1,21 +1,28 @@
-#'Allows authenticated users to attach files to a document in their library. 
-#'@param mendeley_cred Your Mendeley OAuth credentials.
-#'@param  id Id of the document we want to attach the file to.
-#'@keywords
-#'@seealso
-#'@return
-#'@alias
+#'Allows authenticated users to attach files to a document in their library. [incomplete]
+#'@param mendeley_cred OAuth object of class MendeleyCredentials
+#'@param  doc ...
+#'@param  content ...
+#'@param curl If using in a loop, call getCurlHandle() first and pass
+#'  the returned value in here (avoids unnecessary footprint)
+#' @param ... optional additional curl options (debugging tools mostly).
 #'@export
 #'@examples \dontrun{
-#'
+#' functions is not complete
 #'}
-user_upload_file  <- function(mendeley_cred, id = NULL) {
-	if(!is.mendeley.cred(mendeley_cred)) {
-		stop("Your Mendeley credentials are missing or incorrect. Please run mendeley_auth() again")
-	}
-if(is.null(id)) {
-	stop("File ID is missing", call. = TRUE)
+user_upload_file  <- function(mendeley_cred = NULL, doc, content, ..., curl = getCurlHandle()) {
+#     if (!is(mendeley_cred, 'MendeleyCredentials') ||  missing(mendeley_cred))
+#         stop('Invalid or missing Mendeley credentials. ?mendeley_auth for more information.', call.= FALSE)
+# u = as(doc, 'URL')
+#   if(!is(content, 'AsIs')) {
+#      # read the content
+#   }
+#   sha = digest(content, 'sha1', serialize = FALSE)
+#   input = RCurl:::uploadFunctionHandler(content, TRUE)
+#   ans = OAuthRequest(mendeley_cred, u, method = 'PUT',
+#                            readfunction = input, infilesize = nchar(content),
+#                            customHeader = c(oauth_body_hash = sha), ...
+#                           )
+#   ans == ''
+# }
 }
-
-}	
-# API: http://apidocs.mendeley.com/home/user-specific-methods/file-upload
+# # API: http://apidocs.mendeley.com/home/user-specific-methods/file-upload
