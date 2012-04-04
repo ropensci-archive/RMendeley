@@ -1,3 +1,4 @@
+```
 > groups(mendeley_cred)
        id                                      name    type size
 1  530031                         Future of Science  public  194
@@ -9,7 +10,7 @@
 7 1377483                     Workflow review paper private   13
 8 1377653           Stage Structured Modeling Group private   14
 >
-> user_profile(mendeley_cred)
+> mendeley_profile (mendeley_cred)
 $main
                                                                                                                             profile_id
                                                                                                                                "39369"
@@ -338,3 +339,4 @@ NULL
 > createGroup(mendeley_cred, "test_group", type="invite")
 An object of class "MendeleyGroupID"
 [1] "2067243"
+```
