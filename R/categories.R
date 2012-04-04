@@ -1,7 +1,7 @@
 #' Returns a list of Mendeley's categories
 #' @param key Mendeley API key (otherwise will try and load from server)
 #' @param url Mendeley API URL (don't change this)
-#' @param curl If using in a loop, call getCurlHandle() first and pass
+#'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
 #' @param ... optional additional curl options (debugging tools mostly)
 #' @examples \dontrun{

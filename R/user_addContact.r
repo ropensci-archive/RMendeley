@@ -4,7 +4,7 @@
 #' Add another Mendeley user as a contact with their Mendeley ID.
 #'@param mendeley_cred OAuth object of class MendeleyCredentials
 #'@param  mendeley_user_id Mendeley user id of your contact.
-#' @param curl If using in a loop, call getCurlHandle() first and pass
+#'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@seealso user_contacts

@@ -53,3 +53,4 @@ Collate:
     'user_profile.r'
     'user_pub_stats.r'
     'user_tag_stats.r'
+    'user_upload_file.r'

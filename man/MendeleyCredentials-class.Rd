@@ -6,8 +6,8 @@
 
   An S4 class that stores Mendeley credentials
 
-  An S4 class that stores Mendeley credentials
+  An S4 class that stores MendeleyID
 
-  An S4 class that stores Mendeley credentials
+  An S4 class that stores MendeleyDocumentID
 }
 

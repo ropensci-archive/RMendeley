@@ -4,7 +4,7 @@
 #' @param  doc <what param does>
 #' @param  file   <what param does>
 #' @param  binary logical. Set TRUE for binary files.
-#' @param curl If using in a loop, call getCurlHandle() first and pass
+#'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
 #' @param ... optional additional curl options (debugging tools mostly).
 #' @export

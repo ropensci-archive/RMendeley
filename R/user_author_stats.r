@@ -1,7 +1,7 @@
 #'Returns list of top 5 authors in user library.
 #'
 #'@param mendeley_cred OAuth object of class MendeleyCredentials
-#' @param curl If using in a loop, call getCurlHandle() first and pass
+#'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@return List
