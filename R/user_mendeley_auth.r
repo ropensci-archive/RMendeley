@@ -3,17 +3,17 @@
 #' @rdname MendeleyCredentials-class
 #' @exportClass MendeleyCredentials
 setClass("MendeleyCredentials", contains = "OAuthCredentials")
-#' An S4 class that stores Mendeley credentials
+#' An S4 class that stores MendeleyID
 #' @name MendeleyID-class
 #' @rdname MendeleyID-class
 #' @exportClass MendeleyID
 setClass("MendeleyID", contains = "character")
-#' An S4 class that stores Mendeley credentials
+#' An S4 class that stores MendeleyGroupID
 #' @name MendeleyGroupID-class
 #' @rdname MendeleyGroupID-class
 #' @exportClass MendeleyGroupID
 setClass("MendeleyGroupID", contains = "MendeleyID")
-#' An S4 class that stores Mendeley credentials
+#' An S4 class that stores MendeleyFolderID
 #' @name MendeleyFolderID-class
 #' @rdname MendeleyFolderID-class
 #' @exportClass MendeleyFolderID
@@ -24,13 +24,13 @@ setClass("MendeleyFolderID", contains = "MendeleyID")
 #' @rdname MendeleyCredentials-class
 #' @exportClass MendeleyCredentials
 setClass("MendeleySimpleDocumentID", contains = "MendeleyID")
-#' An S4 class that stores Mendeley credentials
+#' An S4 class that stores MendeleyID
 #' @name MendeleyCredentials-class
 #' @rdname MendeleyCredentials-class
 #' @exportClass MendeleyCredentials
 setClass("MendeleyDocumentID", representation(folder = "MendeleyFolderID"),
     contains = "MendeleyID")
-#' An S4 class that stores Mendeley credentials
+#' An S4 class that stores MendeleyDocumentID
 #' @name MendeleyCredentials-class
 #' @rdname MendeleyCredentials-class
 #' @exportClass MendeleyCredentials
@@ -47,13 +47,13 @@ setAs("MendeleyDocumentID", "URL", function(from) sprintf("http://api.mendeley.c
 #' @exportClass MendeleySimpleDocumentID
 setAs("MendeleySimpleDocumentID", "URL", function(from) sprintf("http://api.mendeley.com/oapi/library/documents/%s/",
     as(from, "character")))
-#' An S4 class that stores Mendeley credentials
+#' An S4 class that stores MendeleyFolderId
 #' @name MendeleyFolderID-class
 #' @rdname MendeleyFolderID-class
 #' @exportClass MendeleyFolderID
 setAs("MendeleyFolderID", "URL", function(from) sprintf("http://api.mendeley.com/oapi/library/folders/%s/",
     as(from, "character")))
-#' An S4 class that stores Mendeley credentials
+#' An S4 class that stores MendeleyGroupID
 #' @name MendeleyGroupID-class
 #' @rdname MendeleyGroupID-class
 #' @exportClass MendeleyGroupID
