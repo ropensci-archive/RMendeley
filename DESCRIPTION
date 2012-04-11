@@ -11,6 +11,7 @@ Depends:
     RJSONIO,
     RCurl (>= 1.6),
     ROAuth (>= 0.92.0),
+    plyr,
     methods
 Imports:
     RJSONIO,
