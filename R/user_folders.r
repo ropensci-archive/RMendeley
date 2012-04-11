@@ -45,7 +45,7 @@ getFolderID <- function(mendeley_cred = NULL, name, ..., curl = getCurlHandle())
     i <- which(fl$name == name)
     subs <- fl[i,]
     if (dim(subs)[1]==0)
-        stop("Can't find folder")
+        stop("Cannot find folder")
     if (dim(subs)[1]>1)
         stop("Found more than one match \n")
     flID <- subs$id

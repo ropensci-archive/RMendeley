@@ -15,11 +15,12 @@ addFolderDoc <- function(mendeley_cred = NULL, folder, doc, ..., curl = getCurlH
     if (!is(mendeley_cred, "MendeleyCredentials") || missing(mendeley_cred))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)
-    u <- sprintf("%s%s/", as(folder, "URL"), as(doc, "character"))
+    u <- sprintf("http://api.mendeley.com/oapi/library/folders/%s/%s/", folder, doc)
     ans <- OAuthRequest(mendeley_cred, u, method = "POST", ..., curl = curl)
     if (ans == "") {
         cat("success \n")
     } else {
+         new("MendeleyGroupID", as.character(ans))
         return(fromJSON(ans))
     }
 }

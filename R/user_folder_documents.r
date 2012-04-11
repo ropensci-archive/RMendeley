@@ -20,9 +20,11 @@ folderDocs <- function(mendeley_cred = NULL, folder_id = NULL, page = NULL,
     if (is.null(folder_id)) {
         stop("You did not enter a folder ID.", call. = FALSE)
     }
-    folder_doc_url <- paste("http://api.mendeley.com/oapi/library/folders/", folder_id,
-        "/", sep = "")
+    folder_doc_url <- sprintf("http://api.mendeley.com/oapi/library/folders/%s/", folder_id)
     group_docs <- OAuthRequest(mendeley_cred, folder_doc_url, , "GET")
     group_docs <- fromJSON(group_docs)
+    lapply(group_docs$document_ids,
+           function(x)
+              new("MendeleyDocumentID", x, folder = new("MendeleyFolderID", group_docs$folder_id)))
     return(group_docs)
 }

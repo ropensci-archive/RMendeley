@@ -75,7 +75,7 @@ setAs("MendeleyGroupID", "URL", function(from) sprintf("http://api.mendeley.com/
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@keywords authentication
 #'@return OAUth credential.
-#'@export
+#'@export mendeley_auth
 #'@examples \dontrun{
 #' mendeley_cred <- mendeley_auth('YOUR_CONSUMER_KEY', 'YOUR_CONSUMER_SECRET')
 #' mendeley_cred <- mendeley_auth() # If your keys are stored in options using

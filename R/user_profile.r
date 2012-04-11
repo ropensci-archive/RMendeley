@@ -6,7 +6,7 @@
 #'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
 #' @param ... optional additional curl options (debugging tools mostly).
-#'@export mendeley_autH
+#'@export mendeley_profile
 #'@examples \dontrun{
 #' user_profile(mendeley_cred, '39369') # If left blank, it will retrieve your profile.
 #'}
