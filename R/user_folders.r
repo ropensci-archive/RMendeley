@@ -6,7 +6,7 @@
 #'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
 #' @param ... optional additional curl options (debugging tools mostly).
-#'@export
+#'@export Folders
 #'@examples \dontrun{
 #' user_folders(mendeley_cred)
 #'}
@@ -36,7 +36,7 @@ Folders <- function(mendeley_cred = NULL, ..., curl = getCurlHandle()) {
 #'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
 #' @param ... optional additional curl options (debugging tools mostly).
-#' @export
+#' @export getFolderID
 #' @examples \dontrun{
 #' getFolderID(mendeley_cred, 'folder_name')
 #'}

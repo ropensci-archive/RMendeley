@@ -22,11 +22,3 @@ docInfo <- function(mendeley_cred = NULL, id = NULL, ..., curl = getCurlHandle()
     user_doc_det <- fromJSON(user_doc_det)
     return(user_doc_det)
 }
-# ------------------------------------------------------------------------------------------------
-getDocInfo <- function(mendeley_cred = NULL, doc, ..., curl = getCurlHandle()) {
-    if (length(doc) > 1)
-        return(lapply(doc, function(d) getDocInfo(cred, doc, ..., curl = curl)))
-    u <- as(doc, "URL")
-    ans <- OAuthRequest(mendeley_cred, u, ..., curl = curl)
-    fromJSON(ans)
-}

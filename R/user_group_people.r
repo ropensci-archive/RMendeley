@@ -8,7 +8,7 @@
 #'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
 #' @param ... optional additional curl options (debugging tools mostly).
-#'@export
+#'@export groupPeople
 #'@examples \dontrun{
 #' user_group_people(mendeley_cred, '530031')
 #'}
