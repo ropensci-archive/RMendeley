@@ -1,13 +1,7 @@
+Not working:
+"user_delete_group"
 "user_create_document.r"
 "user_upload_file.r"
-"user_download_file.r"
-"user_add_doc_folder.r"
-"user_delete_group.r"
-
-Working on:
-"user_create_group.r", somewhat compliated to allow for follow and leave. requires more work.
-"user_delete_group"
-
 Done!
 =====
 "user_tag_stats.r"
@@ -29,3 +23,5 @@ Done!
 "user_group_documents.r"
 "user_group_doc_details.r"
 "user_delete_document.r"
+"user_create_group.r"
+"user_add_doc_folder.r"
