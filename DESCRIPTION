@@ -3,7 +3,7 @@ Description: A programmatic interface to the
     Web Service methods provided by the Mendeley open science
     project.
 Title: Interface to Mendeley API methods
-Version: 0.1-2
+Version: 1.0
 License: BSD
 Author: Carl Boettiger, Karthik Ram, Duncan Temple Lang
 Maintainer: Carl Boettiger <cboettig@gmail.com>
