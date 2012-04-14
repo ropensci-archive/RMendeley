@@ -20,10 +20,10 @@ groupPeople <- function(mendeley_cred = NULL, group_name = NULL, ..., curl = get
         stop("You did not specifiy a group name", call. = FALSE)
     }
 
-    id <- getGroupID(mendeley_cred, name)
+    id <- getGroupID(mendeley_cred, group_name)
 
     group_url <- sprintf("http://api.mendeley.com/oapi/library/groups/%s/people", id)
-    groups_people <- OAuthRequest(mendeley_cred, group_url, , "GET")
+    groups_people <- suppressWarnings(OAuthRequest(mendeley_cred, group_url, , "GET"))
     groups_people <- fromJSON(groups_people)
     format_groups <- function(group_peeps) {
         x1 <- ldply(group_peeps[[1]])
