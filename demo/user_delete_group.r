@@ -25,10 +25,14 @@ deleteGroup <- function(mendeley_cred, group, ..., curl = getCurlHandle()) {
     
       # The trailing / is essential here.
     del_group_url <- sprintf("http://api.mendeley.com/oapi/library/groups/%s/", id)
-    delete_group <- OAuthRequest(mendeley_cred, del_group_url, , "DELETE", ..., followlocation = TRUE)
     
-      #XXX We really want the HTTP response header and to check the status, not whether its body is ""
-    delete_group == ""
+    reader = dynCurlReader(curl, del_group_url, binary = FALSE)
+    OAuthRequest(mendeley_cred, del_group_url, , "DELETE", ..., followlocation = TRUE,
+                      .addwritefunction = FALSE, headerfunction = reader$update)
+
+        # We really want the HTTP response header and to check the status, not whether its body is ""    
+    hdr = parseHTTPHeader(reader$header())
+    as.integer(hdr["status"]) %/% 100 == 2
   }
 # API: http://apidocs.mendeley.com/home/user-specific-methods/user-library-delete-group
 
