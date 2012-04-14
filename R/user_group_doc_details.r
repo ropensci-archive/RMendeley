@@ -24,7 +24,7 @@ groupDocInfo <- function(mendeley_cred = NULL, group_id = NULL, document_id = NU
     }
     group_doc_detail <- paste("http://api.mendeley.com/oapi/library/groups/", group_id,
         "/", document_id, "/", sep = "")
-    group_doc_det <- OAuthRequest(mendeley_cred, group_doc_detail, , "GET")
+    group_doc_det <- suppressWarnings(OAuthRequest(mendeley_cred, group_doc_detail, , "GET"))
     group_doc_det <- fromJSON(group_doc_det)
     return(group_doc_det)
 }
