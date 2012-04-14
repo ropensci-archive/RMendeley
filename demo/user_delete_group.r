@@ -9,22 +9,27 @@
 #'@examples \dontrun{
 #' user_delete_group(mendeley_cred, ...)
 #'}
-deleteGroup <- function(mendeley_cred = NULL, group = NULL, ..., curl = getCurlHandle()) {
-    if (!is(mendeley_cred, "MendeleyCredentials") || missing(mendeley_cred))
+deleteGroup <- function(mendeley_cred, group, ..., curl = getCurlHandle()) {
+      # no need to test for missing(), it will just fail using R's usual evaluation rules.
+      # Also, no use in checking is(cred, "M...") and then missing(). 
+
+    if (!is(mendeley_cred, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)
-    if (is.null(group)) {
-        stop("Group name is missing", call. = FALSE)
-    }
-    id <- getGroupID(mendeley_cred, group)
-    del_group_url <- sprintf("http://api.mendeley.com/oapi/library/groups/%s", id)
-    delete_group <- OAuthRequest(mendeley_cred, del_group_url, , "DELETE")
-    if(delete_group=="") {
-        cat ("Deletion successful \n")
-        } else {
-    return(delete_group)
-    }
-}
+
+      # getGroupID now returns a MendeleyGroupID.  It should not return a factor.
+    id <- if(!is(group,"MendeleyGroupID"))
+            getGroupID(mendeley_cred, group)
+          else
+            group
+    
+      # The trailing / is essential here.
+    del_group_url <- sprintf("http://api.mendeley.com/oapi/library/groups/%s/", id)
+    delete_group <- OAuthRequest(mendeley_cred, del_group_url, , "DELETE", ..., followlocation = TRUE)
+    
+      #XXX We really want the HTTP response header and to check the status, not whether its body is ""
+    delete_group == ""
+  }
 # API: http://apidocs.mendeley.com/home/user-specific-methods/user-library-delete-group
 
 
@@ -116,19 +121,22 @@ getGroupID <- function(mendeley_cred = NULL, group = NULL,..., curl = getCurlHan
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)
 
-if (is.null(group)) {
+ if (is.null(group)) {
         stop("Group name is missing", call. = FALSE)
-    }
+ }
 
-groups <- myGroups(mendeley_cred, curl = curl)
-selected_group <- groups[which(groups$name==group),]
+  groups <- myGroups(mendeley_cred, curl = curl)
+  selected_group <- groups[which(groups$name==group),]
 
-if(dim(selected_group)[1]==0)
-    stop("No matching group found", call.=F)
+  if(dim(selected_group)[1]==0)
+      stop("No matching group found", call.=F)
 
-if(dim(selected_group)[1]>2)
+  if(dim(selected_group)[1]>2)
     stop("Multiple groups found. Please check the name", call.=F)
 
-return(selected_group$id)
+  return(new("MendeleyGroupID", as.character(selected_group$id)))
 }
 
+setClass("MendeleyID", contains = "character")
+setClass("MendeleyGroupID", contains = "MendeleyID")
+ 
