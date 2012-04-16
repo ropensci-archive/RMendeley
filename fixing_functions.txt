@@ -1,5 +1,5 @@
 Not working:
-"user_delete_group"
+
 "user_create_document.r"
 "user_upload_file.r"
 Done!
@@ -25,3 +25,4 @@ Done!
 "user_delete_document.r"
 "user_create_group.r"
 "user_add_doc_folder.r"
+"user_delete_group"
