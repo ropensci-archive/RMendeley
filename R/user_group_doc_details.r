@@ -1,7 +1,7 @@
-#' groupDocInfo -  function will return all available information for a document within a group.
+#' groupDocInfo -  Returns metadata for a document in a group.
 #'
 #'
-#'@param mendeley_cred OAuth object of class MendeleyCredentials
+#'@param mc OAuth object of class MendeleyCredentials
 #'@param  group_id ...
 #'@param  document_id ...
 #'@param curl If using in a loop, call getCurlHandle() first and pass
@@ -9,11 +9,11 @@
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@export
 #'@examples \dontrun{
-#' user_group_doc_details(mendeley_cred,1377653 ,4402412575)
+#' groupDocInfo(mc,1377653 ,4402412575)
 #'}
-groupDocInfo <- function(mendeley_cred = NULL, group_id = NULL, document_id = NULL,
+groupDocInfo <- function(mc = NULL, group_id = NULL, document_id = NULL,
     ..., curl = getCurlHandle()) {
-    if (!is(mendeley_cred, "MendeleyCredentials") || missing(mendeley_cred))
+if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)
     if (is.null(group_id)) {
@@ -24,12 +24,12 @@ groupDocInfo <- function(mendeley_cred = NULL, group_id = NULL, document_id = NU
     }
     group_doc_detail <- paste("http://api.mendeley.com/oapi/library/groups/", group_id,
         "/", document_id, "/", sep = "")
-    group_doc_det <- suppressWarnings(OAuthRequest(mendeley_cred, group_doc_detail, , "GET"))
+    group_doc_det <- suppressWarnings(OAuthRequest(mc, group_doc_detail, , "GET"))
     group_doc_det <- fromJSON(group_doc_det)
     return(group_doc_det)
 }
 # Example Output
-# > user_group_doc_details(mendeley_cred,'1377653' ,'4402412575')
+# > user_group_doc_details(mc,'1377653' ,'4402412575')
 # $authors
 # $authors[[1]]
 #  forename   surname

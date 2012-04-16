@@ -1,11 +1,14 @@
-\name{authorStats}
-\alias{authorStats}
-\title{authorStats - Returns list of top 5 authors in your library.}
+\name{leave_group}
+\alias{leave_group}
+\title{The following methods will quit membership from a group}
 \usage{
-  authorStats(mc = NULL, ..., curl = getCurlHandle())
+  leave_group(mc = NULL, group = NULL, ...,
+    curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
+
+  \item{group}{group id.}
 
   \item{curl}{If using in a loop, call getCurlHandle()
   first and pass the returned value in here (avoids
@@ -14,16 +17,12 @@
   \item{...}{optional additional curl options (debugging
   tools mostly).}
 }
-\value{
-  List
-}
 \description{
-  authorStats - Returns list of top 5 authors in your
-  library.
+  The following methods will quit membership from a group
 }
 \examples{
 \dontrun{
-authorStats(mendeley_oauth_cred)
+user_delete_group(mc, ...)
 }
 }
 

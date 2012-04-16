@@ -2,11 +2,11 @@
 \alias{createFolder}
 \title{createFolder - Create a folder in your Mendeley library}
 \usage{
-  createFolder(mendeley_cred = NULL, name = NULL, ...,
+  createFolder(mc = NULL, name = NULL, ...,
     curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{Your Mendeley OAUth credentials}
+  \item{mc}{Your Mendeley OAUth credentials}
 
   \item{name}{Name of your new folder}
 
@@ -26,7 +26,7 @@
 }
 \examples{
 \dontrun{
-user_create_folder(...)
+createFolder(mc, 'folder_name')
 }
 }
 

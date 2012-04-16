@@ -1,12 +1,11 @@
 \name{Folders}
 \alias{Folders}
-\title{Folders - retuns a list of your Mendeley folders with sizes}
+\title{Folders - retuns a list of your Mendeley folders with sizes.}
 \usage{
-  Folders(mendeley_cred = NULL, ...,
-    curl = getCurlHandle())
+  Folders(mc = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{Your Mendeley ROAuth credential.}
+  \item{mc}{Your Mendeley ROAuth credential.}
 
   \item{curl}{If using in a loop, call getCurlHandle()
   first and pass the returned value in here (avoids
@@ -20,11 +19,11 @@
 }
 \description{
   Folders - retuns a list of your Mendeley folders with
-  sizes
+  sizes.
 }
 \examples{
 \dontrun{
-user_folders(mendeley_cred)
+Folders(mc)
 }
 }
 

@@ -1,7 +1,7 @@
-#'mendeley_library - allows authenticated users to retrieve all the documents in their library.
+#'mendeley_library - Returns a list of all the documents in your library.
 #'
 #'
-#'@param mendeley_cred Your Mendeley ROauth credentials.
+#'@param mc Your Mendeley ROauth credentials.
 #'@param  page  Page number of search results
 #'@param  items  Number of items per page
 #'@param curl If using in a loop, call getCurlHandle() first and pass
@@ -9,14 +9,14 @@
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@export
 #'@examples \dontrun{
-#' user_library(mendeley_cred)
-#' user_library(mendeley_cred, 2)
-#' user_library(mendeley_cred, 1, 25)
+#' user_library(mc)
+#' user_library(mc, 2)
+#' mendeley_library(mc, 1, 25)
 #'}
-mendeley_library <- function(mendeley_cred = NULL, page = NULL, items = NULL, ...,
+mendeley_library <- function(mc = NULL, page = NULL, items = NULL, ...,
     curl = getCurlHandle()) {
     lib_url <- ""
-    if (!is(mendeley_cred, "MendeleyCredentials") || missing(mendeley_cred))
+if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)
     lib_opts <- list()
@@ -26,7 +26,7 @@ mendeley_library <- function(mendeley_cred = NULL, page = NULL, items = NULL, ..
     if (!is.null(items)) {
         lib_opts$items <- items
     }
-    library <- OAuthRequest(mendeley_cred, "http://api.mendeley.com/oapi/library/",
+    library <- OAuthRequest(mc, "http://api.mendeley.com/oapi/library/",
         lib_opts, "GET")
     library <- fromJSON(library)
     return(library)

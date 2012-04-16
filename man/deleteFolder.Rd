@@ -1,13 +1,12 @@
 \name{deleteFolder}
 \alias{deleteFolder}
-\title{deleteFolder - allows authenticated users to remove a folder from their library. Documents contained in the id.}
+\title{deleteFolder - Delete a existing folder from your Mendeley library.}
 \usage{
-  deleteFolder(mendeley_cred = NULL, name = NULL, ...,
+  deleteFolder(mc = NULL, name = NULL, ...,
     curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{OAuth object of class
-  MendeleyCredentials}
+  \item{mc}{OAuth object of class MendeleyCredentials}
 
   \item{name}{name of folder to be removed}
 
@@ -23,7 +22,7 @@
 }
 \examples{
 \dontrun{
-deleteFolder(...)
+deleteFolder(mc, 'folder_name')
 }
 }
 

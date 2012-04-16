@@ -1,14 +1,14 @@
-\name{groupDocs}
-\alias{groupDocs}
-\title{groupDocs - returns a list of documents in a group.}
+\name{unfollow_group}
+\alias{unfollow_group}
+\title{The following methods will essentially delete a group from the user's library.}
 \usage{
-  groupDocs(mc = NULL, group_id = NULL, ...,
+  unfollow_group(mc = NULL, group = NULL, ...,
     curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
 
-  \item{group_id}{Private group ID}
+  \item{group}{group id.}
 
   \item{curl}{If using in a loop, call getCurlHandle()
   first and pass the returned value in here (avoids
@@ -18,11 +18,12 @@
   tools mostly).}
 }
 \description{
-  groupDocs - returns a list of documents in a group.
+  The following methods will essentially delete a group
+  from the user's library.
 }
 \examples{
 \dontrun{
-groupDocs(mc, group_id='1377483')
+user_delete_group(mc, ...)
 }
 }
 

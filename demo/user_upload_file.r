@@ -1,5 +1,5 @@
 #'Allows authenticated users to attach files to a document in their library. [incomplete]
-#'@param mendeley_cred OAuth object of class MendeleyCredentials
+#'@param mc OAuth object of class MendeleyCredentials
 #'@param  doc ...
 #'@param  content ...
 #'@param curl If using in a loop, call getCurlHandle() first and pass
@@ -9,8 +9,8 @@
 #'@examples \dontrun{
 #' functions is not complete
 #'}
-user_upload_file  <- function(mendeley_cred = NULL, doc, content, ..., curl = getCurlHandle()) {
-#     if (!is(mendeley_cred, 'MendeleyCredentials') ||  missing(mendeley_cred))
+user_upload_file  <- function(mc = NULL, doc, content, ..., curl = getCurlHandle()) {
+#     if (!is(mc, 'MendeleyCredentials') ||  missing(mc))
 #         stop('Invalid or missing Mendeley credentials. ?mendeley_auth for more information.', call.= FALSE)
 # u = as(doc, 'URL')
 #   if(!is(content, 'AsIs')) {
@@ -18,7 +18,7 @@ user_upload_file  <- function(mendeley_cred = NULL, doc, content, ..., curl = ge
 #   }
 #   sha = digest(content, 'sha1', serialize = FALSE)
 #   input = RCurl:::uploadFunctionHandler(content, TRUE)
-#   ans = OAuthRequest(mendeley_cred, u, method = 'PUT',
+#   ans = OAuthRequest(mc, u, method = 'PUT',
 #                            readfunction = input, infilesize = nchar(content),
 #                            customHeader = c(oauth_body_hash = sha), ...
 #                           )

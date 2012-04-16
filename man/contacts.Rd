@@ -1,13 +1,11 @@
 \name{contacts}
 \alias{contacts}
-\title{contacts- List Mendeley contacts}
+\title{contacts - List  of  current Mendeley contacts}
 \usage{
-  contacts(mendeley_cred = NULL, ...,
-    curl = getCurlHandle())
+  contacts(mc = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{OAuth object of class
-  MendeleyCredentials}
+  \item{mc}{OAuth object of class MendeleyCredentials}
 
   \item{curl}{If using in a loop, call getCurlHandle()
   first and pass the returned value in here (avoids
@@ -20,11 +18,11 @@
   list
 }
 \description{
-  contacts- List Mendeley contacts
+  contacts - List of current Mendeley contacts
 }
 \examples{
 \dontrun{
-user_contacts(mendeley_cred)
+contacts(mc)
 }
 }
 

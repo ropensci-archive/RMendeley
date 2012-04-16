@@ -1,7 +1,7 @@
-#' groupPeople  - returns list of group members and their Mendeley usr IDs
+#' groupPeople  - returns list of group members and their Mendeley user IDs
 #'
 #'
-#'@param mendeley_cred Your Mendeley OAuth credential.
+#'@param mc Your Mendeley OAuth credential.
 #'@param  group_name Name of group
 #'@seealso user_groups
 #'@return list
@@ -10,20 +10,20 @@
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@export groupPeople
 #'@examples \dontrun{
-#' user_group_people(mendeley_cred, '530031')
+#' groupPeople(mc, 'Future of Science')
 #'}
-groupPeople <- function(mendeley_cred = NULL, group_name = NULL, ..., curl = getCurlHandle()) {
-    if (!is(mendeley_cred, "MendeleyCredentials") || missing(mendeley_cred))
+groupPeople <- function(mc = NULL, group_name = NULL, ..., curl = getCurlHandle()) {
+if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)
     if (is.null(group_name)) {
         stop("You did not specifiy a group name", call. = FALSE)
     }
 
-    id <- getGroupID(mendeley_cred, group_name)
+    id <- getGroupID(mc, group_name)
 
     group_url <- sprintf("http://api.mendeley.com/oapi/library/groups/%s/people", id)
-    groups_people <- suppressWarnings(OAuthRequest(mendeley_cred, group_url, , "GET"))
+    groups_people <- suppressWarnings(OAuthRequest(mc, group_url, , "GET"))
     groups_people <- fromJSON(groups_people)
     format_groups <- function(group_peeps) {
         x1 <- ldply(group_peeps[[1]])

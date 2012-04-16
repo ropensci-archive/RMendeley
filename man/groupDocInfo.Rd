@@ -1,13 +1,12 @@
 \name{groupDocInfo}
 \alias{groupDocInfo}
-\title{groupDocInfo -  function will return all available information for a document within a group.}
+\title{groupDocInfo -  Returns metadata for a document in a group.}
 \usage{
-  groupDocInfo(mendeley_cred = NULL, group_id = NULL,
+  groupDocInfo(mc = NULL, group_id = NULL,
     document_id = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{OAuth object of class
-  MendeleyCredentials}
+  \item{mc}{OAuth object of class MendeleyCredentials}
 
   \item{group_id}{...}
 
@@ -21,12 +20,12 @@
   tools mostly).}
 }
 \description{
-  groupDocInfo - function will return all available
-  information for a document within a group.
+  groupDocInfo - Returns metadata for a document in a
+  group.
 }
 \examples{
 \dontrun{
-user_group_doc_details(mendeley_cred,1377653 ,4402412575)
+groupDocInfo(mc,1377653 ,4402412575)
 }
 }
 

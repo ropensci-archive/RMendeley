@@ -1,1 +1,2 @@
 News
+04/15/12 Added 22 new functions which now allow users to access user specific methods from the Mendeley API after authenticating using ROAuth.

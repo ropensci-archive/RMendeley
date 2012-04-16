@@ -2,12 +2,10 @@
 \alias{authoredPubs}
 \title{authoredPubs - allows authenticated users to retrieve their own publications.}
 \usage{
-  authoredPubs(mendeley_cred = NULL, ...,
-    curl = getCurlHandle())
+  authoredPubs(mc = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{OAuth object of class
-  MendeleyCredentials}
+  \item{mc}{OAuth object of class MendeleyCredentials}
 
   \item{curl}{If using in a loop, call getCurlHandle()
   first and pass the returned value in here (avoids
@@ -22,7 +20,7 @@
 }
 \examples{
 \dontrun{
-user_authored_pubs(mendeley_cred)
+authoredPubs(mc)
 }
 }
 

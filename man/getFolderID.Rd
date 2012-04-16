@@ -2,11 +2,10 @@
 \alias{getFolderID}
 \title{getFolderID - retrieves Folder ID from folder name}
 \usage{
-  getFolderID(mendeley_cred = NULL, name, ...,
-    curl = getCurlHandle())
+  getFolderID(mc = NULL, name, ..., curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{Your Mendeley ROAuth credential.}
+  \item{mc}{Your Mendeley ROAuth credential.}
 
   \item{name}{Folder name}
 
@@ -22,7 +21,7 @@
 }
 \examples{
 \dontrun{
-getFolderID(mendeley_cred, 'folder_name')
+getFolderID(mc, 'folder_name')
 }
 }
 

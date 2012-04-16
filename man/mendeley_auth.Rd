@@ -49,8 +49,8 @@
 }
 \examples{
 \dontrun{
-mendeley_cred <- mendeley_auth('YOUR_CONSUMER_KEY', 'YOUR_CONSUMER_SECRET')
-mendeley_cred <- mendeley_auth() # If your keys are stored in options using
+mc <- mendeley_auth('YOUR_CONSUMER_KEY', 'YOUR_CONSUMER_SECRET')
+mc <- mendeley_auth() # If your keys are stored in options using
 as MendeleyKey and MendeleyPrivateKey.
 }
 }

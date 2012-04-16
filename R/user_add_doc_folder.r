@@ -1,22 +1,22 @@
-# addFolderDoc - Add folder to a document. [need to code up]
+# addFolderDoc - Add folder to a document.
 #'
 #'Allows authenticated users to add a document to an specific folder. The document must exists on the library
-#'@param mendeley_cred OAuth object of class MendeleyCredentials
-#'@param  folder foo
+#'@param mc OAuth object of class MendeleyCredentials
+#'@param  folder Folder Name
 #'@param  doc document...
 #'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@export
 #'@examples \dontrun{
-#' user_add_doc_folder(mendeley_cred, ...)
+#' addFolderDoc(mc, '23423', '12321312')
 #'}
-addFolderDoc <- function(mendeley_cred = NULL, folder, doc, ..., curl = getCurlHandle()) {
-    if (!is(mendeley_cred, "MendeleyCredentials") || missing(mendeley_cred))
+addFolderDoc <- function(mc = NULL, folder, doc, ..., curl = getCurlHandle()) {
+if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)
     u <- sprintf("http://api.mendeley.com/oapi/library/folders/%s/%s/", folder, doc)
-    ans <- OAuthRequest(mendeley_cred, u, method = "POST", ..., curl = curl)
+    ans <- OAuthRequest(mc, u, method = "POST", ..., curl = curl)
     if (ans == "") {
         cat("success \n")
     } else {

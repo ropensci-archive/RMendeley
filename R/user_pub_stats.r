@@ -1,7 +1,7 @@
-#'pubStats - returns list of top 20 publication outlets in library.
+#'pubStats - returns list of top 20 publication outlets in your library.
 #'
 #'
-#'@param mendeley_cred OAuth object of class MendeleyCredentials
+#'@param mc OAuth object of class MendeleyCredentials
 #'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
 #' @param ... optional additional curl options (debugging tools mostly).
@@ -9,11 +9,11 @@
 #'@examples \dontrun{
 #' user_pub_stats(...)
 #'}
-pubStats <- function(mendeley_cred = NULL, ..., curl = getCurlHandle()) {
-    if (!is(mendeley_cred, "MendeleyCredentials") || missing(mendeley_cred))
+pubStats <- function(mc = NULL, ..., curl = getCurlHandle()) {
+if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)
-    pub_stats <- OAuthRequest(mendeley_cred, "http://api.mendeley.com/oapi/library/publications/",
+    pub_stats <- OAuthRequest(mc, "http://api.mendeley.com/oapi/library/publications/",
         , "GET")
     pub_stats <- fromJSON(pub_stats)
     return(ldply(pub_stats))

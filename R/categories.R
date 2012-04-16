@@ -17,11 +17,11 @@ categories <- function(key = getOption("MendeleyKey", stop("need an API key for 
 }
 # Trying to rewrite an old working fuction using the new auth. Fails with the same verification errors as the other non-working functions. Clearly this has something to do with malformed args?
 # # Below DOES NOT WORK.
-# categories <- function(mendeley_cred = NULL)
+# categories <- function(mc = NULL)
 # {
-#     if (!is(mendeley_cred, 'MendeleyCredentials') ||  missing(mendeley_cred))
+#     if (!is(mc, 'MendeleyCredentials') ||  missing(mc))
 #         stop('Invalid or missing Mendeley credentials. ?mendeley_auth for more information.', call.= FALSE)
-# 	categories <- OAuthRequest(mendeley_cred, 'http://api.mendeley.com/oapi/documents/categories/', , 'GET')
+# 	categories <- OAuthRequest(mc, 'http://api.mendeley.com/oapi/documents/categories/', , 'GET')
 # 	categories <- fromJSON(categories)
 # 	categories <- ldply(categories, function(x) as.data.frame(x))
 #     return(categories)

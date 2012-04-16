@@ -1,13 +1,11 @@
 \name{pubStats}
 \alias{pubStats}
-\title{pubStats - returns list of top 20 publication outlets in library.}
+\title{pubStats - returns list of top 20 publication outlets in your library.}
 \usage{
-  pubStats(mendeley_cred = NULL, ...,
-    curl = getCurlHandle())
+  pubStats(mc = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{OAuth object of class
-  MendeleyCredentials}
+  \item{mc}{OAuth object of class MendeleyCredentials}
 
   \item{curl}{If using in a loop, call getCurlHandle()
   first and pass the returned value in here (avoids
@@ -18,7 +16,7 @@
 }
 \description{
   pubStats - returns list of top 20 publication outlets in
-  library.
+  your library.
 }
 \examples{
 \dontrun{

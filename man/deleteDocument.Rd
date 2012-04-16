@@ -1,13 +1,12 @@
 \name{deleteDocument}
 \alias{deleteDocument}
-\title{deleteDocument - allows authenticated users to remove a document from their library.}
+\title{deleteDocument - delete a document from your library.}
 \usage{
-  deleteDocument(mendeley_cred = NULL, doc_id = NULL,
+  deleteDocument(mc = NULL, doc_id = NULL,
     folder_id = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{OAuth object of class
-  MendeleyCredentials}
+  \item{mc}{OAuth object of class MendeleyCredentials}
 
   \item{folder_id}{Id of the folder which contains the
   document to be removed.}

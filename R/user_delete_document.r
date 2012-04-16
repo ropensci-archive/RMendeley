@@ -1,7 +1,7 @@
-#'deleteDocument - allows authenticated users to remove a document from their library.
+#'deleteDocument - delete a document from your library.
 #'
 #'Deletes from library if no folder is specified. Deletes from folder if a folder id is specified.
-#'@param mendeley_cred OAuth object of class MendeleyCredentials
+#'@param mc OAuth object of class MendeleyCredentials
 #'@param  folder_id Id of the folder which contains the document to be removed.
 #'@param  doc_id Id of the document to be removed.
 #'@param curl If using in a loop, call getCurlHandle() first and pass
@@ -11,9 +11,9 @@
 #'@examples \dontrun{
 #' deleteDocument(...)
 #'}
-deleteDocument <- function(mendeley_cred = NULL, doc_id = NULL, folder_id = NULL,
+deleteDocument <- function(mc = NULL, doc_id = NULL, folder_id = NULL,
     ..., curl = getCurlHandle()) {
-    if (!is(mendeley_cred, "MendeleyCredentials") || missing(mendeley_cred))
+if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)
     if (is.null(doc_id)) {
@@ -26,7 +26,7 @@ deleteDocument <- function(mendeley_cred = NULL, doc_id = NULL, folder_id = NULL
         u <- sprintf("http://api.mendeley.com/oapi/library/folders/%s/%s/", folder_id,
             doc_id)
     }
-    deleted_doc <- OAuthRequest(mendeley_cred, u, method = "DELETE", ..., curl = curl,
+    deleted_doc <- OAuthRequest(mc, u, method = "DELETE", ..., curl = curl,
         followlocation = TRUE)
     if (deleted_doc == "") {
         cat("successfully deleted document", doc_id, "from folder ", folder_id, "\n")

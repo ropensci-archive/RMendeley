@@ -1,13 +1,12 @@
 \name{createGroup}
 \alias{createGroup}
-\title{createGroup - Create a new group in the user's library.}
+\title{createGroup - Create a new group in your Mendeley library.}
 \usage{
-  createGroup(mendeley_cred = NULL, group_name = NULL,
+  createGroup(mc = NULL, group_name = NULL,
     type = "invite", ..., curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{OAuth object of class
-  MendeleyCredentials}
+  \item{mc}{OAuth object of class MendeleyCredentials}
 
   \item{group_name}{Name of your group.}
 
@@ -22,11 +21,13 @@
   tools mostly).}
 }
 \description{
-  createGroup - Create a new group in the user's library.
+  createGroup - Create a new group in your Mendeley
+  library.
 }
 \examples{
 \dontrun{
-user_create_group(...)
+createGroup(mc, 'new_group_name')
+createGroup(mc, 'new_group_name', type="open")
 }
 }
 

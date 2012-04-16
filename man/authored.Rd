@@ -2,13 +2,11 @@
 \alias{authored}
 \title{authored.R   Search Method (Public Method)}
 \usage{
-  authored(mendeley_cred = NULL, query, page = NA,
-    numItems = 100L, year = NA, curl = getCurlHandle(),
-    ...)
+  authored(mc = NULL, query, page = NA, numItems = 100L,
+    year = NA, curl = getCurlHandle(), ...)
 }
 \arguments{
-  \item{mendeley_cred}{OAuth object of class
-  MendeleyCredentials}
+  \item{mc}{OAuth object of class MendeleyCredentials}
 
   \item{query}{an author name to query}
 

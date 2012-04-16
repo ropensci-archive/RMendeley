@@ -1,18 +1,18 @@
-#' groupDocs - returns a list of group documents.
+#' groupDocs - returns a list of documents in a group.
 #'
 #'
-#'@param mendeley_cred OAuth object of class MendeleyCredentials
+#'@param mc OAuth object of class MendeleyCredentials
 #'@param  group_id Private group ID
 #'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@export
 #'@examples \dontrun{
-#' user_group_documents(mendeley_cred, group_id='1377483')
+#' groupDocs(mc, group_id='1377483')
 #'}
-groupDocs <- function(mendeley_cred = NULL, group_id = NULL, ...,
+groupDocs <- function(mc = NULL, group_id = NULL, ...,
     curl = getCurlHandle()) {
-    if (!is(mendeley_cred, "MendeleyCredentials") || missing(mendeley_cred))
+if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)
     if (is.null(group_id)) {
@@ -20,7 +20,7 @@ groupDocs <- function(mendeley_cred = NULL, group_id = NULL, ...,
     }
     group_doc_url <- paste("http://api.mendeley.com/oapi/library/groups/", group_id,
         "/", sep = "")
-    group_docs <- OAuthRequest(mendeley_cred, group_doc_url, , "GET")
+    group_docs <- OAuthRequest(mc, group_doc_url, , "GET")
     group_docs <- fromJSON(group_docs)
     return(group_docs)
 }

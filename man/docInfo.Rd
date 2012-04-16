@@ -2,12 +2,11 @@
 \alias{docInfo}
 \title{docInfo - returns citation info for a specific paper}
 \usage{
-  docInfo(mendeley_cred = NULL, id = NULL, ...,
+  docInfo(mc = NULL, id = NULL, ...,
     curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{OAuth object of class
-  MendeleyCredentials}
+  \item{mc}{OAuth object of class MendeleyCredentials}
 
   \item{id}{Document id (retrieved with /oapi/library/)}
 
@@ -25,7 +24,7 @@
 }
 \examples{
 \dontrun{
-user_doc_details(mendeley_cred, '4388654895')
+docInfo(mc, '4388654895')
 }
 }
 

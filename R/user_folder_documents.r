@@ -1,7 +1,7 @@
-#'folderDocs - allows authenticated users to retrieve documents within a folder.
+#'folderDocs - Returns list of documents in a specific folder.
 #'
 #'
-#'@param mendeley_cred OAuth object of class MendeleyCredentials
+#'@param mc OAuth object of class MendeleyCredentials
 #'@param  folder_id ...
 #'@param  page ...
 #'@param  items ...
@@ -10,18 +10,18 @@
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@export
 #'@examples \dontrun{
-#' user_folder_documents(mendeley_cred, '22468211')
+#' folderDocs(mc, '22468211')
 #'}
-folderDocs <- function(mendeley_cred = NULL, folder_id = NULL, page = NULL,
+folderDocs <- function(mc = NULL, folder_id = NULL, page = NULL,
     items = NULL, ..., curl = getCurlHandle()) {
-    if (!is(mendeley_cred, "MendeleyCredentials") || missing(mendeley_cred))
+if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)
     if (is.null(folder_id)) {
         stop("You did not enter a folder ID.", call. = FALSE)
     }
     folder_doc_url <- sprintf("http://api.mendeley.com/oapi/library/folders/%s/", folder_id)
-    group_docs <- OAuthRequest(mendeley_cred, folder_doc_url, , "GET")
+    group_docs <- OAuthRequest(mc, folder_doc_url, , "GET")
     group_docs <- fromJSON(group_docs)
     lapply(group_docs$document_ids,
            function(x)

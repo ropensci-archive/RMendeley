@@ -1,12 +1,12 @@
 \name{mendeley_profile}
 \alias{mendeley_profile}
-\title{mendeley_profile - returns profile of a Mendeley user}
+\title{mendeley_profile - Displays your user profile.}
 \usage{
-  mendeley_profile(mendeley_cred = NULL,
-    mendeley_user_id = NULL, ..., curl = getCurlHandle())
+  mendeley_profile(mc = NULL, mendeley_user_id = NULL, ...,
+    curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{Mendeley OAUth credentials.}
+  \item{mc}{Mendeley OAUth credentials.}
 
   \item{mendeley_user_id}{...}
 
@@ -18,11 +18,11 @@
   tools mostly).}
 }
 \description{
-  mendeley_profile - returns profile of a Mendeley user
+  mendeley_profile - Displays your user profile.
 }
 \examples{
 \dontrun{
-user_profile(mendeley_cred, '39369') # If left blank, it will retrieve your profile.
+mendeley_profile(mc, '39369') # If left blank, it will retrieve your profile.
 }
 }
 

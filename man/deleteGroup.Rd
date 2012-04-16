@@ -1,11 +1,13 @@
-\name{authorStats}
-\alias{authorStats}
-\title{authorStats - Returns list of top 5 authors in your library.}
+\name{deleteGroup}
+\alias{deleteGroup}
+\title{deleteGroup - Delete a group for which you have owner permissions.}
 \usage{
-  authorStats(mc = NULL, ..., curl = getCurlHandle())
+  deleteGroup(mc, group, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
+
+  \item{group}{group id.}
 
   \item{curl}{If using in a loop, call getCurlHandle()
   first and pass the returned value in here (avoids
@@ -14,16 +16,13 @@
   \item{...}{optional additional curl options (debugging
   tools mostly).}
 }
-\value{
-  List
-}
 \description{
-  authorStats - Returns list of top 5 authors in your
-  library.
+  deleteGroup - Delete a group for which you have owner
+  permissions.
 }
 \examples{
 \dontrun{
-authorStats(mendeley_oauth_cred)
+deleteGroup(mc, 'group name')
 }
 }
 

@@ -1,13 +1,12 @@
 \name{addContact}
 \alias{addContact}
-\title{addContact}
+\title{addContact - Add a contact on Mendeley}
 \usage{
-  addContact(mendeley_cred = NULL, mendeley_user_id = NULL,
-    ..., curl = getCurlHandle())
+  addContact(mc = NULL, mendeley_user_id = NULL, ...,
+    curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{OAuth object of class
-  MendeleyCredentials}
+  \item{mc}{OAuth object of class MendeleyCredentials}
 
   \item{mendeley_user_id}{Mendeley user id of your
   contact.}
@@ -25,7 +24,7 @@
 }
 \examples{
 \dontrun{
-addContact(mendeley_cred, '12356')
+addContact(mc, '12356')
 }
 }
 \seealso{

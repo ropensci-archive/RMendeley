@@ -1,5 +1,5 @@
 #' authored.R   Search Method (Public Method)
-#' @param mendeley_cred OAuth object of class MendeleyCredentials
+#' @param mc OAuth object of class MendeleyCredentials
 #' @param query an author name to query
 #' @param page number pages to return (optional)
 #' @param numItems number of hits to return (optional)
@@ -16,7 +16,7 @@
 #' }
 #' @export
 authored <-
-function(mendeley_cred = NULL, query, page = NA, numItems = 100L, year=NA, curl=getCurlHandle(), ...)
+function(mc = NULL, query, page = NA, numItems = 100L, year=NA, curl=getCurlHandle(), ...)
 {
 
 # sprintf("%s/%s","http://api.mendeley.com/oapi/documents/authored",

@@ -2,14 +2,13 @@
 \alias{addFolderDoc}
 \title{Allows authenticated users to add a document to an specific folder. The document must exists on the library}
 \usage{
-  addFolderDoc(mendeley_cred = NULL, folder, doc, ...,
+  addFolderDoc(mc = NULL, folder, doc, ...,
     curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{OAuth object of class
-  MendeleyCredentials}
+  \item{mc}{OAuth object of class MendeleyCredentials}
 
-  \item{folder}{foo}
+  \item{folder}{Folder Name}
 
   \item{doc}{document...}
 
@@ -26,7 +25,7 @@
 }
 \examples{
 \dontrun{
-user_add_doc_folder(mendeley_cred, ...)
+addFolderDoc(mc, '23423', '12321312')
 }
 }
 

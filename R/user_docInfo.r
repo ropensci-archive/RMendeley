@@ -1,16 +1,16 @@
 #'docInfo - returns citation info for a specific paper
 #'
 #' returns citation info for a specific paper, such as authors, user tags, publication outlet, year, abstract, PubMed ID if available, etc.
-#'@param mendeley_cred OAuth object of class MendeleyCredentials
+#'@param mc OAuth object of class MendeleyCredentials
 #'@param  id Document id (retrieved with /oapi/library/)
 #'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@examples \dontrun{
-#' user_doc_details(mendeley_cred, '4388654895')
+#' docInfo(mc, '4388654895')
 #'}
-docInfo <- function(mendeley_cred = NULL, id = NULL, ..., curl = getCurlHandle()) {
-    if (!is(mendeley_cred, "MendeleyCredentials") || missing(mendeley_cred))
+docInfo <- function(mc = NULL, id = NULL, ..., curl = getCurlHandle()) {
+if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)
     if (is.null(id)) {
@@ -18,7 +18,7 @@ docInfo <- function(mendeley_cred = NULL, id = NULL, ..., curl = getCurlHandle()
     }
     user_doc_url <- paste("http://api.mendeley.com/oapi/library/documents/", id,
         "/", sep = "")
-    user_doc_det <- OAuthRequest(mendeley_cred, user_doc_url, , "GET")
+    user_doc_det <- OAuthRequest(mc, user_doc_url, , "GET")
     user_doc_det <- fromJSON(user_doc_det)
     return(user_doc_det)
 }

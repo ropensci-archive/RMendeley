@@ -1,13 +1,12 @@
 \name{folderDocs}
 \alias{folderDocs}
-\title{folderDocs - allows authenticated users to retrieve documents within a folder.}
+\title{folderDocs - Returns list of documents in a specific folder.}
 \usage{
-  folderDocs(mendeley_cred = NULL, folder_id = NULL,
-    page = NULL, items = NULL, ..., curl = getCurlHandle())
+  folderDocs(mc = NULL, folder_id = NULL, page = NULL,
+    items = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
-  \item{mendeley_cred}{OAuth object of class
-  MendeleyCredentials}
+  \item{mc}{OAuth object of class MendeleyCredentials}
 
   \item{folder_id}{...}
 
@@ -23,12 +22,12 @@
   tools mostly).}
 }
 \description{
-  folderDocs - allows authenticated users to retrieve
-  documents within a folder.
+  folderDocs - Returns list of documents in a specific
+  folder.
 }
 \examples{
 \dontrun{
-user_folder_documents(mendeley_cred, '22468211')
+folderDocs(mc, '22468211')
 }
 }
 
