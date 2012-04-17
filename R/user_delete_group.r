@@ -2,6 +2,7 @@
 #'
 #'@param mc OAuth object of class MendeleyCredentials
 #'@param  group group id.
+#'@param  ask logical. Default is TRUE to verify deletion. To skip this step, set ask to FALSE.
 #'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
 #' @param ... optional additional curl options (debugging tools mostly).
@@ -9,7 +10,7 @@
 #'@examples \dontrun{
 #' deleteGroup(mc, 'group name')
 #'}
-deleteGroup <- function(mc, group, ..., curl = getCurlHandle()) {
+deleteGroup <- function(mc, group, ask = TRUE, ..., curl = getCurlHandle()) {
     if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)
@@ -24,12 +25,21 @@ deleteGroup <- function(mc, group, ..., curl = getCurlHandle()) {
     del_group_url <- sprintf("http://api.mendeley.com/oapi/library/groups/%s/", id)
 
     reader = dynCurlReader(curl, del_group_url, binary = FALSE)
+if (ask) {
+        verify <- readline(paste("Are you sure you want to delete",
+            group, " (Y/N)? "))
+        verify <- toupper(verify)
+        if (verify != "Y" & verify != "N") {
+            stop("Unexpected response. \n", call. = F)
+        }
+    }
+    if (verify == "Y" || !(ask)) {
     OAuthRequest(mc, del_group_url, , "DELETE", ..., followlocation = TRUE,
                       .addwritefunction = FALSE, headerfunction = reader$update)
-
         # We really want the HTTP response header and to check the status, not whether its body is ""
     hdr = parseHTTPHeader(reader$header())
     as.integer(hdr["status"]) %/% 100 == 2
+            }
   }
 # API: http://apidocs.mendeley.com/home/user-specific-methods/user-library-delete-group
 
