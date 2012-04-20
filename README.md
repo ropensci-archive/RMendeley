@@ -72,7 +72,7 @@
 * `Profile info`(completed)
 
 
-### Functions not yet working (3)
+### Functions with issues (3)
 * `Create new document`
 * `Upload file`
 * `Download file`
