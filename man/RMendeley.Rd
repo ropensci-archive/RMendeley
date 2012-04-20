@@ -5,16 +5,21 @@
 \alias{RMendeley-package}
 \title{RMendeley - A programmatic interface to the Web Service methods provided by the Mendeley open science}
 \description{
-  This is version 1.0.0 of package RMendeley. Prior to
-  using this library, you must obtain Mendeley consumer and
-  secret keys from the
-  \href{http://apidocs.mendeley.com/}{developer site}.
+  This is version 1.0.0 of package RMendeley. User specific
+  API methods require obtaining access keys from
+  Mendeley.com. To do so, first sign up at the Mendeley
+  \href{http://apidocs.mendeley.com/}{developer site}and
+  obtain Mendeley API keys. Ideally you should store these
+  keys in your \code{.rprofile} but you may also specify
+  them inline when authenticating with
+  \code{\link{mendeley_auth}}.
 }
 \details{
-  Ideally you should save both keys in your
-  \code{.rprofile} as follows:
+  To save your cosumer key/secret combo in your
+  \code{.rprofile}, add the following lines:
 
   #options(MendeleyKey = \"YOUR_CONSUMER_KEY\")
+
   #options(MendeleyPrivateKey = \"YOUR_PRIVATE_KEY\")
 
   Most functions now require users to authenticate first
@@ -51,6 +56,15 @@
   \code{\link{leaveGroup}} \item
   \code{\link{unfollowGroup}} \item
   \code{\link{getGroupID}} }
+
+  \strong{Public functions} \enumerate{ \item
+  \code{\link{authored}} \item \code{\link{authors}} \item
+  \code{\link{categories}} \item \code{\link{details}}
+  \item \code{\link{groups}} \item \code{\link{papers}}
+  \item \code{\link{public_groups_details}} \item
+  \code{\link{public_groups_documents}} \item
+  \code{\link{msearch}} \item \code{\link{subcategories}}
+  \item \code{\link{tagged}} \item \code{\link{tags}} }
 
   \strong{Useful links} \enumerate{ \item
   \href{http://mendeley.com/}{Mendeley} \item
