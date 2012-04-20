@@ -12,27 +12,66 @@
 #' Most functions now require users to authenticate first using \code{\link{mendeley_auth}}. Once you had approved \code{RMendeley} on the Mendeley website, return to the R console and paste the PIN to complete authentication. You may save this \code{MendeleyCredential} object for future use and not repeat the authentication process for each session.
 #'
 #' \strong{Personal functions}
-#' \enumerate{ \item \code{\link{mendeley_library}} \item \code{\link{mendeley_profile}} \item \code{\link{pubStats}} \item \code{\link{tagStats}} \item \code{\link{authoredPubs}} \item \code{\link{authorStats}} \item \code{\link{contacts}} \item \code{\link{addContact}} }
-#'
+#' \itemize{
+#' \item \code{\link{mendeley_library}}
+#' \item \code{\link{mendeley_profile}}
+#' \item \code{\link{pubStats}}
+#' \item \code{\link{tagStats}}
+#' \item \code{\link{authoredPubs}}
+#' \item \code{\link{authorStats}}
+#' \item \code{\link{contacts}}
+#' \item \code{\link{addContact}}
+#' }
 #'
 #' \strong{Folder functions}
-#' \enumerate{ \item  \code{\link{createFolder}}  \item \code{\link{deleteFolder}} \item \code{\link{folderDocs}} \item \code{\link{Folders}} \item \code{\link{addFolderDoc}} \item \code{\link{getFolderID}} }
-#'
+#' \itemize{
+#' \item  \code{\link{createFolder}}
+#' \item \code{\link{deleteFolder}}
+#' \item \code{\link{folderDocs}}
+#' \item \code{\link{Folders}}
+#' \item \code{\link{addFolderDoc}}
+#' \item \code{\link{getFolderID}}
+#' }
 #'
 #' \strong{Document functions}
-#' \enumerate{ \item \code{\link{docInfo}}}
-#'
+#' \itemize{
+#'   \item \code{\link{docInfo}}
+#' }
 #'
 #'\strong{Group functions}
-#' \enumerate{ \item \code{\link{myGroups}} \item \code{\link{createGroup}} \item \code{\link{deleteGroup}} \item \code{\link{groupDocs}} \item \code{\link{groupDocInfo}} \item \code{\link{groupPeople}} \item \code{\link{leaveGroup}} \item \code{\link{unfollowGroup}} \item \code{\link{getGroupID}} }
-#'
-#'
+#' \itemize{
+#' \item \code{\link{myGroups}}
+#' \item \code{\link{createGroup}}
+#' \item \code{\link{deleteGroup}}
+#' \item \code{\link{groupDocs}}
+#' \item \code{\link{groupDocInfo}}
+#' \item \code{\link{groupPeople}}
+#' \item \code{\link{leaveGroup}}
+#' \item \code{\link{unfollowGroup}}
+#' \item \code{\link{getGroupID}}
+#' }
+#
 #'\strong{Public methods}
-#' \enumerate{ \item \code{\link{authored}} \item \code{\link{authors}} \item \code{\link{categories}} \item \code{\link{details}} \item \code{\link{groups}} \item \code{\link{papers}} \item \code{\link{public_groups_details}} \item \code{\link{public_groups_documents}} \item \code{\link{msearch}} \item \code{\link{subcategories}} \item \code{\link{tagged}} \item \code{\link{tags}} }
-#'
+#' \itemize{
+#' \item \code{\link{authored}}
+#' \item \code{\link{authors}}
+#' \item \code{\link{categories}}
+#' \item \code{\link{details}}
+#' \item \code{\link{groups}}
+#' \item \code{\link{papers}}
+#' \item \code{\link{public_groups_details}}
+#' \item \code{\link{public_groups_documents}}
+#' \item \code{\link{msearch}}
+#' \item \code{\link{subcategories}}
+#' \item \code{\link{tagged}}
+#' \item \code{\link{tags}}
+#' }
 #'
 #' \strong{Useful links}
-#' \enumerate{ \item \href{http://mendeley.com/}{Mendeley} \item \href{http://apidocs.mendeley.com/}{Full API documentation}}
+#' \itemize{
+#' \item \href{http://mendeley.com/}{Mendeley}
+#' \item \href{http://apidocs.mendeley.com/}{Full API documentation}
+#' }
 #' @name RMendeley
 #' @docType package
 #' @aliases RMendeley package-RMendeley
