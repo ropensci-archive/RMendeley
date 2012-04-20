@@ -8,7 +8,8 @@
 \arguments{
   \item{mc}{Mendeley OAUth credentials.}
 
-  \item{mendeley_user_id}{...}
+  \item{mendeley_user_id}{Mendeley ID of the user you wish
+  to look up.}
 
   \item{curl}{If using in a loop, call getCurlHandle()
   first and pass the returned value in here (avoids

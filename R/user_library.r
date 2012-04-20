@@ -9,8 +9,8 @@
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@export
 #'@examples \dontrun{
-#' user_library(mc)
-#' user_library(mc, 2)
+#' mendeley_library(mc)
+#' mendeley_library(mc, 2)
 #' mendeley_library(mc, 1, 25)
 #'}
 mendeley_library <- function(mc = NULL, page = NULL, items = NULL, ...,
