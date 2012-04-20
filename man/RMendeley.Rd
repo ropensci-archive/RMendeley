@@ -6,26 +6,32 @@
 \title{RMendeley - Programmatic interface to the Mendeley Web}
 \description{
   This is version 1.0.0 of package RMendeley.
-  \strong{Personal functions} \link{mendeley_library}
-  \link{mendeley_profile} \link{pubStats} \link{tagStats}
-  \link{authoredPubs} \link{authorStats} \link{contacts}
-  \link{addContact}
 }
 \details{
-  \strong{Folder functions} \link{createFolder}
-  \link{deleteFolder} \link{folderDocs} \link{Folders}
-  \link{addFolderDoc} \link{getFolderID}
+  \strong{Personal functions} \enumerate{ \item
+  \link{mendeley_library} \item \link{mendeley_profile}
+  \item \link{pubStats} \item \link{tagStats} \item
+  \link{authoredPubs} \item \link{authorStats} \item
+  \link{contacts} \item \link{addContact} }
 
-  \strong{Document functions} \link{docInfo}
+  \strong{Folder functions} \enumerate{ \item
+  \link{createFolder} \item \link{deleteFolder} \item
+  \link{folderDocs} \item \link{Folders} \item
+  \link{addFolderDoc} \item \link{getFolderID} }
 
-  \strong{Group functions} \link{myGroups}
-  \link{createGroup} \link{deleteGroup} \link{groupDocs}
-  \link{groupDocInfo} \link{groupPeople} \link{leaveGroup}
-  \link{unfollowGroup} \link{getGroupID}
+  \strong{Document functions} \enumerate{ \item
+  \link{docInfo} }
 
-  \strong{Useful links}
-  \href{http://mendeley.com/}{Mendeley}
+  \strong{Group functions} \enumerate{ \item
+  \link{myGroups} \item \link{createGroup} \item
+  \link{deleteGroup} \item \link{groupDocs} \item
+  \link{groupDocInfo} \item \link{groupPeople} \item
+  \link{leaveGroup} \item \link{unfollowGroup} \item
+  \link{getGroupID} }
+
+  \strong{Useful links} \enumerate{ \item
+  \href{http://mendeley.com/}{Mendeley} \item
   \href{http://apidocs.mendeley.com/}{Full API
-  documentation}
+  documentation}}
 }
 
