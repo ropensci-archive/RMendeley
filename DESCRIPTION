@@ -58,3 +58,5 @@ Collate:
     'user_pub_stats.r'
     'user_tag_stats.r'
     'user_delete_group.r'
+    'RMendeley.R'
+    'startup.r'

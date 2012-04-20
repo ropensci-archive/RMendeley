@@ -1,8 +1,8 @@
-\name{leave_group}
-\alias{leave_group}
+\name{leaveGroup}
+\alias{leaveGroup}
 \title{The following methods will quit membership from a group}
 \usage{
-  leave_group(mc = NULL, group = NULL, ...,
+  leaveGroup(mc = NULL, group = NULL, ...,
     curl = getCurlHandle())
 }
 \arguments{
@@ -22,7 +22,7 @@
 }
 \examples{
 \dontrun{
-user_delete_group(mc, ...)
+leaveGroup(mc, ...)
 }
 }
 

@@ -1,8 +1,8 @@
-\name{unfollow_group}
-\alias{unfollow_group}
+\name{unfollowGroup}
+\alias{unfollowGroup}
 \title{The following methods will essentially delete a group from the user's library.}
 \usage{
-  unfollow_group(mc = NULL, group = NULL, ...,
+  unfollowGroup(mc = NULL, group = NULL, ...,
     curl = getCurlHandle())
 }
 \arguments{
@@ -23,7 +23,7 @@
 }
 \examples{
 \dontrun{
-user_delete_group(mc, ...)
+unfollowGroup(mc, ...)
 }
 }
 

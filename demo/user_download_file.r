@@ -1,8 +1,8 @@
 #' User download file (not working because docInfo does not return file hash)
 #'
 #'@param mc OAuth object of class MendeleyCredentials
-#' @param  doc <what param does>
-#' @param  file   <what param does>
+#' @param  doc ...
+#' @param  file File to download
 #' @param  binary logical. Set TRUE for binary files.
 #'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)

@@ -53,9 +53,9 @@ if (ask) {
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@export
 #'@examples \dontrun{
-#' user_delete_group(mc, ...)
+#' leaveGroup(mc, ...)
 #'}
-leave_group <- function(mc = NULL, group = NULL, ..., curl = getCurlHandle()) {
+leaveGroup <- function(mc = NULL, group = NULL, ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)
@@ -84,9 +84,9 @@ if (!is(mc, "MendeleyCredentials"))
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@export
 #'@examples \dontrun{
-#' user_delete_group(mc, ...)
+#' unfollowGroup(mc, ...)
 #'}
-unfollow_group <- function(mc = NULL, group = NULL, ..., curl = getCurlHandle()) {
+unfollowGroup <- function(mc = NULL, group = NULL, ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
             call. = FALSE)

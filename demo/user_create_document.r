@@ -1,6 +1,5 @@
 #'createDocument - Creates a new document in the user's library or a group. [not working]
 #'
-#'<longer description>
 #'@param mc OAuth object of class MendeleyCredentials
 #'@param doc ...
 #'@param  type type of group. Can be public, private or invite.
