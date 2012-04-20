@@ -9,9 +9,9 @@
 #' @param ... optional additional curl options (debugging tools mostly).
 #' @export
 #' @examples \dontrun{
-#' user_download_file(mc, ....)
+#' MendeleyDownload(mc, ....)
 #'}
-user_download_file <- function(mc = NULL, doc, file = NA, binary = NA,
+MendeleyDownload <- function(mc = NULL, doc, file = NA, binary = NA,
     ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",

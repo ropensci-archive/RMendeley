@@ -7,9 +7,9 @@
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@export
 #'@examples \dontrun{
-#' functions is not complete
+#' MendeleyUpload(mc, ..)
 #'}
-user_upload_file  <- function(mc = NULL, doc, content, ..., curl = getCurlHandle()) {
+MendeleyUpload  <- function(mc = NULL, doc, content, ..., curl = getCurlHandle()) {
 #     if (!is(mc, 'MendeleyCredentials') ||  missing(mc))
 #         stop('Invalid or missing Mendeley credentials. ?mendeley_auth for more information.', call.= FALSE)
 # u = as(doc, 'URL')
