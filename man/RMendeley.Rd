@@ -26,9 +26,9 @@
   using \code{\link{mendeley_auth}}. Once you had approved
   \code{RMendeley} on the Mendeley website, return to the R
   console and paste the PIN to complete authentication. You
-  may save those \code{MendeleyCredential} object for
-  future use and not go through the authentication process
-  again.
+  may save this \code{MendeleyCredential} object for future
+  use and not repeat the authentication process for each
+  session.
 
   \strong{Personal functions} \enumerate{ \item
   \code{\link{mendeley_library}} \item
@@ -57,7 +57,7 @@
   \code{\link{unfollowGroup}} \item
   \code{\link{getGroupID}} }
 
-  \strong{Public functions} \enumerate{ \item
+  \strong{Public methods} \enumerate{ \item
   \code{\link{authored}} \item \code{\link{authors}} \item
   \code{\link{categories}} \item \code{\link{details}}
   \item \code{\link{groups}} \item \code{\link{papers}}

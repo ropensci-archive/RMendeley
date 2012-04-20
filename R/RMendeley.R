@@ -9,7 +9,7 @@
 #' \code{options(MendeleyPrivateKey = "YOUR_PRIVATE_KEY")}
 #'
 #'
-#' Most functions now require users to authenticate first using \code{\link{mendeley_auth}}. Once you had approved \code{RMendeley} on the Mendeley website, return to the R console and paste the PIN to complete authentication. You may save those \code{MendeleyCredential} object for future use and not go through the authentication process again.
+#' Most functions now require users to authenticate first using \code{\link{mendeley_auth}}. Once you had approved \code{RMendeley} on the Mendeley website, return to the R console and paste the PIN to complete authentication. You may save this \code{MendeleyCredential} object for future use and not repeat the authentication process for each session.
 #'
 #' \strong{Personal functions}
 #' \enumerate{ \item \code{\link{mendeley_library}} \item \code{\link{mendeley_profile}} \item \code{\link{pubStats}} \item \code{\link{tagStats}} \item \code{\link{authoredPubs}} \item \code{\link{authorStats}} \item \code{\link{contacts}} \item \code{\link{addContact}} }
@@ -27,7 +27,7 @@
 #' \enumerate{ \item \code{\link{myGroups}} \item \code{\link{createGroup}} \item \code{\link{deleteGroup}} \item \code{\link{groupDocs}} \item \code{\link{groupDocInfo}} \item \code{\link{groupPeople}} \item \code{\link{leaveGroup}} \item \code{\link{unfollowGroup}} \item \code{\link{getGroupID}} }
 #'
 #'
-#'\strong{Public functions}
+#'\strong{Public methods}
 #' \enumerate{ \item \code{\link{authored}} \item \code{\link{authors}} \item \code{\link{categories}} \item \code{\link{details}} \item \code{\link{groups}} \item \code{\link{papers}} \item \code{\link{public_groups_details}} \item \code{\link{public_groups_documents}} \item \code{\link{msearch}} \item \code{\link{subcategories}} \item \code{\link{tagged}} \item \code{\link{tags}} }
 #'
 #'

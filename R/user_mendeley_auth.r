@@ -1,6 +1,6 @@
 #'Function to obtain OAuth tokens from Mendeley to faciliate user specific methods.
 #'
-#' User specific API methods require obtaining access keys from Mendeley.com. To do so, first sign up at the Mendeley \href{http://apidocs.mendeley.com/}{developer site}and obtain Mendeley API keys. Ideally you should store these keys in your \code{.rprofile} like so:
+#' User specific API methods require obtaining access keys from Mendeley.com. To do so, first sign up at the Mendeley \href{http://apidocs.mendeley.com/}{developer site} and obtain Mendeley API keys. Ideally you should store these keys in your \code{.rprofile} like so:
 #' \code{options(MendeleyKey="Your_Key")}
 #' \code{options(MendeleySecret="Your_secret_key")}
 #' If this is not possible (assuming you are on a public machine), then you can spefify both inline. Calling \code{mendeley_auth()} with the right keys will launch your default browser and take you to Mendeley.com to authorize this application. If you are not logged in, you will first be prompted to login with your Mendeley user/pass. Next, click accept to see a pin. At that point, copy the pin and paste it back at the R prompt. If you assign this to a R object, then you can use that as the first argument in all functions that require authentication.
@@ -9,7 +9,7 @@
 #'@param  cSecret Consumer secret. can be supplied here or read from Options()
 #'@param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
-#' @param ... optional additional curl options (debugging tools mostly).
+#'@param ... optional additional curl options (debugging tools mostly).
 #'@keywords authentication
 #'@return OAUth credential.
 #'@export mendeley_auth

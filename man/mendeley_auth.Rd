@@ -27,7 +27,7 @@
   User specific API methods require obtaining access keys
   from Mendeley.com. To do so, first sign up at the
   Mendeley \href{http://apidocs.mendeley.com/}{developer
-  site}and obtain Mendeley API keys. Ideally you should
+  site} and obtain Mendeley API keys. Ideally you should
   store these keys in your \code{.rprofile} like so:
   \code{options(MendeleyKey="Your_Key")}
   \code{options(MendeleySecret="Your_secret_key")} If this
