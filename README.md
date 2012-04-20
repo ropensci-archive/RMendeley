@@ -72,10 +72,8 @@
 * `Profile info`(completed)
 
 
-### Functions not yet working (5)
+### Functions not yet working (3)
 * `Create new document`
 * `Upload file`
 * `Download file`
-* `Delete group`
-* `Add document to folder`
 
