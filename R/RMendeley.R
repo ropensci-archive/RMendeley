@@ -11,46 +11,52 @@
 #'
 #' Most functions now require users to authenticate first using \code{\link{mendeley_auth}}. Once you had approved \code{RMendeley} on the Mendeley website, return to the R console and paste the PIN to complete authentication. You may save this \code{MendeleyCredential} object for future use and not repeat the authentication process for each session.
 #'
-#' \strong{Personal functions}
+#' \strong{Profile methods}
 #' \itemize{
-#' \item \code{\link{mendeley_library}}
-#' \item \code{\link{mendeley_profile}}
-#' \item \code{\link{pubStats}}
-#' \item \code{\link{tagStats}}
-#' \item \code{\link{authoredPubs}}
-#' \item \code{\link{authorStats}}
 #' \item \code{\link{contacts}}
 #' \item \code{\link{addContact}}
+#' \item \code{\link{mendeley_profile}}
 #' }
 #'
-#' \strong{Folder functions}
+#' \strong{Stats methods}
 #' \itemize{
-#' \item  \code{\link{createFolder}}
-#' \item \code{\link{deleteFolder}}
-#' \item \code{\link{folderDocs}}
-#' \item \code{\link{Folders}}
-#' \item \code{\link{addFolderDoc}}
-#' \item \code{\link{getFolderID}}
+#' \item \code{\link{authorStats}}
+#' \item \code{\link{tagStats}}
+#' \item \code{\link{pubStats}}
 #' }
 #'
-#' \strong{Document functions}
+#' \strong{Document methods}
 #' \itemize{
-#'   \item \code{\link{docInfo}}
+#' \item \code{\link{mendeley_library}}
+#' \item \code{\link{authoredPubs}}
+#' \item \code{\link{docInfo}}
+#' \item \code{createDoc}  \emph{Not yet coded.}
+#' \item \code{MendeleyUpload} \emph{Not yet coded.}
+#' \item \code{MendeleyDownload}  \emph{Not yet coded.}
+#' \item \code{\link{deleteDocument}}
 #' }
 #'
-#'\strong{Group functions}
+#'\strong{Group methods}
 #' \itemize{
 #' \item \code{\link{myGroups}}
-#' \item \code{\link{createGroup}}
-#' \item \code{\link{deleteGroup}}
+#' \item \code{\link{groupPeople}}
 #' \item \code{\link{groupDocs}}
 #' \item \code{\link{groupDocInfo}}
-#' \item \code{\link{groupPeople}}
+#' \item \code{\link{createGroup}}
+#' \item \code{\link{deleteGroup}}
 #' \item \code{\link{leaveGroup}}
 #' \item \code{\link{unfollowGroup}}
-#' \item \code{\link{getGroupID}}
 #' }
 #
+#' \strong{Folder methods}
+#' \itemize{
+#' \item \code{\link{Folders}}
+#' \item \code{\link{folderDocs}}
+#' \item \code{\link{addFolderDoc}}
+#' \item  \code{\link{createFolder}}
+#' \item \code{\link{deleteFolder}}
+#' }
+#'
 #'\strong{Public methods}
 #' \itemize{
 #' \item \code{\link{authored}}

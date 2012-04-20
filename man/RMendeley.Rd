@@ -30,37 +30,39 @@
   use and not repeat the authentication process for each
   session.
 
-  \strong{Personal functions} \itemize{ \item
+  \strong{Profile methods} \itemize{ \item
+  \code{\link{contacts}} \item \code{\link{addContact}}
+  \item \code{\link{mendeley_profile}} }
+
+  \strong{Stats methods} \itemize{ \item
+  \code{\link{authorStats}} \item \code{\link{tagStats}}
+  \item \code{\link{pubStats}} }
+
+  \strong{Document methods} \itemize{ \item
   \code{\link{mendeley_library}} \item
-  \code{\link{mendeley_profile}} \item
-  \code{\link{pubStats}} \item \code{\link{tagStats}} \item
-  \code{\link{authoredPubs}} \item
-  \code{\link{authorStats}} \item \code{\link{contacts}}
-  \item \code{\link{addContact}} }
+  \code{\link{authoredPubs}} \item \code{\link{docInfo}}
+  \item \code{createDoc} \emph{Not yet coded.} \item
+  \code{MendeleyUpload} \emph{Not yet coded.} \item
+  \code{MendeleyDownload} \emph{Not yet coded.} \item
+  \code{\link{deleteDocument}} }
 
-  \strong{Folder functions} \itemize{ \item
-  \code{\link{createFolder}} \item
-  \code{\link{deleteFolder}} \item \code{\link{folderDocs}}
-  \item \code{\link{Folders}} \item
-  \code{\link{addFolderDoc}} \item
-  \code{\link{getFolderID}} }
+  \strong{Group methods} \itemize{ \item
+  \code{\link{myGroups}} \item \code{\link{groupPeople}}
+  \item \code{\link{groupDocs}} \item
+  \code{\link{groupDocInfo}} \item
+  \code{\link{createGroup}} \item \code{\link{deleteGroup}}
+  \item \code{\link{leaveGroup}} \item
+  \code{\link{unfollowGroup}} } \strong{Folder methods}
+  \itemize{ \item \code{\link{Folders}} \item
+  \code{\link{folderDocs}} \item \code{\link{addFolderDoc}}
+  \item \code{\link{createFolder}} \item
+  \code{\link{deleteFolder}} }
 
-  \strong{Document functions} \itemize{ \item
-  \code{\link{docInfo}} }
-
-  \strong{Group functions} \itemize{ \item
-  \code{\link{myGroups}} \item \code{\link{createGroup}}
-  \item \code{\link{deleteGroup}} \item
-  \code{\link{groupDocs}} \item \code{\link{groupDocInfo}}
-  \item \code{\link{groupPeople}} \item
-  \code{\link{leaveGroup}} \item
-  \code{\link{unfollowGroup}} \item
-  \code{\link{getGroupID}} } \strong{Public methods}
-  \itemize{ \item \code{\link{authored}} \item
-  \code{\link{authors}} \item \code{\link{categories}}
-  \item \code{\link{details}} \item \code{\link{groups}}
-  \item \code{\link{papers}} \item
-  \code{\link{public_groups_details}} \item
+  \strong{Public methods} \itemize{ \item
+  \code{\link{authored}} \item \code{\link{authors}} \item
+  \code{\link{categories}} \item \code{\link{details}}
+  \item \code{\link{groups}} \item \code{\link{papers}}
+  \item \code{\link{public_groups_details}} \item
   \code{\link{public_groups_documents}} \item
   \code{\link{msearch}} \item \code{\link{subcategories}}
   \item \code{\link{tagged}} \item \code{\link{tags}} }
