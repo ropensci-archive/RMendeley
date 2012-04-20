@@ -14,8 +14,8 @@
   Ideally you should save both keys in your
   \code{.rprofile} as follows:
 
-  options(MendeleyKey = "YOUR_CONSUMER_KEY")
-  options(MendeleyPrivateKey = "YOUR_PRIVATE_KEY")
+  #options(MendeleyKey = \"YOUR_CONSUMER_KEY\")
+  #options(MendeleyPrivateKey = \"YOUR_PRIVATE_KEY\")
 
   Most functions now require users to authenticate first
   using \code{\link{mendeley_auth}}. Once you had approved

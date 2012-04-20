@@ -4,8 +4,8 @@
 #'
 #' Ideally you should save both keys in your \code{.rprofile} as follows:
 #'
-#'options(MendeleyKey = "YOUR_CONSUMER_KEY")
-#'options(MendeleyPrivateKey = "YOUR_PRIVATE_KEY")
+#' #options(MendeleyKey = \"YOUR_CONSUMER_KEY\")
+#' #options(MendeleyPrivateKey = \"YOUR_PRIVATE_KEY\")
 #'
 #'
 #' Most functions now require users to authenticate first using \code{\link{mendeley_auth}}. Once you had approved \code{RMendeley} on the Mendeley website, return to the R console and paste the PIN to complete authentication. You may save those \code{MendeleyCredential} object for future use and not go through the authentication process again.
