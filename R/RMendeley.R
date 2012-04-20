@@ -1,12 +1,12 @@
 #' RMendeley - A programmatic interface to the Web Service methods provided by the Mendeley open science
 #'
-#' This is version 1.0.0 of package RMendeley. User specific API methods require obtaining access keys from Mendeley.com. To do so, first sign up at the Mendeley \href{http://apidocs.mendeley.com/}{developer site}and obtain Mendeley API keys. Ideally you should store these keys in your \code{.rprofile} but you may also specify them inline when authenticating with \code{\link{mendeley_auth}}.
+#' This is version 1.0.0 of package RMendeley. User specific API methods require obtaining access keys from Mendeley.com. To do so, first sign up at the Mendeley \href{http://apidocs.mendeley.com/}{developer site} and obtain Mendeley API keys. Ideally you should store these keys in your \code{.rprofile} but you may also specify them inline when authenticating with \code{\link{mendeley_auth}}.
 #'
 #' To save your cosumer key/secret combo in your \code{.rprofile}, add the following lines:
 #'
-#' #options(MendeleyKey = \"YOUR_CONSUMER_KEY\")
+#' \code{options(MendeleyKey = "YOUR_CONSUMER_KEY")}
 #'
-#' #options(MendeleyPrivateKey = \"YOUR_PRIVATE_KEY\")
+#' \code{options(MendeleyPrivateKey = "YOUR_PRIVATE_KEY")}
 #'
 #'
 #' Most functions now require users to authenticate first using \code{\link{mendeley_auth}}. Once you had approved \code{RMendeley} on the Mendeley website, return to the R console and paste the PIN to complete authentication. You may save those \code{MendeleyCredential} object for future use and not go through the authentication process again.
