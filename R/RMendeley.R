@@ -1,4 +1,4 @@
-#' RMendeley - Programmatic interface to the Mendeley Web
+#' RMendeley - A programmatic interface to the Web Service methods provided by the Mendeley open science
 #'
 #' This is version 1.0.0 of package RMendeley.
 #'
