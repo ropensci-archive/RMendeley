@@ -9,7 +9,7 @@ install_github('ROAuth','duncantl')
 
 
 # Public Methods API
-> (see [public methods for more information](http://apidocs.mendeley.com/home/public-resources ))
+> (see [public methods for more information](http://apidocs.mendeley.com/home/public-resources))
 
 **Statistics methods (from Mendeley Server)**
 
@@ -35,6 +35,9 @@ install_github('ROAuth','duncantl')
  * `Public groups details`
  * `Public groups documents`
  * `Public groups people`
+
+# User Specific Methods API
+> (see [user specific methods for more information](http://apidocs.mendeley.com/home/user-specific-methods))
 
 **Profiles Methods**
 
