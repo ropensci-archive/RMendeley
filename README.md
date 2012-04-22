@@ -36,21 +36,23 @@ install_github('ROAuth','duncantl')
  * `Public groups documents`
  * `Public groups people`
 
+**Profiles Methods**
 
-# User Specific Methods
+* `Contacts`
+* `Add contact`
+* `Profile info`
 
-All user specific methods are currently under development and located in the [dev branch](https://github.com/ropensci/RMendeley/tree/dev).
+**Stats Methods**
 
-=======
-* `Authors stats` (completed)
-* `Tags stats` (completed)
-* `Publications stats` (completed)
+* `Authors stats`
+* `Tags stats`
+* `Publications stats`
 
 **Documents Methods**
 
-* `Library` (completed)
-* `Authored publications` (compelted)
-* `Documents details` (completed)
+* `Library`
+* `Authored publications`
+* `Documents details`
 * `Create new document`
 * `Upload file`
 * `Download file`
@@ -58,26 +60,22 @@ All user specific methods are currently under development and located in the [de
 
 **Groups Methods**
 
-* `Groups` (completed)
-* `Group people` (completed)
-* `Group documents` (completed)
-* `Group document details` (completed)
+* `Groups`
+* `Group people`
+* `Group documents`
+* `Group document details`
 * `Create group`
 * `Delete group`
 
 **Folders Methods**
 
-* `Folders`(completed)
-* `Folder documents` (completed)
+* `Folders`
+* `Folder documents`
 * `Add document to folder`
 * `Create folder`
 * `Delete folder`
 * `Delete document from folder`
 
 
-**Profiles Methods**
 
-* `Contacts` (completed)
-* `Add contact`
-* `Profile info`(completed)
 
