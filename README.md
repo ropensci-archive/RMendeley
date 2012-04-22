@@ -41,7 +41,6 @@ install_github('ROAuth','duncantl')
 
 All user specific methods are currently under development and located in the [dev branch](https://github.com/ropensci/RMendeley/tree/dev).
 
-<<<<<<< HEAD
 =======
 * `Authors stats` (completed)
 * `Tags stats` (completed)
@@ -82,10 +81,3 @@ All user specific methods are currently under development and located in the [de
 * `Add contact`
 * `Profile info`(completed)
 
-
-### Functions with issues (3)
-* `Create new document`
-* `Upload file`
-* `Download file`
-
->>>>>>> dev
