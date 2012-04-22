@@ -1,0 +1,5 @@
+RMendeley 1.0.0
+================
+
+* Added Oauth authentication using ROAuth 0.9.2 which now allows users to manage their entire Mendeley collection directly from R.
+* Added 22 new functions which now allow users to access user specific methods listed in the API documentation: http://apidocs.mendeley.com/home/user-specific-methods

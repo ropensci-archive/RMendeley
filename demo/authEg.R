@@ -1,35 +1,35 @@
-## Manipulation of private libraries through the Mendeley API is also 
+## Manipulation of private libraries through the Mendeley API is also
 ## possible but requires OAuth authentication.  This demonstration shows
-## how private information can be accessed from R.  
+## how private information can be accessed from R.
 ##
 ## This is work in progress, and will eventually be supported directly by the package functions
 
 library(ROAuth)
 library(RJSONIO)
 
-cred <- OAuthFactory$new(consumerKey = getOption(MendeleyKey),
-                         consumerSecret = getOption(RMendeleySecret),
+cred <- OAuthFactory$new(consumerKey = getOption("MendeleyKey"),
+                         consumerSecret = getOption("RMendeleySecret"),
                          requestURL = 'http://api.mendeley.com/oauth/request_token/',
                          accessURL = 'http://api.mendeley.com/oauth/access_token/',
                          authURL = 'http://api.mendeley.com/oauth/authorize/')
 #if using my OAuthInR
 #                         curlHandle = getCurlHandle(verbose = TRUE))
 
-cred$handshake( fun = "get")
+cred = cred$handshake( post = FALSE) # Not fun = "get"
 
-lib = cred$OAuthRequest('http://api.mendeley.com/oapi/library/')
+lib = OAuthRequest(mc, 'http://api.mendeley.com/oapi/library/')
 docs = fromJSON(I(lib))
 
 docs$document_ids[[1]]
 
-details = cred$OAuthRequest(sprintf('http://api.mendeley.com/oapi/library/documents/%s/', docs$document_ids[[1]]))
+details = OAuthRequest(mc, sprintf('http://api.mendeley.com/oapi/library/documents/%s/', docs$document_ids[[1]]))
 
 
-txt = cred$OAuthRequest('http://api.mendeley.com/oapi/library/folders/', method = "GET")
+txt = OAuthRequest(mc, 'http://api.mendeley.com/oapi/library/folders/', method = "GET")
 folders = fromJSON(txt)
 
 
-txt = cred$OAuthRequest(sprintf('http://api.mendeley.com/oapi/library/folders/%s/', folders[[1]]$id))
+txt = OAuthRequest(mc, sprintf('http://api.mendeley.com/oapi/library/folders/%s/', folders[[1]]$id))
 fromJSON(txt)
 
 #XXX When converting to JSON, we currently need collapse = "" or we end up with a signature
@@ -40,26 +40,32 @@ doc = list(type = "Book",
            year = 2008L)
 jdoc = toJSON(doc, collapse = "")
 
-newDoc = cred$OAuthRequest('http://api.mendeley.com/oapi/library/documents/', c(document = jdoc), "POST")
+newDoc = OAuthRequest(mc, 'http://api.mendeley.com/oapi/library/documents/', c(document = jdoc), "POST")
 
 
 f = toJSON(list(name = "Test folder"), collapse = "")
-cred$OAuthRequest('http://api.mendeley.com/oapi/library/folders/', c(folder = f), "POST")
-
+ans = OAuthRequest(mc, 'http://api.mendeley.com/oapi/library/folders/', c(folder = f), "POST")
+f = fromJSON(ans)
 
 ################################
 
-# Delete a folder
 
-u = sprintf('http://api.mendeley.com/oapi/library/folders/%s/', folders[[1]]$id)
-cred$OAuthRequest(u, method = "DELETE", verbose = TRUE)
+# create a folder
+j = toJSON(list(name = "Test folder"))
+ans = OAuthRequest(mc, "http://api.mendeley.com/oapi/library/folders/myFolder",
+                     list(folder = j) , "POST")
+f = fromJSON(ans)
+
+# Delete a folder
+u = sprintf('http://api.mendeley.com/oapi/library/folders/%s/', f)
+OAuthRequest(mc, u, method = "DELETE", verbose = TRUE)
 
 
 ########
 # Upload a file via a PUT
 
-lib = cred$OAuthRequest('http://api.mendeley.com/oapi/library/')
+lib = OAuthRequest(mc, 'http://api.mendeley.com/oapi/library/')
 docs = fromJSON(I(lib))
 u = sprintf('http://www.mendeley.com/oapi/library/documents/%s/', docs$document_ids[[1]])
 f = CFILE("foo.pdf")
-cred$OAuthRequest(u, readdata = f@ref, infilesize = file.info("foo.pdf")[1, "size"], method = "PUT")
+OAuthRequest(mc, u, readdata = f@ref, infilesize = file.info("foo.pdf")[1, "size"], method = "PUT")

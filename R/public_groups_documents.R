@@ -1,6 +1,6 @@
 #' public_groups_documents.R   Public Group Methods (Public Methods)
-#' 
-#' Returns list of documents ids within a public group. It is possible 
+#'
+#' Returns list of documents ids within a public group. It is possible
 #' @param query a public group ID number
 #' @param details if detailed information (public_group_details) should be
 #' returned; logical, default is FALSE
@@ -9,13 +9,13 @@
 #' @param key Mendeley API key (otherwise will try and load from package)
 #' @param url the Mendeley API url for the function (should be left to default)
 #' @param ... optional additional curl options (debugging tools mostly)
-#' @param curl If using in a loop, call getCurlHandle() first and pass 
+#'@param curl If using in a loop, call getCurlHandle() first and pass
 #' the returned value in here (avoids unnecessary footprint)
-#' @return detailed metadata  for all articles in the public group 
+#' @return detailed metadata  for all articles in the public group
 #' @details to retrieve documents details in the same request setting the
 #' optional parameter details to true.
 #' @examples \dontrun{
-#' public_groups_details(492511) 
+#' public_groups_details(492511)
 #' }
 #' @export
 public_groups_documents =

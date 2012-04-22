@@ -33,7 +33,7 @@
 \examples{
 \dontrun{
   tags()
-  tags("6")  # Discipline "6", Computer Science
+  tags('6')  # Discipline '6', Computer Science
 }
 }
 \keyword{method}

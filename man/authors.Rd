@@ -32,7 +32,7 @@
 \examples{
 \dontrun{
   authors()
-  authors(discipline="6") # Discipline "6", Computer Science
+  authors(discipline='6') # Discipline '6', Computer Science
 }
 }
 \keyword{method}

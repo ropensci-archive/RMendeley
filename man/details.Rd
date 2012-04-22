@@ -34,8 +34,8 @@
 }
 \examples{
 \dontrun{
-ali <- details("10.1073/pnas.0810311106", type="doi")
- a <- details("cabcbae0-839b-11df-aedb-0024e8453de8") # uuid
+ali <- details('10.1073/pnas.0810311106', type='doi')
+ a <- details('cabcbae0-839b-11df-aedb-0024e8453de8') # uuid
 }
 }
 
