@@ -9,7 +9,7 @@
   \item{mc}{Mendeley OAUth credentials.}
 
   \item{mendeley_user_id}{Mendeley ID of the user you wish
-  to look up.}
+  to look up. Leave blank to retrieve your own profile.}
 
   \item{curl}{If using in a loop, call getCurlHandle()
   first and pass the returned value in here (avoids
