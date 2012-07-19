@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RMendeley - A programmatic interface to the Web Service methods provided by the Mendeley open science. RMendeley </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {padding-top: 60px;}
+      h2 {padding-top: 20px}
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/highlight.css" rel="stylesheet">
+    <link href="css/staticdocs.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class = "container">
+          <a class="brand">RMendeley </a>
+          <div class="nav">
+            <ul class="nav">
+              <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>RMendeley - A programmatic interface to the Web Service methods provided by the Mendeley open science</h1>
+
+      <div class="row">
+        <div class="span8">
+                    
+          <div class="RMendeley - A programmatic interface to the Web Service methods provided by the Mendeley open science">
+            <h2>RMendeley - A programmatic interface to the Web Service methods provided by the Mendeley open science</h2>
+            
+          </div>
+
+          <div class="Description">
+            <h2>Description</h2>
+            
+            <p>This is version 1.0.0 of package RMendeley. User specific
+  API methods require obtaining access keys from
+  Mendeley.com. To do so, first sign up at the Mendeley
+  <a href = 'http://apidocs.mendeley.com/'>developer site</a> and
+  obtain Mendeley API keys. Ideally you should store these
+  keys in your <code>.rprofile</code> but you may also specify
+  them inline when authenticating with
+  <code><a href='mendeley_auth.html'>mendeley_auth</a></code>.</p>
+        
+          </div>
+
+          <div class="Details">
+            <h2>Details</h2>
+            
+            <p>To save your cosumer key/secret combo in your
+  <code>.rprofile</code>, add the following lines:</p>
+        
+            <p><code>options(MendeleyKey = "YOUR_CONSUMER_KEY")</code></p>
+        
+            <p><code>options(MendeleyPrivateKey = "YOUR_PRIVATE_KEY")</code></p>
+        
+            <p>Most functions now require users to authenticate first
+  using <code><a href='mendeley_auth.html'>mendeley_auth</a></code>. Once you had approved
+  <code>RMendeley</code> on the Mendeley website, return to the R
+  console and paste the PIN to complete authentication. You
+  may save this <code>MendeleyCredential</code> object for future
+  use and not repeat the authentication process for each
+  session.</p>
+        
+            <p><strong>Profile methods</strong> <ul>
+<li>
+  <code><a href='contacts.html'>contacts</a></code> </li>
+<li> <code><a href='addContact.html'>addContact</a></code>
+  </li>
+<li> <code><a href='mendeley_profile.html'>mendeley_profile</a></code> </li>
+</ul></p>
+        
+            <p><strong>Stats methods</strong> <ul>
+<li>
+  <code><a href='authorStats.html'>authorStats</a></code> </li>
+<li> <code><a href='tagStats.html'>tagStats</a></code>
+  </li>
+<li> <code><a href='pubStats.html'>pubStats</a></code> </li>
+</ul></p>
+        
+            <p><strong>Document methods</strong> <ul>
+<li>
+  <code><a href='mendeley_library.html'>mendeley_library</a></code> </li>
+<li>
+  <code><a href='authoredPubs.html'>authoredPubs</a></code> </li>
+<li> <code><a href='docInfo.html'>docInfo</a></code>
+  </li>
+<li> <code>createDoc</code> <em>Not yet coded.</em> </li>
+<li>
+  <code>MendeleyUpload</code> <em>Not yet coded.</em> </li>
+<li>
+  <code>MendeleyDownload</code> <em>Not yet coded.</em> </li>
+<li>
+  <code><a href='deleteDocument.html'>deleteDocument</a></code> </li>
+</ul></p>
+        
+            <p><strong>Group methods</strong> <ul>
+<li>
+  <code><a href='myGroups.html'>myGroups</a></code> </li>
+<li> <code><a href='groupPeople.html'>groupPeople</a></code>
+  </li>
+<li> <code><a href='groupDocs.html'>groupDocs</a></code> </li>
+<li>
+  <code><a href='groupDocInfo.html'>groupDocInfo</a></code> </li>
+<li>
+  <code><a href='createGroup.html'>createGroup</a></code> </li>
+<li> <code><a href='deleteGroup.html'>deleteGroup</a></code>
+  </li>
+<li> <code><a href='leaveGroup.html'>leaveGroup</a></code> </li>
+<li>
+  <code><a href='unfollowGroup.html'>unfollowGroup</a></code> </li>
+</ul>
+ <strong>Folder methods</strong>
+  <ul>
+<li> <code><a href='Folders.html'>Folders</a></code> </li>
+<li>
+  <code><a href='folderDocs.html'>folderDocs</a></code> </li>
+<li> <code><a href='addFolderDoc.html'>addFolderDoc</a></code>
+  </li>
+<li> <code><a href='createFolder.html'>createFolder</a></code> </li>
+<li>
+  <code><a href='deleteFolder.html'>deleteFolder</a></code> </li>
+</ul></p>
+        
+            <p><strong>Public methods</strong> <ul>
+<li>
+  <code><a href='authored.html'>authored</a></code> </li>
+<li> <code><a href='authors.html'>authors</a></code> </li>
+<li>
+  <code><a href='categories.html'>categories</a></code> </li>
+<li> <code><a href='details.html'>details</a></code>
+  </li>
+<li> <code><a href='groups.html'>groups</a></code> </li>
+<li> <code><a href='papers.html'>papers</a></code>
+  </li>
+<li> <code><a href='public_groups_details.html'>public_groups_details</a></code> </li>
+<li>
+  <code><a href='public_groups_documents.html'>public_groups_documents</a></code> </li>
+<li>
+  <code><a href='msearch.html'>msearch</a></code> </li>
+<li> <code><a href='subcategories.html'>subcategories</a></code>
+  </li>
+<li> <code><a href='tagged.html'>tagged</a></code> </li>
+<li> <code><a href='tags.html'>tags</a></code> </li>
+</ul></p>
+        
+            <p><strong>Useful links</strong> <ul>
+<li>
+  <a href = 'http://mendeley.com/'>Mendeley</a> </li>
+<li>
+  <a href = 'http://apidocs.mendeley.com/'>Full API
+  documentation</a> </li>
+</ul></p>
+        
+            <p></p>
+        
+          </div>
+      
+        </div>
+        <div class="span4">
+          <!-- <ul>
+            <li>package-RMendeley</li><li>RMendeley</li><li>RMendeley-package</li>
+          </ul>
+          <ul>
+            
+          </ul> -->
+            
+                    
+        </div>
+      </div>
+      <footer class="footer">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div> <!-- /container -->
+  </body>
+</html>
