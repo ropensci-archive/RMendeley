@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>msearch.R   Search Method (Public Method). RMendeley </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {padding-top: 60px;}
+      h2 {padding-top: 20px}
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/highlight.css" rel="stylesheet">
+    <link href="css/staticdocs.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class = "container">
+          <a class="brand">RMendeley </a>
+          <div class="nav">
+            <ul class="nav">
+              <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>msearch.R   Search Method (Public Method)</h1>
+
+      <div class="row">
+        <div class="span8">
+          <h2>Usage</h2>
+          <pre><span class="functioncall"><a href='msearch.html'>msearch</a></span><span class="keyword">(</span><span class="symbol">query</span><span class="keyword">,</span> <span class="argument">page</span> <span class="argument">=</span> <span class="number">NA</span><span class="keyword">,</span> <span class="argument">numItems</span> <span class="argument">=</span> <span class="number">1000L</span><span class="keyword">,</span> <span class="argument">key</span> <span class="argument">=</span> <span class="functioncall"><a href='NA'>getOption</a></span><span class="keyword">(</span><span class="string">"MendeleyKey"</span><span class="keyword">,</span> <span class="functioncall"><a href='NA'>stop</a></span><span class="keyword">(</span><span class="string">"need an API key for Mendeley"</span><span class="keyword">)</span><span class="keyword">)</span><span class="keyword">,</span>
+  <span class="argument">curl</span> <span class="argument">=</span> <span class="functioncall"><a href='NA'>getCurlHandle</a></span><span class="keyword">(</span><span class="keyword">)</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
+          
+          <h2>Arguments</h2>
+          <dl>
+            <dt>query</dt>
+            <dd>any search query. Can use the options:
+  authors, year, title, published_in, followed by colons
+  e.g. authors:Alistair Boettiger published_in:Science</dd>
+            <dt>page</dt>
+            <dd>number pages to return (optional)</dd>
+            <dt>numItems</dt>
+            <dd>number of hits to return (optional)</dd>
+            <dt>key</dt>
+            <dd>Mendeley API key (otherwise will try and load
+  from package)</dd>
+            <dt>...</dt>
+            <dd>optional additional curl options (debugging
+  tools mostly)</dd>
+            <dt>curl</dt>
+            <dd>If using in a loop, call getCurlHandle()
+  first and pass the returned value in here (avoids
+  unnecessary footprint)</dd>
+          </dl>
+          
+          <div class="Value">
+            <h2>Value</h2>
+            
+            <p>all results matching the query for the author</p>
+        
+          </div>
+
+          <div class="Description">
+            <h2>Description</h2>
+            
+            <p>msearch.R Search Method (Public Method)</p>
+        
+          </div>
+
+          <div class="Details">
+            <h2>Details</h2>
+            
+            <p>see
+  <a href = 'http://apidocs.mendeley.com/home/public-resources/search-terms'>http://apidocs.mendeley.com/home/public-resources/search-terms</a></p>
+        
+          </div>
+      
+          <h2 id="examples">Examples</h2>
+          <pre class="examples"><div class='input'>## <strong>Not run</strong>: #  a = msearch('bob', , 20)#  b = msearch('bob', 4, 20)#  d = msearch('authors:Alistair Boettiger published_in:Science')#  # Get the DOIs of Journal of Ecology hits (returns first 999 exact matches)#   all <- msearch('published_in:\'Journal of Ecology\'')#   dois <- sapply(all, function(x) x$doi)# ## <strong>End(Not run)</strong></div></pre>
+        </div>
+        <div class="span4">
+          <!-- <ul>
+            <li>msearch</li>
+          </ul>
+          <ul>
+            
+          </ul> -->
+            
+                    
+        </div>
+      </div>
+      <footer class="footer">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div> <!-- /container -->
+  </body>
+</html>
