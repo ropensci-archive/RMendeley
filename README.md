@@ -2,7 +2,7 @@
 
 `Mendeley 1.00` requires `ROAuth 0.9.2` which is not yet available on CRAN. As soon as it is updated, we will push update `RMenedeley` as well. In the meantime, install `ROAUth` from github before installing this version:
 
-```
+```r
 library(devtools)
 install_github('ROAuth','duncantl')
 ```
@@ -81,9 +81,4 @@ install_github('ROAuth','duncantl')
 * `Add contact`
 * `Profile info`(completed)
 
-
-### Functions with issues (3)
-* `Create new document`
-* `Upload file`
-* `Download file`
 
