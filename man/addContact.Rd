@@ -27,6 +27,9 @@
 addContact(mc, '12356')
 }
 }
+\author{
+  Karthik Ram \email{karthik.ram@gmail.com}
+}
 \seealso{
   user_contacts
 }

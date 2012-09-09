@@ -12,6 +12,7 @@
 #'@examples \dontrun{
 #' groupPeople(mc, 'Future of Science')
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 groupPeople <- function(mc = NULL, group_name = NULL, ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",

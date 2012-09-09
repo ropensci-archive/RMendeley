@@ -1,4 +1,4 @@
- #' addContact - Add a contact on Mendeley
+#' addContact - Add a contact on Mendeley
 #'
 #' Add contacts to your Mendeley profile from R.
 #' Add another Mendeley user as a contact with their Mendeley ID.
@@ -11,6 +11,7 @@
 #'@examples \dontrun{
 #' addContact(mc, '12356')
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 addContact <- function(mc = NULL, mendeley_user_id = NULL, ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",

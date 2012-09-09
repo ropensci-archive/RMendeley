@@ -53,5 +53,8 @@ mc <- mendeley_auth() # If your keys are stored in options using
 as MendeleyKey and MendeleyPrivateKey.
 }
 }
+\author{
+  Karthik Ram \email{karthik.ram@gmail.com}
+}
 \keyword{authentication}
 

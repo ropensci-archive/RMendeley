@@ -10,6 +10,7 @@
 #'@examples \dontrun{
 #' deleteGroup(mc, 'group name')
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 deleteGroup <- function(mc, group, ask = TRUE, ..., curl = getCurlHandle()) {
     if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",

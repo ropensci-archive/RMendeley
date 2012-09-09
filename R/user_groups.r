@@ -10,6 +10,7 @@
 #'@examples \dontrun{
 #' myGroups(mc)
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 myGroups <- function(mc = NULL, ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",

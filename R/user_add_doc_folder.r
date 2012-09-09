@@ -11,6 +11,7 @@
 #'@examples \dontrun{
 #' addFolderDoc(mc, '23423', '12321312')
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 addFolderDoc <- function(mc = NULL, folder, doc, ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",

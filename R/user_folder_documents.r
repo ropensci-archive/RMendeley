@@ -12,6 +12,7 @@
 #'@examples \dontrun{
 #' folderDocs(mc, '22468211')
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 folderDocs <- function(mc = NULL, folder_id = NULL, page = NULL,
     items = NULL, ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))

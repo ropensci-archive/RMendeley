@@ -9,6 +9,7 @@
 #'@examples \dontrun{
 #' docInfo(mc, '4388654895')
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 docInfo <- function(mc = NULL, id = NULL, ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",

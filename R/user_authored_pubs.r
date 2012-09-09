@@ -8,6 +8,7 @@
 #'@examples \dontrun{
 #' authoredPubs(mc)
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 authoredPubs <- function(mc = NULL, ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",

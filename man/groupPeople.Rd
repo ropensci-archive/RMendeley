@@ -29,6 +29,9 @@
 groupPeople(mc, 'Future of Science')
 }
 }
+\author{
+  Karthik Ram \email{karthik.ram@gmail.com}
+}
 \seealso{
   user_groups
 }

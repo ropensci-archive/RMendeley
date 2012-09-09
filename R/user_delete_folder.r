@@ -10,6 +10,7 @@
 #'@examples \dontrun{
 #' deleteFolder(mc, 'folder_name')
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 #DTL  This should take an id that is the human-readable name of the folder and then
  #  call the folders() method to get the actual ID.
  # Allow the caller to use I('id') to specify that it is the actual id.

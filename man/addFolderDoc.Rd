@@ -28,4 +28,7 @@
 addFolderDoc(mc, '23423', '12321312')
 }
 }
+\author{
+  Karthik Ram \email{karthik.ram@gmail.com}
+}
 

@@ -1,8 +1,8 @@
 \docType{package}
 \name{RMendeley}
-\alias{package-RMendeley}
 \alias{RMendeley}
 \alias{RMendeley-package}
+\alias{package-RMendeley}
 \title{RMendeley - A programmatic interface to the Web Service methods provided by the Mendeley open science}
 \description{
   This is version 1.0.0 of package RMendeley. User specific

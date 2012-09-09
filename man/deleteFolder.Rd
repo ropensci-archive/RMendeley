@@ -25,4 +25,7 @@
 deleteFolder(mc, 'folder_name')
 }
 }
+\author{
+  Karthik Ram \email{karthik.ram@gmail.com}
+}
 

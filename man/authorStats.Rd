@@ -26,4 +26,7 @@
 authorStats(mendeley_oauth_cred)
 }
 }
+\author{
+  Karthik Ram \email{karthik.ram@gmail.com}
+}
 

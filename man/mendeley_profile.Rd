@@ -26,4 +26,7 @@
 mendeley_profile(mc, '39369') # If left blank, it will retrieve your profile.
 }
 }
+\author{
+  Karthik Ram \email{karthik.ram@gmail.com}
+}
 

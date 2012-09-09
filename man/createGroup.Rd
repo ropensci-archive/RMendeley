@@ -30,4 +30,7 @@ createGroup(mc, 'new_group_name')
 createGroup(mc, 'new_group_name', type="open")
 }
 }
+\author{
+  Karthik Ram \email{karthik.ram@gmail.com}
+}
 

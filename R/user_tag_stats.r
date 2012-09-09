@@ -1,3 +1,4 @@
+
 #'tagStats - allows authenticated users to get the most recent tags used in their library
 #'
 #'
@@ -10,6 +11,7 @@
 #'@examples \dontrun{
 #' tagStats(mc)
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 tagStats <- function(mc = NULL, ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
