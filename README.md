@@ -9,7 +9,7 @@ install_github('ROAuth','duncantl')
 
 
 # Public Methods API
-> (see [public methods for more information](http://apidocs.mendeley.com/home/public-resources ))
+> (see [public methods for more information](http://apidocs.mendeley.com/home/public-resources))
 
 **Statistics methods (from Mendeley Server)**
 
@@ -36,21 +36,26 @@ install_github('ROAuth','duncantl')
  * `Public groups documents`
  * `Public groups people`
 
+# User Specific Methods API
+> (see [user specific methods for more information](http://apidocs.mendeley.com/home/user-specific-methods))
 
-# User Specific Methods
- >  New functions coming to the next version of Mendeley. (see [user specific methods for more information](http://apidocs.mendeley.com/home/user-specific-methods))
+**Profiles Methods**
 
- **Stats Methods**
+* `Contacts`
+* `Add contact`
+* `Profile info`
 
-* `Authors stats` (completed)
-* `Tags stats` (completed)
-* `Publications stats` (completed)
+**Stats Methods**
+
+* `Authors stats`
+* `Tags stats`
+* `Publications stats`
 
 **Documents Methods**
 
-* `Library` (completed)
-* `Authored publications` (compelted)
-* `Documents details` (completed)
+* `Library`
+* `Authored publications`
+* `Documents details`
 * `Create new document`
 * `Upload file`
 * `Download file`
@@ -58,27 +63,25 @@ install_github('ROAuth','duncantl')
 
 **Groups Methods**
 
-* `Groups` (completed)
-* `Group people` (completed)
-* `Group documents` (completed)
-* `Group document details` (completed)
+* `Groups`
+* `Group people`
+* `Group documents`
+* `Group document details`
 * `Create group`
 * `Delete group`
 
 **Folders Methods**
 
-* `Folders`(completed)
-* `Folder documents` (completed)
+* `Folders`
+* `Folder documents`
 * `Add document to folder`
 * `Create folder`
 * `Delete folder`
 * `Delete document from folder`
 
 
-**Profiles Methods**
 
-* `Contacts` (completed)
-* `Add contact`
-* `Profile info`(completed)
+<<<<<<< HEAD
+=======
 
-
+>>>>>>> db57a2d0f8e60538936d3608fec470fe239b876f
