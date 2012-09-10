@@ -1,11 +1,15 @@
-**Important.**
+# Installing RMendeley 1.00
 
-`Mendeley 1.00` requires `ROAuth 0.9.2` which is not yet available on CRAN. As soon as it is updated, we will push update `RMenedeley` as well. In the meantime, install `ROAUth` from github before installing this version:
+Mendeley `1.00` requires `ROAuth 0.9.2` which is not yet available on CRAN. As soon as it becomes available on CRAN, we will update update `RMenedeley` as well. In the meantime, install `ROAUth` from github before installing this version:
 
 ```r
 library(devtools)
 install_github('ROAuth','ropensci')
 ```
+
+## Tutorial
+
+A full `RMendeley` tutorial is available on the [ropensci website](http://ropensci.org/tutorials/mendeley_tutorial.html).
 
 
 # Public Methods API
@@ -78,10 +82,4 @@ install_github('ROAuth','ropensci')
 * `Create folder`
 * `Delete folder`
 * `Delete document from folder`
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> db57a2d0f8e60538936d3608fec470fe239b876f
+ 
