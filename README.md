@@ -4,7 +4,7 @@
 
 ```r
 library(devtools)
-install_github('ROAuth','duncantl')
+install_github('ROAuth','ropensci')
 ```
 
 
