@@ -1,4 +1,4 @@
-Package: RMendeley
+Package: RMendeley2
 Description: A programmatic interface to the
     Web Service methods provided by the Mendeley open science
     project.
@@ -10,12 +10,12 @@ Maintainer: Carl Boettiger <cboettig@gmail.com>
 Depends:
     RJSONIO,
     RCurl (>= 1.6),
-    ROAuth (>= 0.92.0),
+    httr
     plyr,
     methods
 Imports:
     RJSONIO,
-    ROAuth (>= 0.92.0),
+    httr
     methods,
     RCurl (>= 1.6)
 Collate:
