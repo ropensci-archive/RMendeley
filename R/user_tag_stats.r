@@ -19,4 +19,5 @@ if (!is(mc, "MendeleyCredentials"))
     tag_stats <- OAuthRequest(mc, "http://api.mendeley.com/oapi/library/tags/",
         , "GET")
     tag_stats <- fromJSON(tag_stats)
+    return(tag_stats)
 }
