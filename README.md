@@ -4,7 +4,8 @@ Mendeley `1.00` requires `ROAuth 0.9.2` which is not yet available on CRAN. As s
 
 ```r
 library(devtools)
-install_github('ROAuth','ropensci')
+install_github('ROAuth','duncantl')
+install_github('RMendeley','ropensci')
 ```
 
 ## Tutorial
