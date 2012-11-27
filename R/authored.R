@@ -15,10 +15,11 @@
 #' a$total_results
 #' }
 #' @export
-authored <-
-function(mc = NULL, query, page = NA, numItems = 100L, year=NA, curl=getCurlHandle(), ...)
+authored <- function(query, mc = NULL, page = NA, numItems = 100L, year=NA, key = getOption("MendeleyKey", stop("need an API key for Mendeley")), curl=getCurlHandle(), ...)
 {
-
-# sprintf("%s/%s","http://api.mendeley.com/oapi/documents/authored",
-#          gsub(" ", "%20", query))
+	browser()
+q_url <- sprintf("%s/%s","http://api.mendeley.com/oapi/documents/authored", gsub(" ", "%20", query))
+args <- list(consumer_key = key)
+    result <- getForm(q_url, .params = args, .opts = list(...), curl = curl)
+    fromJSON(I(result))
 }
