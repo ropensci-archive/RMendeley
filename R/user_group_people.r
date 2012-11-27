@@ -20,7 +20,6 @@ if (!is(mc, "MendeleyCredentials"))
     if (is.null(group_name)) {
         stop("You did not specifiy a group name", call. = FALSE)
     }
-
     id <- getGroupID(mc, group_name)
 
     group_url <- sprintf("http://api.mendeley.com/oapi/library/groups/%s/people", id)
