@@ -8,8 +8,9 @@
 #' @param ... optional additional curl options (debugging tools mostly).
 #'@export
 #'@examples \dontrun{
-#' groupDocs(mc, group_id='1377483')
+#' groupDocs(mc, group_id='530031')
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 groupDocs <- function(mc = NULL, group_id = NULL, ...,
     curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))

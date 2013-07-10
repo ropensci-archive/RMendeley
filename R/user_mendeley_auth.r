@@ -18,6 +18,7 @@
 #' mc <- mendeley_auth() # If your keys are stored in options using
 #' as MendeleyKey and MendeleyPrivateKey.
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 mendeley_auth <- function(cKey = getOption("MendeleyKey", stop("Missing Mendeley consumer key")),
     cSecret = getOption("MendeleyPrivateKey", stop("Missing Mendeley app secret")),
     curl = getCurlHandle(), ...) {

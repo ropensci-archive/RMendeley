@@ -9,6 +9,7 @@
 #'@examples \dontrun{
 #' createFolder(mc, 'folder_name')
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 createFolder <- function(mc = NULL, name = NULL, ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",

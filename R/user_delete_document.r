@@ -11,6 +11,7 @@
 #'@examples \dontrun{
 #' deleteDocument(...)
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 deleteDocument <- function(mc = NULL, doc_id = NULL, folder_id = NULL,
     ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))

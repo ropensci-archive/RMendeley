@@ -11,6 +11,7 @@
 #'@examples \dontrun{
 #' groupDocInfo(mc,1377653 ,4402412575)
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 groupDocInfo <- function(mc = NULL, group_id = NULL, document_id = NULL,
     ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))

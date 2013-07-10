@@ -12,6 +12,7 @@
 #'@examples \dontrun{
 #' groupPeople(mc, 'Future of Science')
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 groupPeople <- function(mc = NULL, group_name = NULL, ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",
@@ -19,7 +20,6 @@ if (!is(mc, "MendeleyCredentials"))
     if (is.null(group_name)) {
         stop("You did not specifiy a group name", call. = FALSE)
     }
-
     id <- getGroupID(mc, group_name)
 
     group_url <- sprintf("http://api.mendeley.com/oapi/library/groups/%s/people", id)

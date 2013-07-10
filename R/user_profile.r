@@ -10,6 +10,7 @@
 #'@examples \dontrun{
 #' mendeley_profile(mc, '39369') # If left blank, it will retrieve your profile.
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 mendeley_profile <- function(mc = NULL, mendeley_user_id = NULL, ...,
     curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))

@@ -10,6 +10,7 @@
 #' createGroup(mc, 'new_group_name')
 #' createGroup(mc, 'new_group_name', type="open")
 #'}
+#' @author Karthik Ram \email{karthik.ram@@gmail.com}
 createGroup <- function(mc = NULL, group_name = NULL, type = "invite",
     ..., curl = getCurlHandle()) {
 if (!is(mc, "MendeleyCredentials"))
