@@ -10,7 +10,7 @@ Maintainer: Carl Boettiger <cboettig@gmail.com>
 Depends:
     RJSONIO,
     RCurl (>= 1.6),
-    ROAuth (>= 0.92.0),
+    ROAuth (>= 0.9.2),
     plyr,
     methods
 Imports:
