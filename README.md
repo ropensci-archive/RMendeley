@@ -1,8 +1,8 @@
 # Installing RMendeley 1.00
 
-Mendeley `1.00` requires `ROAuth 0.9.2` which is not yet available on CRAN. As soon as it becomes available on CRAN, we will update update `RMenedeley` as well. In the meantime, install `ROAUth` from github before installing this version:
+Mendeley `1.00` requires `ROAuth 0.9.2` which is unlikely to ever be available on CRAN. Therefore you MUST install `ROAUth` from github before installing this version. There is no futher development planned for the package at this time.
 
-```r
+```coffee
 library(devtools)
 install_github('ROAuth','duncantl')
 install_github('RMendeley','ropensci')
