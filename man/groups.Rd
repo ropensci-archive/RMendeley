@@ -2,10 +2,10 @@
 \alias{groups}
 \title{query for documents in a given group}
 \usage{
-  groups(query, page = NA, numItems = 10, cat = NA,
-    url = "http://api.mendeley.com/oapi/documents/groups/",
-    key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-    curl = getCurlHandle(), ...)
+groups(query, page = NA, numItems = 10, cat = NA,
+  url = "http://api.mendeley.com/oapi/documents/groups/",
+  key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
+  curl = getCurlHandle(), ...)
 }
 \arguments{
   \item{query}{a group name to query}
@@ -30,9 +30,9 @@
   unnecessary footprint)}
 }
 \value{
-  all results matching the query for the author
+all results matching the query for the author
 }
 \description{
-  query for documents in a given group
+query for documents in a given group
 }
 

@@ -2,8 +2,8 @@
 \alias{createGroup}
 \title{createGroup - Create a new group in your Mendeley library.}
 \usage{
-  createGroup(mc = NULL, group_name = NULL,
-    type = "invite", ..., curl = getCurlHandle())
+createGroup(mc = NULL, group_name = NULL, type = "invite", ...,
+  curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -21,8 +21,7 @@
   tools mostly).}
 }
 \description{
-  createGroup - Create a new group in your Mendeley
-  library.
+createGroup - Create a new group in your Mendeley library.
 }
 \examples{
 \dontrun{
@@ -31,6 +30,6 @@ createGroup(mc, 'new_group_name', type="open")
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

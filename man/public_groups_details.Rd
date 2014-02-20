@@ -2,10 +2,10 @@
 \alias{public_groups_details}
 \title{public_groups.details.R   Public Group Methods (Public Methods)}
 \usage{
-  public_groups_details(query,
-    key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-    url = sprintf("\%s/\%s", "http://api.mendeley.com/oapi/documents/groups", query),
-    curl = getCurlHandle(), ...)
+public_groups_details(query, key = getOption("MendeleyKey",
+  stop("need an API key for Mendeley")), url = sprintf("\%s/\%s",
+  "http://api.mendeley.com/oapi/documents/groups", query),
+  curl = getCurlHandle(), ...)
 }
 \arguments{
   \item{query}{a public group ID number}
@@ -24,10 +24,10 @@
   unnecessary footprint)}
 }
 \value{
-  detailed metadata for all articles in the public group
+detailed metadata for all articles in the public group
 }
 \description{
-  This method will return further details about a group.
+This method will return further details about a group.
 }
 \examples{
 \dontrun{

@@ -2,8 +2,8 @@
 \alias{mendeley_profile}
 \title{mendeley_profile - Displays your user profile.}
 \usage{
-  mendeley_profile(mc = NULL, mendeley_user_id = NULL, ...,
-    curl = getCurlHandle())
+mendeley_profile(mc = NULL, mendeley_user_id = NULL, ...,
+  curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{Mendeley OAUth credentials.}
@@ -19,7 +19,7 @@
   tools mostly).}
 }
 \description{
-  mendeley_profile - Displays your user profile.
+mendeley_profile - Displays your user profile.
 }
 \examples{
 \dontrun{
@@ -27,6 +27,6 @@ mendeley_profile(mc, '39369') # If left blank, it will retrieve your profile.
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

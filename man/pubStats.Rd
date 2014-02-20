@@ -2,7 +2,7 @@
 \alias{pubStats}
 \title{pubStats - returns list of top 20 publication outlets in your library.}
 \usage{
-  pubStats(mc = NULL, ..., curl = getCurlHandle())
+pubStats(mc = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -15,8 +15,8 @@
   tools mostly).}
 }
 \description{
-  pubStats - returns list of top 20 publication outlets in
-  your library.
+pubStats - returns list of top 20 publication outlets in
+your library.
 }
 \examples{
 \dontrun{
@@ -24,6 +24,6 @@ user_pub_stats(...)
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

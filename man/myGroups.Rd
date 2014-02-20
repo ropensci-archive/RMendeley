@@ -2,7 +2,7 @@
 \alias{myGroups}
 \title{myGroups - returns a list of Mendeley groups that you belong to.}
 \usage{
-  myGroups(mc = NULL, ..., curl = getCurlHandle())
+myGroups(mc = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -15,11 +15,11 @@
   tools mostly).}
 }
 \value{
-  data.frame
+data.frame
 }
 \description{
-  myGroups - returns a list of Mendeley groups that you
-  belong to.
+myGroups - returns a list of Mendeley groups that you
+belong to.
 }
 \examples{
 \dontrun{
@@ -27,6 +27,6 @@ myGroups(mc)
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

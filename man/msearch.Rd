@@ -2,9 +2,8 @@
 \alias{msearch}
 \title{msearch.R   Search Method (Public Method)}
 \usage{
-  msearch(query, page = NA, numItems = 1000L,
-    key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-    curl = getCurlHandle(), ...)
+msearch(query, page = NA, numItems = 1000L, key = getOption("MendeleyKey",
+  stop("need an API key for Mendeley")), curl = getCurlHandle(), ...)
 }
 \arguments{
   \item{query}{any search query. Can use the options:
@@ -26,14 +25,14 @@
   unnecessary footprint)}
 }
 \value{
-  all results matching the query for the author
+all results matching the query for the author
 }
 \description{
-  msearch.R Search Method (Public Method)
+msearch.R Search Method (Public Method)
 }
 \details{
-  see
-  \url{http://apidocs.mendeley.com/home/public-resources/search-terms}
+see
+\url{http://apidocs.mendeley.com/home/public-resources/search-terms}
 }
 \examples{
 \dontrun{

@@ -2,8 +2,7 @@
 \alias{leaveGroup}
 \title{The following methods will quit membership from a group}
 \usage{
-  leaveGroup(mc = NULL, group = NULL, ...,
-    curl = getCurlHandle())
+leaveGroup(mc = NULL, group = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -18,7 +17,7 @@
   tools mostly).}
 }
 \description{
-  The following methods will quit membership from a group
+The following methods will quit membership from a group
 }
 \examples{
 \dontrun{

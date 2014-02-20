@@ -2,8 +2,8 @@
 \alias{deleteDocument}
 \title{deleteDocument - delete a document from your library.}
 \usage{
-  deleteDocument(mc = NULL, doc_id = NULL,
-    folder_id = NULL, ..., curl = getCurlHandle())
+deleteDocument(mc = NULL, doc_id = NULL, folder_id = NULL, ...,
+  curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -21,8 +21,8 @@
   tools mostly).}
 }
 \description{
-  Deletes from library if no folder is specified. Deletes
-  from folder if a folder id is specified.
+Deletes from library if no folder is specified. Deletes
+from folder if a folder id is specified.
 }
 \examples{
 \dontrun{
@@ -30,6 +30,6 @@ deleteDocument(...)
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

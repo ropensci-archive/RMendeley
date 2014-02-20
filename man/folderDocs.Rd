@@ -2,8 +2,8 @@
 \alias{folderDocs}
 \title{folderDocs - Returns list of documents in a specific folder.}
 \usage{
-  folderDocs(mc = NULL, folder_id = NULL, page = NULL,
-    items = NULL, ..., curl = getCurlHandle())
+folderDocs(mc = NULL, folder_id = NULL, page = NULL, items = NULL, ...,
+  curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -22,8 +22,8 @@
   tools mostly).}
 }
 \description{
-  folderDocs - Returns list of documents in a specific
-  folder.
+folderDocs - Returns list of documents in a specific
+folder.
 }
 \examples{
 \dontrun{
@@ -31,6 +31,6 @@ folderDocs(mc, '22468211')
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

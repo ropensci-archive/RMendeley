@@ -2,10 +2,10 @@
 \alias{subcategories}
 \title{Returns a list of Mendeley's subcategories}
 \usage{
-  subcategories(cat,
-    key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-    url = sprintf("\%s/\%s", "http://api.mendeley.com/oapi/documents/subcategories/", cat),
-    curl = getCurlHandle(), ...)
+subcategories(cat, key = getOption("MendeleyKey",
+  stop("need an API key for Mendeley")), url = sprintf("\%s/\%s",
+  "http://api.mendeley.com/oapi/documents/subcategories/", cat),
+  curl = getCurlHandle(), ...)
 }
 \arguments{
   \item{cat}{subject category id}
@@ -23,7 +23,7 @@
   tools mostly)}
 }
 \description{
-  Returns a list of Mendeley's subcategories
+Returns a list of Mendeley's subcategories
 }
 \examples{
 \dontrun{

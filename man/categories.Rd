@@ -2,9 +2,10 @@
 \alias{categories}
 \title{Returns a list of Mendeley's categories}
 \usage{
-  categories(key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-    url = "http://api.mendeley.com/oapi/documents/categories/",
-    ..., curl = getCurlHandle())
+categories(key = getOption("MendeleyKey",
+  stop("need an API key for Mendeley")),
+  url = "http://api.mendeley.com/oapi/documents/categories/", ...,
+  curl = getCurlHandle())
 }
 \arguments{
   \item{key}{Mendeley API key (otherwise will try and load
@@ -20,7 +21,7 @@
   tools mostly)}
 }
 \description{
-  Returns a list of Mendeley's categories
+Returns a list of Mendeley's categories
 }
 \examples{
 \dontrun{

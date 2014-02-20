@@ -2,7 +2,7 @@
 \alias{tagStats}
 \title{tagStats - allows authenticated users to get the most recent tags used in their library}
 \usage{
-  tagStats(mc = NULL, ..., curl = getCurlHandle())
+tagStats(mc = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -15,11 +15,11 @@
   tools mostly).}
 }
 \value{
-  list with tags
+list with tags
 }
 \description{
-  tagStats - allows authenticated users to get the most
-  recent tags used in their library
+tagStats - allows authenticated users to get the most
+recent tags used in their library
 }
 \examples{
 \dontrun{
@@ -27,6 +27,6 @@ tagStats(mc)
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

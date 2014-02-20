@@ -2,8 +2,7 @@
 \alias{groupDocs}
 \title{groupDocs - returns a list of documents in a group.}
 \usage{
-  groupDocs(mc = NULL, group_id = NULL, ...,
-    curl = getCurlHandle())
+groupDocs(mc = NULL, group_id = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -18,7 +17,7 @@
   tools mostly).}
 }
 \description{
-  groupDocs - returns a list of documents in a group.
+groupDocs - returns a list of documents in a group.
 }
 \examples{
 \dontrun{
@@ -26,6 +25,6 @@ groupDocs(mc, group_id='530031')
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

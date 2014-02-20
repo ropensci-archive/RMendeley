@@ -1,2 +1,7 @@
 authEg    examples of using Open Authentication with RMendeley to access users own secure files
 erdos     example of using RMendeley to calculate one's Erdos number to a given author
+mendeley  examples using RMendeley
+user_create_document example of creating a document
+user_download_file example of downloading a file
+user_upload_file example of uploading a file
+

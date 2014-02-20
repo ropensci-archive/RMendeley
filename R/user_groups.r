@@ -22,18 +22,18 @@ if (!is(mc, "MendeleyCredentials"))
 }
 
 
-#' getGroupID
+#' getGroupID function
 #'
-#'Retrieves Mendeley Group ID from a Mendeley Group Name
 #' @param mc OAuth object of class MendeleyCredentials
 #' @param group Group Name
 #' @param ... additional (optional) parameters
-#' @param curl curl handle
-#' @export
+#' @param curl the curl handle
+#' @return group id
 #' @examples \dontrun{
 #' getGroupID(mc, "Future of Science")
-#'}
-getGroupID <- function(mc = NULL, group = NULL,..., curl = getCurlHandle()) {
+#' }
+#' @export
+getGroupID <- function(mc = NULL, group = NULL, ..., curl = getCurlHandle()){
 name <- NA
  if (!is(mc, "MendeleyCredentials"))
         stop("Invalid or missing Mendeley credentials. ?mendeley_auth for more information.",

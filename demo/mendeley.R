@@ -13,23 +13,23 @@
 #
 #
 #Create new document (user_create_document.r)
-# • Upload file (user_upload_file.r)
-# • Add document to folder (user_add_doc_folder.r)
+# Upload file (user_upload_file.r)
+# Add document to folder (user_add_doc_folder.r)
 
-# • Add Contacts (user_add_contacts.r)
+# Add Contacts (user_add_contacts.r)
 #
-# # • Download file (user_download_file.r)
+# Download file (user_download_file.r)
 #
-# • Create folder (user_create_folder.r)
-# • Delete folder (user_delete_folder.r)
-# • Delete document from folder (user_delete_folder_doc.r)
+# Create folder (user_create_folder.r)
+# Delete folder (user_delete_folder.r)
+# Delete document from folder (user_delete_folder_doc.r)
 #
-# • Create group (user_create_group.r)
-# • Delete group (user_delete_group.r) # Is there delete in addition to get and post?
+# Create group (user_create_group.r)
+# Delete group (user_delete_group.r) # Is there delete in addition to get and post?
 #
 #
 # Test
-# • Delete document (user_delete_document.r)
+# Delete document (user_delete_document.r)
 #
 
 library(ROAuth)

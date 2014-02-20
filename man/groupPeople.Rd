@@ -2,8 +2,7 @@
 \alias{groupPeople}
 \title{groupPeople  - returns list of group members and their Mendeley user IDs}
 \usage{
-  groupPeople(mc = NULL, group_name = NULL, ...,
-    curl = getCurlHandle())
+groupPeople(mc = NULL, group_name = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{Your Mendeley OAuth credential.}
@@ -18,11 +17,11 @@
   tools mostly).}
 }
 \value{
-  list
+list
 }
 \description{
-  groupPeople - returns list of group members and their
-  Mendeley user IDs
+groupPeople - returns list of group members and their
+Mendeley user IDs
 }
 \examples{
 \dontrun{
@@ -30,9 +29,9 @@ groupPeople(mc, 'Future of Science')
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 \seealso{
-  user_groups
+user_groups
 }
 

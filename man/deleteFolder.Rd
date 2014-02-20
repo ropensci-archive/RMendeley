@@ -2,8 +2,7 @@
 \alias{deleteFolder}
 \title{deleteFolder - Delete a existing folder from your Mendeley library.}
 \usage{
-  deleteFolder(mc = NULL, name = NULL, ...,
-    curl = getCurlHandle())
+deleteFolder(mc = NULL, name = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -18,7 +17,7 @@
   tools mostly).}
 }
 \description{
-  <longer description>
+<longer description>
 }
 \examples{
 \dontrun{
@@ -26,6 +25,6 @@ deleteFolder(mc, 'folder_name')
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

@@ -2,11 +2,11 @@
 \alias{details}
 \title{details Search Method (Public Method)}
 \usage{
-  details(query,
-    type = c("mendeley", "arxiv", "doi", "isbn", "pmid", "scopus", "ssm"),
-    key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-    url = sprintf("\%s/\%s", "http://api.mendeley.com/oapi/documents/details", query),
-    curl = getCurlHandle(), ...)
+details(query, type = c("mendeley", "arxiv", "doi", "isbn", "pmid", "scopus",
+  "ssm"), key = getOption("MendeleyKey",
+  stop("need an API key for Mendeley")), url = sprintf("\%s/\%s",
+  "http://api.mendeley.com/oapi/documents/details", query),
+  curl = getCurlHandle(), ...)
 }
 \arguments{
   \item{query}{an object identifer of type identified by
@@ -27,10 +27,10 @@
   tools mostly)}
 }
 \value{
-  the details of the paper being queried
+the details of the paper being queried
 }
 \description{
-  details Search Method (Public Method)
+details Search Method (Public Method)
 }
 \examples{
 \dontrun{

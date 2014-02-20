@@ -2,8 +2,7 @@
 \alias{createFolder}
 \title{createFolder - Create a folder in your Mendeley library}
 \usage{
-  createFolder(mc = NULL, name = NULL, ...,
-    curl = getCurlHandle())
+createFolder(mc = NULL, name = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{Your Mendeley OAUth credentials}
@@ -18,11 +17,11 @@
   debugging purposes.}
 }
 \value{
-  JSON object of class \code{MendeleyFolderID} containing
-  your folder ID if successful.
+JSON object of class \code{MendeleyFolderID} containing
+your folder ID if successful.
 }
 \description{
-  createFolder - Create a folder in your Mendeley library
+createFolder - Create a folder in your Mendeley library
 }
 \examples{
 \dontrun{
@@ -30,6 +29,6 @@ createFolder(mc, 'folder_name')
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

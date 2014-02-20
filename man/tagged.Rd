@@ -2,11 +2,10 @@
 \alias{tagged}
 \title{tagged.R   Search Method (Public Method)}
 \usage{
-  tagged(query, page = NA, numItems = 1000L, cat = NA,
-    subcat = NA,
-    key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-    url = sprintf("\%s/\%s", "http://api.mendeley.com/oapi/documents/tagged", query),
-    curl = getCurlHandle(), ...)
+tagged(query, page = NA, numItems = 1000L, cat = NA, subcat = NA,
+  key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
+  url = sprintf("\%s/\%s", "http://api.mendeley.com/oapi/documents/tagged",
+  query), curl = getCurlHandle(), ...)
 }
 \arguments{
   \item{query}{any possible tag in Mendeley}
@@ -36,10 +35,10 @@
   unnecessary footprint)}
 }
 \value{
-  all results matching the query
+all results matching the query
 }
 \description{
-  tagged.R Search Method (Public Method)
+tagged.R Search Method (Public Method)
 }
 \examples{
 \dontrun{

@@ -2,10 +2,10 @@
 \alias{authors}
 \title{authors Stats Method (Public Method)}
 \usage{
-  authors(discipline = NULL, upandcoming = FALSE,
-    url = "http://api.mendeley.com/oapi/stats/authors/",
-    key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-    ..., curl = getCurlHandle())
+authors(discipline = NULL, upandcoming = FALSE,
+  url = "http://api.mendeley.com/oapi/stats/authors/",
+  key = getOption("MendeleyKey", stop("need an API key for Mendeley")), ...,
+  curl = getCurlHandle())
 }
 \arguments{
   \item{discipline}{a numeric code indicating the
@@ -27,7 +27,7 @@
   tools mostly)}
 }
 \description{
-  Returns list of top authors of given disipline or overall
+Returns list of top authors of given disipline or overall
 }
 \examples{
 \dontrun{

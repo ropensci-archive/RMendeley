@@ -2,8 +2,7 @@
 \alias{docInfo}
 \title{docInfo - returns citation info for a specific paper}
 \usage{
-  docInfo(mc = NULL, id = NULL, ...,
-    curl = getCurlHandle())
+docInfo(mc = NULL, id = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -18,9 +17,9 @@
   tools mostly).}
 }
 \description{
-  returns citation info for a specific paper, such as
-  authors, user tags, publication outlet, year, abstract,
-  PubMed ID if available, etc.
+returns citation info for a specific paper, such as
+authors, user tags, publication outlet, year, abstract,
+PubMed ID if available, etc.
 }
 \examples{
 \dontrun{
@@ -28,6 +27,6 @@ docInfo(mc, '4388654895')
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

@@ -2,7 +2,7 @@
 \alias{erdos_number}
 \title{erdos number}
 \usage{
-  erdos_number(myname, target = "Erdos", cutoff = 2)
+erdos_number(myname, target = "Erdos", cutoff = 2)
 }
 \arguments{
   \item{myname}{name as character with two elements,
@@ -14,19 +14,18 @@
   levels deep}
 }
 \value{
-  the erdos number and the network of coauthors The network
-  is a list, where each element is successively farther
-  removed
+the erdos number and the network of coauthors The network
+is a list, where each element is successively farther
+removed
 }
 \description{
-  A function to crawl the co-author tree looking for
-  matches
+A function to crawl the co-author tree looking for matches
 }
 \details{
-  This is really just an example function showing how the
-  RMendeley functions can leverage the power of scripted
-  codes and the R language to perform arbitrary &
-  complicated data manipulation.
+This is really just an example function showing how the
+RMendeley functions can leverage the power of scripted
+codes and the R language to perform arbitrary & complicated
+data manipulation.
 }
 \examples{
 \dontrun{

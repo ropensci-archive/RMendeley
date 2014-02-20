@@ -2,7 +2,7 @@
 \alias{authoredPubs}
 \title{authoredPubs - allows authenticated users to retrieve their own publications.}
 \usage{
-  authoredPubs(mc = NULL, ..., curl = getCurlHandle())
+authoredPubs(mc = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -15,8 +15,8 @@
   tools mostly).}
 }
 \description{
-  authoredPubs - allows authenticated users to retrieve
-  their own publications.
+authoredPubs - allows authenticated users to retrieve their
+own publications.
 }
 \examples{
 \dontrun{
@@ -24,6 +24,6 @@ authoredPubs(mc)
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

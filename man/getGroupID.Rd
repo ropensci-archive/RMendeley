@@ -1,12 +1,8 @@
 \name{getGroupID}
 \alias{getGroupID}
-\title{getGroupID}
+\title{Get a Group ID from group name}
 \usage{
-  getGroupID(mc = NULL, group = NULL, ...,
-    curl = getCurlHandle())
-
-  getGroupID(mc = NULL, group = NULL, ...,
-    curl = getCurlHandle())
+getGroupID(mc = NULL, group = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -15,30 +11,24 @@
 
   \item{...}{additional (optional) parameters}
 
-  \item{curl}{curl handle}
-
-  \item{mc}{<what param does>}
-
-  \item{group}{Name of group}
-
-  \item{...}{<what param does>}
-
-  \item{curl}{= getCurlHandle() <what param does>}
+  \item{curl}{the curl handle}
 }
 \value{
-  numeric
+numeric
+
+group id
 }
 \description{
-  Retrieves Mendeley Group ID from a Mendeley Group Name
+Meant for internal use.
 
-  Meant for internal use.
+getGroupID function
 }
 \examples{
 \dontrun{
-getGroupID(mc, "Future of Science")
+getGroupID(mc, '')
 }
 \dontrun{
-getGroupID(mc, '')
+getGroupID(mc, "Future of Science")
 }
 }
 

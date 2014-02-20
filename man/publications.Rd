@@ -2,10 +2,10 @@
 \alias{publications}
 \title{publications.R: A Stats Method (Public Methods)}
 \usage{
-  publications(discipline = NULL, upandcoming = FALSE,
-    url = "http://api.mendeley.com/oapi/stats/publications/",
-    key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-    ..., curl = getCurlHandle())
+publications(discipline = NULL, upandcoming = FALSE,
+  url = "http://api.mendeley.com/oapi/stats/publications/",
+  key = getOption("MendeleyKey", stop("need an API key for Mendeley")), ...,
+  curl = getCurlHandle())
 }
 \arguments{
   \item{discipline}{a numeric code indicating the
@@ -27,7 +27,7 @@
   tools mostly)}
 }
 \description{
-  publications.R: A Stats Method (Public Methods)
+publications.R: A Stats Method (Public Methods)
 }
 \examples{
 \dontrun{

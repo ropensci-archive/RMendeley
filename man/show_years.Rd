@@ -2,18 +2,18 @@
 \alias{show_years}
 \title{show of titles of the returned papers}
 \usage{
-  show_years(x)
+show_years(x)
 }
 \arguments{
   \item{x}{the list returned from a Mendeley public search
   method}
 }
 \value{
-  a vector of the years in each of the publications
-  included in the returned list
+a vector of the years in each of the publications included
+in the returned list
 }
 \description{
-  show of titles of the returned papers
+show of titles of the returned papers
 }
 \examples{
 \dontrun{

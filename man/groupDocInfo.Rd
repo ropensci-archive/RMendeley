@@ -2,8 +2,8 @@
 \alias{groupDocInfo}
 \title{groupDocInfo -  Returns metadata for a document in a group.}
 \usage{
-  groupDocInfo(mc = NULL, group_id = NULL,
-    document_id = NULL, ..., curl = getCurlHandle())
+groupDocInfo(mc = NULL, group_id = NULL, document_id = NULL, ...,
+  curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -20,8 +20,7 @@
   tools mostly).}
 }
 \description{
-  groupDocInfo - Returns metadata for a document in a
-  group.
+groupDocInfo - Returns metadata for a document in a group.
 }
 \examples{
 \dontrun{
@@ -29,6 +28,6 @@ groupDocInfo(mc,1377653 ,4402412575)
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

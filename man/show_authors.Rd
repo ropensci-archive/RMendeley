@@ -2,18 +2,18 @@
 \alias{show_authors}
 \title{show of authors on the paper}
 \usage{
-  show_authors(x)
+show_authors(x)
 }
 \arguments{
   \item{x}{the list returned from a Mendeley public search
   method}
 }
 \value{
-  a vector of the authors in each of the publications
-  included in the returned list
+a vector of the authors in each of the publications
+included in the returned list
 }
 \description{
-  show of authors on the paper
+show of authors on the paper
 }
 \examples{
 \dontrun{

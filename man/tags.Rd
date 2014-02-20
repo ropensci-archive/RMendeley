@@ -2,10 +2,10 @@
 \alias{tags}
 \title{tags.R a Stats Method (Public Method)}
 \usage{
-  tags(discipline, upandcoming = FALSE,
-    url = sprintf("\%s/\%s", "http://api.mendeley.com/oapi/stats/tags/", discipline),
-    key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-    curl = getCurlHandle(), ...)
+tags(discipline, upandcoming = FALSE, url = sprintf("\%s/\%s",
+  "http://api.mendeley.com/oapi/stats/tags/", discipline),
+  key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
+  curl = getCurlHandle(), ...)
 }
 \arguments{
   \item{discipline}{a numeric code indicating the
@@ -28,7 +28,7 @@
   tools mostly)}
 }
 \description{
-  tags.R a Stats Method (Public Method)
+tags.R a Stats Method (Public Method)
 }
 \examples{
 \dontrun{

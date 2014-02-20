@@ -2,8 +2,7 @@
 \alias{unfollowGroup}
 \title{The following methods will essentially delete a group from the user's library.}
 \usage{
-  unfollowGroup(mc = NULL, group = NULL, ...,
-    curl = getCurlHandle())
+unfollowGroup(mc = NULL, group = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -18,8 +17,8 @@
   tools mostly).}
 }
 \description{
-  The following methods will essentially delete a group
-  from the user's library.
+The following methods will essentially delete a group from
+the user's library.
 }
 \examples{
 \dontrun{

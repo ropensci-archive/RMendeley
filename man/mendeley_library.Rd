@@ -2,8 +2,8 @@
 \alias{mendeley_library}
 \title{mendeley_library - Returns a list of all the documents in your library.}
 \usage{
-  mendeley_library(mc = NULL, page = NULL, items = NULL,
-    ..., curl = getCurlHandle())
+mendeley_library(mc = NULL, page = NULL, items = NULL, ...,
+  curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{Your Mendeley ROauth credentials.}
@@ -20,8 +20,8 @@
   tools mostly).}
 }
 \description{
-  mendeley_library - Returns a list of all the documents in
-  your library.
+mendeley_library - Returns a list of all the documents in
+your library.
 }
 \examples{
 \dontrun{
@@ -31,6 +31,6 @@ mendeley_library(mc, 1, 25)
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

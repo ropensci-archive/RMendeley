@@ -2,7 +2,7 @@
 \alias{Folders}
 \title{Folders - retuns a list of your Mendeley folders with sizes.}
 \usage{
-  Folders(mc = NULL, ..., curl = getCurlHandle())
+Folders(mc = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{Your Mendeley ROAuth credential.}
@@ -15,11 +15,11 @@
   tools mostly).}
 }
 \value{
-  list
+list
 }
 \description{
-  Folders - retuns a list of your Mendeley folders with
-  sizes.
+Folders - retuns a list of your Mendeley folders with
+sizes.
 }
 \examples{
 \dontrun{
@@ -27,6 +27,6 @@ Folders(mc)
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

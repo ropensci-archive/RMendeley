@@ -2,9 +2,9 @@
 \alias{authored}
 \title{authored.R   Search Method (Public Method)}
 \usage{
-  authored(query, page = NA, numItems = 100L, year = NA,
-    key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-    curl = getCurlHandle(), ...)
+authored(query, page = NA, numItems = 100L, year = NA,
+  key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
+  curl = getCurlHandle(), ...)
 }
 \arguments{
   \item{query}{an author name to query}
@@ -26,10 +26,10 @@
   unnecessary footprint)}
 }
 \value{
-  all results matching the query for the author
+all results matching the query for the author
 }
 \description{
-  authored.R Search Method (Public Method)
+authored.R Search Method (Public Method)
 }
 \examples{
 \dontrun{

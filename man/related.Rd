@@ -2,10 +2,10 @@
 \alias{related}
 \title{related.R a Search Method (Public Method)}
 \usage{
-  related(query, page = NA, numItems = 1000L,
-    key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-    url = sprintf("\%s/\%s", "http://api.mendeley.com/oapi/documents/related", query),
-    curl = getCurlHandle(), ...)
+related(query, page = NA, numItems = 1000L, key = getOption("MendeleyKey",
+  stop("need an API key for Mendeley")), url = sprintf("\%s/\%s",
+  "http://api.mendeley.com/oapi/documents/related", query),
+  curl = getCurlHandle(), ...)
 }
 \arguments{
   \item{query}{any Mendeley uuid (see details() function)}
@@ -28,14 +28,14 @@
   unnecessary footprint)}
 }
 \value{
-  all results matching the query related =
+all results matching the query related =
 }
 \description{
-  Return a list of papers related to a given Mendeley uuid
+Return a list of papers related to a given Mendeley uuid
 }
 \details{
-  See
-  \url{http://apidocs.mendeley.com/home/public-resources/search-related}
+See
+\url{http://apidocs.mendeley.com/home/public-resources/search-related}
 }
 \examples{
 \dontrun{

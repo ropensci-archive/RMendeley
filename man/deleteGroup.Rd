@@ -2,8 +2,7 @@
 \alias{deleteGroup}
 \title{deleteGroup - Delete a group for which you have owner permissions.}
 \usage{
-  deleteGroup(mc, group, ask = TRUE, ...,
-    curl = getCurlHandle())
+deleteGroup(mc, group, ask = TRUE, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -21,8 +20,8 @@
   tools mostly).}
 }
 \description{
-  deleteGroup - Delete a group for which you have owner
-  permissions.
+deleteGroup - Delete a group for which you have owner
+permissions.
 }
 \examples{
 \dontrun{
@@ -30,6 +29,6 @@ deleteGroup(mc, 'group name')
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

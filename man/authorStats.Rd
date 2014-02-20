@@ -2,7 +2,7 @@
 \alias{authorStats}
 \title{authorStats - Returns list of top 5 authors in your library.}
 \usage{
-  authorStats(mc = NULL, ..., curl = getCurlHandle())
+authorStats(mc = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -15,11 +15,11 @@
   tools mostly).}
 }
 \value{
-  List
+List
 }
 \description{
-  authorStats - Returns list of top 5 authors in your
-  library.
+authorStats - Returns list of top 5 authors in your
+library.
 }
 \examples{
 \dontrun{
@@ -27,6 +27,6 @@ authorStats(mendeley_oauth_cred)
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

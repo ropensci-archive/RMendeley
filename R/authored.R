@@ -14,6 +14,9 @@
 #' b$documents
 #' a$total_results
 #' }
+#' @import methods
+#' @import ROAuth
+#' @import plyr
 #' @export
 authored <- function(query,  page = NA, numItems = 100L, year=NA, key = getOption("MendeleyKey", stop("need an API key for Mendeley")), curl=getCurlHandle(), ...)
 {

@@ -2,7 +2,7 @@
 \alias{contacts}
 \title{contacts - List  of  current Mendeley contacts}
 \usage{
-  contacts(mc = NULL, ..., curl = getCurlHandle())
+contacts(mc = NULL, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -15,10 +15,10 @@
   tools mostly).}
 }
 \value{
-  list
+list
 }
 \description{
-  contacts - List of current Mendeley contacts
+contacts - List of current Mendeley contacts
 }
 \examples{
 \dontrun{
@@ -26,6 +26,6 @@ contacts(mc)
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

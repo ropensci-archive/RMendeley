@@ -2,8 +2,7 @@
 \alias{addFolderDoc}
 \title{Allows authenticated users to add a document to an specific folder. The document must exists on the library}
 \usage{
-  addFolderDoc(mc = NULL, folder, doc, ...,
-    curl = getCurlHandle())
+addFolderDoc(mc = NULL, folder, doc, ..., curl = getCurlHandle())
 }
 \arguments{
   \item{mc}{OAuth object of class MendeleyCredentials}
@@ -20,8 +19,8 @@
   tools mostly).}
 }
 \description{
-  Allows authenticated users to add a document to an
-  specific folder. The document must exists on the library
+Allows authenticated users to add a document to an specific
+folder. The document must exists on the library
 }
 \examples{
 \dontrun{
@@ -29,6 +28,6 @@ addFolderDoc(mc, '23423', '12321312')
 }
 }
 \author{
-  Karthik Ram \email{karthik.ram@gmail.com}
+Karthik Ram \email{karthik.ram@gmail.com}
 }
 

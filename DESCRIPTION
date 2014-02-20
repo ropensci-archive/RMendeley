@@ -4,59 +4,13 @@ Description: A programmatic interface to the
     project.
 Title: Interface to Mendeley API methods
 Version: 1.2
-License: MIT
+License: CC0
 Author: Carl Boettiger, Karthik Ram, Duncan Temple Lang
 Maintainer: Carl Boettiger <cboettig@gmail.com>
 Depends:
-    RJSONIO,
-    RCurl (>= 1.6),
-    ROAuth (>= 0.92.0),
     plyr,
-    methods
-Imports:
     RJSONIO,
-    ROAuth (>= 0.92.0),
+    ROAuth (>= 0.92.0)
+Imports:
     methods,
     RCurl (>= 1.6)
-Collate:
-    'authored.R'
-    'authors.R'
-    'categories.R'
-    'details.R'
-    'groups.R'
-    'papers.R'
-    'public_groups_details.R'
-    'public_groups_documents.R'
-    'public_groups_overview.R'
-    'public_groups_people.R'
-    'publications.R'
-    'related.R'
-    'search.R'
-    'subcategories.R'
-    'tagged.R'
-    'tags.R'
-    'utilities.R'
-    'user_add_doc_folder.r'
-    'user_addContact.r'
-    'user_author_stats.r'
-    'user_authored_pubs.r'
-    'user_contacts.r'
-    'user_create_folder.r'
-    'user_create_group.r'
-    'user_delete_document.r'
-    'user_delete_folder.r'
-    'user_docInfo.r'
-    'user_folder_documents.r'
-    'user_folders.r'
-    'user_group_doc_details.r'
-    'user_group_documents.r'
-    'user_group_people.r'
-    'user_groups.r'
-    'user_library.r'
-    'user_mendeley_auth.r'
-    'user_profile.r'
-    'user_pub_stats.r'
-    'user_tag_stats.r'
-    'user_delete_group.r'
-    'RMendeley.R'
-    'startup.r'

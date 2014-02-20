@@ -2,11 +2,10 @@
 \alias{public_groups_overview}
 \title{public_groups_overview.R   Public Group Methods (Public Methods)}
 \usage{
-  public_groups_overview(page = NA, numItems = 1000L,
-    cat = NA,
-    key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
-    url = "http://api.mendeley.com/oapi/documents/groups",
-    curl = getCurlHandle(), ...)
+public_groups_overview(page = NA, numItems = 1000L, cat = NA,
+  key = getOption("MendeleyKey", stop("need an API key for Mendeley")),
+  url = "http://api.mendeley.com/oapi/documents/groups",
+  curl = getCurlHandle(), ...)
 }
 \arguments{
   \item{page}{number pages to return (optional)}
@@ -32,11 +31,11 @@
   unnecessary footprint)}
 }
 \value{
-  detailed metadata for all articles in the public group
+detailed metadata for all articles in the public group
 }
 \description{
-  This method will return a list of public groups available
-  on Mendeley sorted by number of members.
+This method will return a list of public groups available
+on Mendeley sorted by number of members.
 }
 \examples{
 \dontrun{

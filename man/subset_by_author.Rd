@@ -2,7 +2,7 @@
 \alias{subset_by_author}
 \title{subset search results by matching author}
 \usage{
-  subset_by_author(x, surname, forename)
+subset_by_author(x, surname, forename)
 }
 \arguments{
   \item{x}{the return of any search function, such as
@@ -15,12 +15,12 @@
   partial matching}
 }
 \value{
-  a vector indicating where a (partial) match of both first
-  and last name has been successful
+a vector indicating where a (partial) match of both first
+and last name has been successful
 }
 \description{
-  get the ids of all the entries where the author's surname
-  and forename match the given regular expressions
+get the ids of all the entries where the author's surname
+and forename match the given regular expressions
 }
 \examples{
 \dontrun{
