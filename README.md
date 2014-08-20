@@ -8,10 +8,6 @@ install_github('ROAuth','duncantl')
 install_github('RMendeley','ropensci')
 ```
 
-## Tutorial
-
-A full `RMendeley` tutorial is available on the [ropensci website](http://ropensci.org/tutorials/mendeley_tutorial.html).
-
 
 # Public Methods API
 > (see [public methods for more information](http://apidocs.mendeley.com/home/public-resources))
@@ -83,4 +79,3 @@ A full `RMendeley` tutorial is available on the [ropensci website](http://ropens
 * `Create folder`
 * `Delete folder`
 * `Delete document from folder`
- 
