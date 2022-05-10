@@ -1,8 +1,5 @@
-
-[![Project Status: Unsupported – The project has reached a stable, usable state but the author(s) have ceased all work on it. A new maintainer may be desired.](http://www.repostatus.org/badges/latest/unsupported.svg)](http://www.repostatus.org/#unsupported)
-
 # RMendeley
 
-This package is now deprecated on CRAN and no longer works due to significant API changes. 
+[![Project Status: Abandoned](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
 
-[![ropensci footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+This package has been archived. The former README is now in [README-NOT.md](README-NOT.md).
